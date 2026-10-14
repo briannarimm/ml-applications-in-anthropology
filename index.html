@@ -4,18 +4,278 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ML Applications in Anthropology</title>
+<meta name="description" content="Two Python projects that map and cluster cross-cultural data on animals, gods and religion in 141 societies.">
+<meta property="og:title" content="ML Applications in Anthropology">
+<meta property="og:description" content="An interactive map of domesticated animals and a K-Modes clustering of 141 societies.">
+<meta property="og:image" content="assets/images/cows.jpg">
 <style>
-  body { font-family: system-ui, sans-serif; max-width: 40rem; margin: 3rem auto; padding: 0 1rem; line-height: 1.5; }
-  a { color: #1a5fb4; }
+  :root {
+    --bg: #faf8f4; --surface: #ffffff; --text: #24211c; --muted: #6a645a;
+    --accent: #9a4a1f; --accent-soft: #f2e3d6; --border: #e3ddd2;
+    --c1: #111111; --c2: #2e8b3d; --c3: #d9372b;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17150f; --surface: #211e17; --text: #efeadf; --muted: #a39b8a;
+      --accent: #e69a62; --accent-soft: #33281d; --border: #3a3529;
+      --c1: #d8d8d8;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 17px/1.65 system-ui, -apple-system, "Segoe UI", sans-serif; }
+  a { color: var(--accent); }
+  img { max-width: 100%; height: auto; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  .narrow { max-width: 720px; }
+
+  nav { position: sticky; top: 0; z-index: 10; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--border); }
+  nav .wrap { display: flex; gap: 22px; align-items: center; height: 52px; overflow-x: auto; white-space: nowrap; font-size: 15px; }
+  nav strong { margin-right: auto; }
+  nav a { text-decoration: none; color: var(--muted); }
+  nav a:hover { color: var(--accent); }
+
+  header.hero { position: relative; color: #fff; background: #333 url(assets/images/cows.jpg) center 40%/cover; }
+  header.hero::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.35), rgba(0,0,0,.7)); }
+  header.hero .wrap { position: relative; padding-top: 110px; padding-bottom: 90px; }
+  .eyebrow { text-transform: uppercase; letter-spacing: .12em; font-size: 13px; opacity: .85; }
+  h1 { font-size: clamp(2.2rem, 6vw, 3.6rem); line-height: 1.1; margin: .3em 0; }
+  .hero p.lead { font-size: 1.2rem; max-width: 640px; }
+  .btns { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+  .btn { display: inline-block; padding: 11px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; background: #fff; color: #24211c; }
+  .btn.ghost { background: transparent; color: #fff; border: 1.5px solid rgba(255,255,255,.7); }
+
+  section { padding: 64px 0 8px; }
+  h2 { font-size: 1.9rem; line-height: 1.2; margin: 0 0 .5em; }
+  h3 { margin: 1.6em 0 .4em; }
+  .kicker { color: var(--accent); font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .1em; }
+  .muted { color: var(--muted); }
+
+  .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px; margin: 28px 0; }
+  .stat { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 18px; }
+  .stat b { display: block; font-size: 2rem; color: var(--accent); line-height: 1.1; }
+
+  .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px; }
+  .card h3 { margin-top: 0; }
+
+  .mapbox { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin: 22px 0; }
+  .mapbox iframe { display: block; width: 100%; height: 560px; border: 0; }
+  .mapbox figcaption { padding: 10px 16px; font-size: 14px; color: var(--muted); border-top: 1px solid var(--border); }
+  .mapbox figcaption a { white-space: nowrap; }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 8px 22px; list-style: none; padding: 0; margin: 12px 0 0; }
+  .legend li { display: flex; align-items: center; gap: 8px; }
+  .legend img { width: 28px; height: 28px; background: #fff; border-radius: 6px; padding: 2px; }
+
+  .clusters { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin: 24px 0; }
+  .cluster { background: var(--surface); border: 1px solid var(--border); border-top: 5px solid var(--cc); border-radius: 12px; padding: 18px 20px; }
+  .cluster .n { font-size: 2rem; font-weight: 700; line-height: 1; }
+  .cluster h3 { margin: 0 0 6px; }
+  .cluster ul { margin: 10px 0 0; padding-left: 18px; }
+
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(440px, 1fr)); gap: 16px; }
+  .gallery figure { margin: 0; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
+  .gallery figcaption { font-size: 14px; color: #555; text-align: center; padding-top: 4px; }
+  @media (max-width: 520px) { .gallery { grid-template-columns: 1fr; } .mapbox iframe { height: 440px; } }
+
+  table { width: 100%; border-collapse: collapse; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; font-size: 15px; }
+  th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); vertical-align: top; }
+  th { background: var(--accent-soft); }
+  tr:last-child td { border-bottom: 0; }
+  code { background: var(--accent-soft); padding: 1px 6px; border-radius: 4px; font-size: .92em; }
+  pre { background: #1d1b17; color: #f0ebe0; padding: 16px 18px; border-radius: 10px; overflow-x: auto; font-size: 14px; line-height: 1.5; }
+  pre code { background: none; padding: 0; }
+  .callout { background: var(--accent-soft); border-left: 4px solid var(--accent); padding: 12px 18px; border-radius: 0 10px 10px 0; margin: 20px 0; }
+
+  footer { margin-top: 72px; padding: 32px 0 48px; border-top: 1px solid var(--border); color: var(--muted); font-size: 15px; }
+  footer .cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
 </style>
 </head>
 <body>
-<h1>ML Applications in Anthropology</h1>
-<p>Two interactive maps made with Python. Both maps use cross-cultural data from D-PLACE.</p>
-<ul>
-  <li><a href="domesticated-animals-map/output/animal_map.html">Map of the primary domesticated animal of each society</a></li>
-  <li><a href="clustering-demo/output/cluster_map.html">Map of societies grouped by K-Modes clustering</a></li>
-</ul>
-<p><a href="https://github.com/briannarimm/ml-applications-in-anthropology">Source code and instructions</a></p>
+
+<nav>
+  <div class="wrap">
+    <strong>ML Applications in Anthropology</strong>
+    <a href="#data">Data</a>
+    <a href="#animal-map">Animal map</a>
+    <a href="#clustering">Clustering</a>
+    <a href="#run">Run it</a>
+    <a href="#credits">Credits</a>
+    <a href="https://github.com/briannarimm/ml-applications-in-anthropology">GitHub</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Data science &middot; Cultural anthropology &middot; Python</div>
+    <h1>ML Applications in Anthropology</h1>
+    <p class="lead">What do societies farm, hunt and believe? Two projects use maps and machine learning to look for patterns in 141 societies.</p>
+    <div class="btns">
+      <a class="btn" href="#animal-map">Explore the maps</a>
+      <a class="btn ghost" href="https://github.com/briannarimm/ml-applications-in-anthropology">View the code</a>
+    </div>
+  </div>
+</header>
+
+<main>
+<section id="about">
+  <div class="wrap narrow">
+    <div class="kicker">The project</div>
+    <h2>Two tools, one question</h2>
+    <p>This project started in an anthropology course that treats culture as data. The question: <em>where do food taboos come from?</em> Pigs are taboo in Judaism and Islam. Do societies that keep pigs have different gods, hunting habits and religions from societies that keep other animals?</p>
+    <p>To look for an answer, I built two small Python tools. One <strong>maps</strong> the data. The other <strong>clusters</strong> it with machine learning.</p>
+  </div>
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>141</b>societies in the Standard Cross-Cultural Sample</div>
+      <div class="stat"><b>118</b>societies with map coordinates</div>
+      <div class="stat"><b>7</b>kinds of primary domesticated animal</div>
+      <div class="stat"><b>3</b>clusters found with K-Modes</div>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <h3>1. Domesticated animals map</h3>
+        <p>Every society gets an icon for its main domesticated animal. Click an icon to read about the gods, hunting and religion of that society.</p>
+        <p><a href="#animal-map">Open the map &rarr;</a></p>
+      </div>
+      <div class="card">
+        <h3>2. Clustering demo</h3>
+        <p>The K-Modes algorithm groups societies with similar animals, gods and religion. Charts and a map show what each group has in common.</p>
+        <p><a href="#clustering">See the clusters &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="data">
+  <div class="wrap narrow">
+    <div class="kicker">The data</div>
+    <h2>141 societies, four categorical variables</h2>
+    <p>The data comes from <a href="https://d-place.org">D-PLACE</a>, a database of cultural data. Locations come from <a href="https://glottolog.org">Glottolog</a>. Every variable is a category, not a number. This is why the clustering uses K-Modes.</p>
+  </div>
+  <div class="wrap">
+    <table>
+      <thead><tr><th>Variable</th><th>What it describes</th><th>Example values</th></tr></thead>
+      <tbody>
+        <tr><td><code>domesticated_label</code></td><td>The main domesticated animal</td><td>Pigs, Bovines, Camels, Small Species</td></tr>
+        <tr><td><code>roleofgods_label</code></td><td>The role of the gods</td><td>Absent, Otiose, Active (supporting morality)</td></tr>
+        <tr><td><code>animalshunted_label</code></td><td>The animals that people hunt</td><td>Large Game, Small Mammals, Birds or Waterfowl</td></tr>
+        <tr><td><code>religion_label</code></td><td>The main religion</td><td>Indigenous religion, Islamization, Christianization</td></tr>
+        <tr><td><code>focal_year</code></td><td>The year that the data describes</td><td>1880</td></tr>
+      </tbody>
+    </table>
+    <p class="muted">23 societies have no coordinates. They appear in the clustering but not on the maps.</p>
+  </div>
+</section>
+
+<section id="animal-map">
+  <div class="wrap">
+    <div class="kicker">Project 1</div>
+    <h2>Map of primary domesticated animals</h2>
+    <p class="narrow" style="max-width:720px">Hover over an icon to see the society. Click it to see the focal year, the role of the gods, the animals hunted and the religion.</p>
+    <figure class="mapbox">
+      <iframe src="domesticated-animals-map/output/animal_map.html" title="Map of the primary domesticated animals of different societies" loading="lazy"></iframe>
+      <figcaption>Interactive map. <a href="domesticated-animals-map/output/animal_map.html">Open full screen</a></figcaption>
+    </figure>
+    <ul class="legend">
+      <li><img src="assets/icons/chicken.png" alt="">Small species</li>
+      <li><img src="assets/icons/pig.png" alt="">Pigs</li>
+      <li><img src="assets/icons/sheep.png" alt="">Ovis</li>
+      <li><img src="assets/icons/horse.png" alt="">Equines</li>
+      <li><img src="assets/icons/reindeer.png" alt="">Reindeer</li>
+      <li><img src="assets/icons/camel.png" alt="">Camels</li>
+      <li><img src="assets/icons/cow.png" alt="">Bovines</li>
+    </ul>
+    <h3>How it works</h3>
+    <p><strong>pandas</strong> joins the society data to the coordinates. <strong>Folium</strong> draws one marker for each society. <strong>Branca</strong> adds the legend. The script is <a href="domesticated-animals-map/map.py"><code>map.py</code></a>.</p>
+  </div>
+</section>
+
+<section id="clustering">
+  <div class="wrap">
+    <div class="kicker">Project 2</div>
+    <h2>Clustering societies with K-Modes</h2>
+    <p style="max-width:720px">Clustering puts similar items in the same group. <strong>K-Modes</strong> is like K-Means, but it works with categories. The center of a group is the most common category of each variable.</p>
+    <figure class="mapbox">
+      <iframe src="clustering-demo/output/cluster_map.html" title="Map of societies colored by cluster" loading="lazy"></iframe>
+      <figcaption>Black = cluster 1, green = cluster 2, red = cluster 3. <a href="clustering-demo/output/cluster_map.html">Open full screen</a></figcaption>
+    </figure>
+
+    <h3>What each cluster has in common</h3>
+    <div class="clusters">
+      <div class="cluster" style="--cc: var(--c1)">
+        <div class="n">69</div><h3>Cluster 1 &middot; Black</h3>
+        <ul><li>Gods are absent (50 societies)</li><li>Pigs are the main animal in 23 of the 24 pig societies</li></ul>
+      </div>
+      <div class="cluster" style="--cc: var(--c2)">
+        <div class="n">47</div><h3>Cluster 2 &middot; Green</h3>
+        <ul><li>Gods are otiose (27)</li><li>Small animals are the main animal (31)</li><li>People hunt two or more kinds of animal (26)</li></ul>
+      </div>
+      <div class="cluster" style="--cc: var(--c3)">
+        <div class="n">25</div><h3>Cluster 3 &middot; Red</h3>
+        <ul><li>Gods are active and support morality (22)</li><li>Deep Islamization is common (14)</li><li>Bovines (17) and camels (3) are the main animals</li></ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>The finding I find most interesting:</strong> almost all pig societies are in the cluster where gods are absent. Pigs are taboo in Judaism and Islam. This may support a link between food taboos and the role of gods. Correlation is not causation, and geography and indigenous religions also shape the clusters.
+    </div>
+    <p class="muted">The elbow curve has no sharp bend, so 3 clusters is a readable choice and not a proof. A fixed seed (<code>SEED = 42</code>) makes each run give the same result.</p>
+
+    <h3>Charts</h3>
+    <div class="gallery">
+      <figure><img src="clustering-demo/output/charts/cluster_sizes_chart.png" alt="Number of societies in each cluster" loading="lazy"><figcaption>Societies in each cluster</figcaption></figure>
+      <figure><img src="clustering-demo/output/charts/domesticated_chart.png" alt="Primary domesticated animals in each cluster" loading="lazy"><figcaption>Primary domesticated animal</figcaption></figure>
+      <figure><img src="clustering-demo/output/charts/roleofgods_chart.png" alt="Role of gods in each cluster" loading="lazy"><figcaption>Role of the gods</figcaption></figure>
+      <figure><img src="clustering-demo/output/charts/religion_chart.png" alt="Religions in each cluster" loading="lazy"><figcaption>Religion</figcaption></figure>
+      <figure><img src="clustering-demo/output/charts/animalshunted_chart.png" alt="Animals hunted in each cluster" loading="lazy"><figcaption>Animals hunted</figcaption></figure>
+      <figure><img src="clustering-demo/output/elbow_curve.png" alt="Elbow curve of clustering cost" loading="lazy"><figcaption>Elbow curve</figcaption></figure>
+    </div>
+    <p class="muted">The <a href="clustering-demo/published/cluster_map.html">charts and map from the original 2021 analysis</a> are in the repository. Its random start was different, so the cluster sizes differ a little. The main pattern is the same.</p>
+  </div>
+</section>
+
+<section id="run">
+  <div class="wrap narrow">
+    <div class="kicker">Try it</div>
+    <h2>Run the projects yourself</h2>
+    <p>You need Python 3.9 or later.</p>
+<pre><code>git clone https://github.com/briannarimm/ml-applications-in-anthropology.git
+cd ml-applications-in-anthropology
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
+python domesticated-animals-map/map.py   # writes the animal map
+python clustering-demo/clustering.py     # writes charts, CSV files and the cluster map
+
+python -m http.server 8000               # open http://localhost:8000</code></pre>
+    <p>To use your own data, change the CSV files in <a href="data/societies.csv"><code>data/</code></a>. Keep the column names. To change the number of clusters, change <code>N_CLUSTERS</code> in <code>clustering.py</code>.</p>
+  </div>
+</section>
+
+<section id="credits">
+  <div class="wrap narrow">
+    <div class="kicker">Credits</div>
+    <h2>Sources and thanks</h2>
+    <ul>
+      <li><strong>Data:</strong> <a href="https://d-place.org">D-PLACE</a> (Murdock &amp; Morrow 1970; Murdock 1962&ndash;1971 and Gray 1999; Rosenblatt, Walsh &amp; Jackson 2011) and <a href="https://glottolog.org">Glottolog 4.4</a>.</li>
+      <li><strong>Icons:</strong> Symbolon, BomSymbols, Doodle Icons and KonKapp from <a href="https://thenounproject.com">the Noun Project</a> (CC BY 3.0).</li>
+      <li><strong>Header images:</strong> Pixel-Sepp and Pexels on Pixabay.</li>
+      <li><strong>Software:</strong> Folium, Branca, pandas, kmodes, seaborn and Matplotlib.</li>
+    </ul>
+    <p>Full citations are in <a href="CREDITS.md">CREDITS.md</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap cols">
+    <div>&copy; 2021&ndash;2026 Brianna R. Imm. Code under the <a href="LICENSE">MIT License</a>.</div>
+    <div><a href="https://github.com/briannarimm/ml-applications-in-anthropology">Source on GitHub</a></div>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -124,7 +124,7 @@ You need Python 3.9 or later.
    python -m http.server 8000
    ```
 
-   Open <http://localhost:8000> in a web browser.
+   Open <http://localhost:8000> in a web browser. The start page is the same page as the online showcase.
 
 > **Note:** The map in the browser loads map tiles from the internet. You need an internet connection to see the base map.
 
@@ -148,6 +148,10 @@ requirements.txt            Python libraries
 To change the map, change the CSV files in the `data` folder. Keep the column names. The `society_id` column links the two files.
 
 To add an animal, add a line to the `ICONS` dictionary in `map.py` and put a PNG file in `assets/icons`. To change the number of groups, change `N_CLUSTERS` in `clustering.py`.
+
+## Author
+
+Brianna R. Imm
 
 ## License
 

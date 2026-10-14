@@ -9,7 +9,7 @@ This repository has two small Python projects. Both projects use machine learnin
 | Domesticated animals map | Shows the main domesticated animal of 118 societies | [domesticated-animals-map](domesticated-animals-map) |
 | Clustering demo | Puts 141 societies into 3 groups with the K-Modes algorithm. Shows the groups on a map and in charts | [clustering-demo](clustering-demo) |
 
-**See the maps online:** <https://briannarimm.github.io/ml-applications-in-anthropology/>
+**See the maps online:** <https://dev.briannaimm.com/ml-applications-in-anthropology/>
 
 ## Data
 

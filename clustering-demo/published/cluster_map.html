@@ -1,0 +1,3277 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_50fa001c23294e4d9a08f404f915737d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_50fa001c23294e4d9a08f404f915737d" ></div>
+        
+    
+<div style="
+    position: fixed;
+    bottom: 350px;
+    left: 75px;
+    width: 200px;
+    height: 150px;
+    z-index:9999;
+    font-size:14px;
+    ">
+    <p><a style="color:black;font-size:40px">&#9679;</a>&emsp;Cluster 1</p>
+    <p><a style="color:green;font-size:40px">&#9679;</a>&emsp;Cluster 2</p>
+    <p><a style="color:red;font-size:40px">&#9679;</a>&emsp;Cluster 3</p>
+</div>
+<div style="
+    position: fixed;
+    bottom: 300px;
+    left: 50px;
+    width: 160px;
+    height: 200px;
+    z-index:9998;
+    font-size:14px;
+    background-color: #ffffff;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+    opacity: 0.7;
+    ">
+</div>
+</body>
+<script>    
+    
+            var map_50fa001c23294e4d9a08f404f915737d = L.map(
+                "map_50fa001c23294e4d9a08f404f915737d",
+                {
+                    center: [10.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_06d89b170ced40ca84cc65fb47038586 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+            var circle_marker_5903d66255e141d7b6022dc7245ac56c = L.circleMarker(
+                [7.34138, 134.476678],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_0cabb8e047a34b97b1dad71e8544365f = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_15a3d4dd985b4f47a9ea261c5d50fb64 = $(`<div id="html_15a3d4dd985b4f47a9ea261c5d50fb64" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Birds or Waterfowl</div>`)[0];
+            popup_0cabb8e047a34b97b1dad71e8544365f.setContent(html_15a3d4dd985b4f47a9ea261c5d50fb64);
+        
+
+        circle_marker_5903d66255e141d7b6022dc7245ac56c.bindPopup(popup_0cabb8e047a34b97b1dad71e8544365f)
+        ;
+
+        
+    
+    
+            circle_marker_5903d66255e141d7b6022dc7245ac56c.bindTooltip(
+                `<div>
+                     Palauans
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bb8fdb8b6e0743f5a06d5e9d37ac0246 = L.circleMarker(
+                [43.633654, 142.46167],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_4cd02c4de95241e3a9e7a4158daec004 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_bd63079ff5474f34ad6d0bbb53fa7b5f = $(`<div id="html_bd63079ff5474f34ad6d0bbb53fa7b5f" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_4cd02c4de95241e3a9e7a4158daec004.setContent(html_bd63079ff5474f34ad6d0bbb53fa7b5f);
+        
+
+        circle_marker_bb8fdb8b6e0743f5a06d5e9d37ac0246.bindPopup(popup_4cd02c4de95241e3a9e7a4158daec004)
+        ;
+
+        
+    
+    
+            circle_marker_bb8fdb8b6e0743f5a06d5e9d37ac0246.bindTooltip(
+                `<div>
+                     Ainu
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3887f7c8038b4d69b965617ef817ca24 = L.circleMarker(
+                [52.59, 140.681],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_43c75a848c4b4ae88aab8e673ee658bc = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_944b12b47ae24740809be9497c3c4ad4 = $(`<div id="html_944b12b47ae24740809be9497c3c4ad4" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_43c75a848c4b4ae88aab8e673ee658bc.setContent(html_944b12b47ae24740809be9497c3c4ad4);
+        
+
+        circle_marker_3887f7c8038b4d69b965617ef817ca24.bindPopup(popup_43c75a848c4b4ae88aab8e673ee658bc)
+        ;
+
+        
+    
+    
+            circle_marker_3887f7c8038b4d69b965617ef817ca24.bindTooltip(
+                `<div>
+                     Nivkh
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_21a0c2d94a0d4aea8e85676d69a6c1ea = L.circleMarker(
+                [62.0697, -160.044],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_5eb9d44ace434a45b32984f96e830131 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_4acc01b6fa00495e8c8c405cf5781454 = $(`<div id="html_4acc01b6fa00495e8c8c405cf5781454" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_5eb9d44ace434a45b32984f96e830131.setContent(html_4acc01b6fa00495e8c8c405cf5781454);
+        
+
+        circle_marker_21a0c2d94a0d4aea8e85676d69a6c1ea.bindPopup(popup_5eb9d44ace434a45b32984f96e830131)
+        ;
+
+        
+    
+    
+            circle_marker_21a0c2d94a0d4aea8e85676d69a6c1ea.bindTooltip(
+                `<div>
+                     Deg Xit'an
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_309c45f1132045e49f70cdda1459eb98 = L.circleMarker(
+                [49.0533, -68.7376],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_797b487a74d64b828a3bd5e57cf3ad45 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_5475b89d9345479badfb5246a55aa8f1 = $(`<div id="html_5475b89d9345479badfb5246a55aa8f1" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_797b487a74d64b828a3bd5e57cf3ad45.setContent(html_5475b89d9345479badfb5246a55aa8f1);
+        
+
+        circle_marker_309c45f1132045e49f70cdda1459eb98.bindPopup(popup_797b487a74d64b828a3bd5e57cf3ad45)
+        ;
+
+        
+    
+    
+            circle_marker_309c45f1132045e49f70cdda1459eb98.bindTooltip(
+                `<div>
+                     Montagnais
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_990510258fad41a982ad63f5155bb2cf = L.circleMarker(
+                [45.9941, -65.5766],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_03ca0c88264944248076095522c25ef5 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_da19fa9038414f7ea025ad7dd14d3de9 = $(`<div id="html_da19fa9038414f7ea025ad7dd14d3de9" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_03ca0c88264944248076095522c25ef5.setContent(html_da19fa9038414f7ea025ad7dd14d3de9);
+        
+
+        circle_marker_990510258fad41a982ad63f5155bb2cf.bindPopup(popup_03ca0c88264944248076095522c25ef5)
+        ;
+
+        
+    
+    
+            circle_marker_990510258fad41a982ad63f5155bb2cf.bindTooltip(
+                `<div>
+                     Mi'kmaq
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d78767177f7f4081830eb98f5e6bac07 = L.circleMarker(
+                [59.8794, -117.047],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_ee7a0339cf914d098bdb90d897f062da = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_856fa2e460984b80b433da9244d576b3 = $(`<div id="html_856fa2e460984b80b433da9244d576b3" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_ee7a0339cf914d098bdb90d897f062da.setContent(html_856fa2e460984b80b433da9244d576b3);
+        
+
+        circle_marker_d78767177f7f4081830eb98f5e6bac07.bindPopup(popup_ee7a0339cf914d098bdb90d897f062da)
+        ;
+
+        
+    
+    
+            circle_marker_d78767177f7f4081830eb98f5e6bac07.bindTooltip(
+                `<div>
+                     DeneTha
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_68417461c2794f348116a5c6754e1c05 = L.circleMarker(
+                [61.9942, -132.412],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_f1c0566ec3834d1f936bea38fc903b1e = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_8fca928097e34259aa3baa9f17c2df5c = $(`<div id="html_8fca928097e34259aa3baa9f17c2df5c" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_f1c0566ec3834d1f936bea38fc903b1e.setContent(html_8fca928097e34259aa3baa9f17c2df5c);
+        
+
+        circle_marker_68417461c2794f348116a5c6754e1c05.bindPopup(popup_f1c0566ec3834d1f936bea38fc903b1e)
+        ;
+
+        
+    
+    
+            circle_marker_68417461c2794f348116a5c6754e1c05.bindTooltip(
+                `<div>
+                     Kaska
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1db220e2cce549d59e18dcbabb3ec89a = L.circleMarker(
+                [1.16839, 28.7626],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_1ce173535c8f429e8b09fe9db34d70b3 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_d0007564e44a4ea0801a2535f08b69bc = $(`<div id="html_d0007564e44a4ea0801a2535f08b69bc" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_1ce173535c8f429e8b09fe9db34d70b3.setContent(html_d0007564e44a4ea0801a2535f08b69bc);
+        
+
+        circle_marker_1db220e2cce549d59e18dcbabb3ec89a.bindPopup(popup_1ce173535c8f429e8b09fe9db34d70b3)
+        ;
+
+        
+    
+    
+            circle_marker_1db220e2cce549d59e18dcbabb3ec89a.bindTooltip(
+                `<div>
+                     Mbuti
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_12a3bb25ad2c430a8af30d9f31fbaa0e = L.circleMarker(
+                [60.4232, -144.762],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_1481963ce8ae424580a0748d19529299 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_bceabe44ce5344e4b3d2e51b16d5108a = $(`<div id="html_bceabe44ce5344e4b3d2e51b16d5108a" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_1481963ce8ae424580a0748d19529299.setContent(html_bceabe44ce5344e4b3d2e51b16d5108a);
+        
+
+        circle_marker_12a3bb25ad2c430a8af30d9f31fbaa0e.bindPopup(popup_1481963ce8ae424580a0748d19529299)
+        ;
+
+        
+    
+    
+            circle_marker_12a3bb25ad2c430a8af30d9f31fbaa0e.bindTooltip(
+                `<div>
+                     Eyak
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_40c78531300f415382fec3e408faf53f = L.circleMarker(
+                [54.004532, -132.079257],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_0c4fc3e155fb454ea72abc2ee3bb935c = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_71f12f3a7b7f419c9f563ce279638567 = $(`<div id="html_71f12f3a7b7f419c9f563ce279638567" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_0c4fc3e155fb454ea72abc2ee3bb935c.setContent(html_71f12f3a7b7f419c9f563ce279638567);
+        
+
+        circle_marker_40c78531300f415382fec3e408faf53f.bindPopup(popup_0c4fc3e155fb454ea72abc2ee3bb935c)
+        ;
+
+        
+    
+    
+            circle_marker_40c78531300f415382fec3e408faf53f.bindTooltip(
+                `<div>
+                     Haida
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_36a48c70d80e4266b49687e8a6aec30a = L.circleMarker(
+                [52.3448, -126.689],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_35050a6aa0974df2b4f29cb060df083f = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_524a0decbf2a4a919dff6b03cc98d07a = $(`<div id="html_524a0decbf2a4a919dff6b03cc98d07a" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_35050a6aa0974df2b4f29cb060df083f.setContent(html_524a0decbf2a4a919dff6b03cc98d07a);
+        
+
+        circle_marker_36a48c70d80e4266b49687e8a6aec30a.bindPopup(popup_35050a6aa0974df2b4f29cb060df083f)
+        ;
+
+        
+    
+    
+            circle_marker_36a48c70d80e4266b49687e8a6aec30a.bindTooltip(
+                `<div>
+                     Nuxalk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_341b6caaceda4f17aa285a5887a460a8 = L.circleMarker(
+                [47.7419, -121.765],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_3e946ff1cd8b441cbf85f24ba71f1d03 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_42d6619f39a84a9d8586a940c827f0c7 = $(`<div id="html_42d6619f39a84a9d8586a940c827f0c7" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_3e946ff1cd8b441cbf85f24ba71f1d03.setContent(html_42d6619f39a84a9d8586a940c827f0c7);
+        
+
+        circle_marker_341b6caaceda4f17aa285a5887a460a8.bindPopup(popup_3e946ff1cd8b441cbf85f24ba71f1d03)
+        ;
+
+        
+    
+    
+            circle_marker_341b6caaceda4f17aa285a5887a460a8.bindTooltip(
+                `<div>
+                     Twana
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7a49622f431d4573967b120d19bfc22e = L.circleMarker(
+                [41.3262, -123.824],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_484cf0dfd7ad4876901008b404c3844b = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_98314938ebc64b91a4ae565d9e9bb315 = $(`<div id="html_98314938ebc64b91a4ae565d9e9bb315" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_484cf0dfd7ad4876901008b404c3844b.setContent(html_98314938ebc64b91a4ae565d9e9bb315);
+        
+
+        circle_marker_7a49622f431d4573967b120d19bfc22e.bindPopup(popup_484cf0dfd7ad4876901008b404c3844b)
+        ;
+
+        
+    
+    
+            circle_marker_7a49622f431d4573967b120d19bfc22e.bindTooltip(
+                `<div>
+                     Yurok
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_790def1b63e749ad881d07cb926239b8 = L.circleMarker(
+                [44.33, -77.5],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_ae6a07b4edea470c98410742d72a839a = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_f6dd7d54dd5646b2a41d88b83a2637a7 = $(`<div id="html_f6dd7d54dd5646b2a41d88b83a2637a7" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_ae6a07b4edea470c98410742d72a839a.setContent(html_f6dd7d54dd5646b2a41d88b83a2637a7);
+        
+
+        circle_marker_790def1b63e749ad881d07cb926239b8.bindPopup(popup_ae6a07b4edea470c98410742d72a839a)
+        ;
+
+        
+    
+    
+            circle_marker_790def1b63e749ad881d07cb926239b8.bindTooltip(
+                `<div>
+                     Huron
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_15f69f7f6cab421a9736b6b2de717290 = L.circleMarker(
+                [31.75, -91.33],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_82af5ecdbe6649299c788b557aa8bbeb = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_605001462ee640a6aad3cab3ba196ea2 = $(`<div id="html_605001462ee640a6aad3cab3ba196ea2" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_82af5ecdbe6649299c788b557aa8bbeb.setContent(html_605001462ee640a6aad3cab3ba196ea2);
+        
+
+        circle_marker_15f69f7f6cab421a9736b6b2de717290.bindPopup(popup_82af5ecdbe6649299c788b557aa8bbeb)
+        ;
+
+        
+    
+    
+            circle_marker_15f69f7f6cab421a9736b6b2de717290.bindTooltip(
+                `<div>
+                     Natchez
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_393f2532ccbc449c954f34911fc4e7db = L.circleMarker(
+                [4.75, 10.67],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_5437d81184044693994909394fdcaa1e = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_fa6509bfe8464364a5a76fd346c9fd76 = $(`<div id="html_fa6509bfe8464364a5a76fd346c9fd76" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_5437d81184044693994909394fdcaa1e.setContent(html_fa6509bfe8464364a5a76fd346c9fd76);
+        
+
+        circle_marker_393f2532ccbc449c954f34911fc4e7db.bindPopup(popup_5437d81184044693994909394fdcaa1e)
+        ;
+
+        
+    
+    
+            circle_marker_393f2532ccbc449c954f34911fc4e7db.bindTooltip(
+                `<div>
+                     Banen
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d87a4c3ff7d84bff961632f5814f9f3d = L.circleMarker(
+                [19.72, -96.97],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_b7935c5ba99e4a0abcd3ea26268e5531 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_84fd5a91aca34a8995c1e8b022c85978 = $(`<div id="html_84fd5a91aca34a8995c1e8b022c85978" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Active, but not supporting morality<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_b7935c5ba99e4a0abcd3ea26268e5531.setContent(html_84fd5a91aca34a8995c1e8b022c85978);
+        
+
+        circle_marker_d87a4c3ff7d84bff961632f5814f9f3d.bindPopup(popup_b7935c5ba99e4a0abcd3ea26268e5531)
+        ;
+
+        
+    
+    
+            circle_marker_d87a4c3ff7d84bff961632f5814f9f3d.bindTooltip(
+                `<div>
+                     Aztec
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_24935cf0bf4740a08ffcd53709f9eb91 = L.circleMarker(
+                [18.198, -94.9109],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_42efd44442854ec48abc1fa09b5eab6e = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_8694416fab75496fa9043524c8f14cea = $(`<div id="html_8694416fab75496fa9043524c8f14cea" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_42efd44442854ec48abc1fa09b5eab6e.setContent(html_8694416fab75496fa9043524c8f14cea);
+        
+
+        circle_marker_24935cf0bf4740a08ffcd53709f9eb91.bindPopup(popup_42efd44442854ec48abc1fa09b5eab6e)
+        ;
+
+        
+    
+    
+            circle_marker_24935cf0bf4740a08ffcd53709f9eb91.bindTooltip(
+                `<div>
+                     Sierra Popoluca
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fc0816bc54d04285ac18515fe77962c1 = L.circleMarker(
+                [7.92993, -77.1664],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_3465904866324cc18e2904fac3fe9dfa = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_501f1d8c47a3402c908295e8af82e8dd = $(`<div id="html_501f1d8c47a3402c908295e8af82e8dd" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_3465904866324cc18e2904fac3fe9dfa.setContent(html_501f1d8c47a3402c908295e8af82e8dd);
+        
+
+        circle_marker_fc0816bc54d04285ac18515fe77962c1.bindPopup(popup_3465904866324cc18e2904fac3fe9dfa)
+        ;
+
+        
+    
+    
+            circle_marker_fc0816bc54d04285ac18515fe77962c1.bindTooltip(
+                `<div>
+                     Guna
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_593e8e7af4da433fae2252ad97aaca14 = L.circleMarker(
+                [6.88039, 9.26287],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_afd7c298b12b4a0c900b75819ee30197 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_067ed01caf64415dada8ed4ea7e52630 = $(`<div id="html_067ed01caf64415dada8ed4ea7e52630" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_afd7c298b12b4a0c900b75819ee30197.setContent(html_067ed01caf64415dada8ed4ea7e52630);
+        
+
+        circle_marker_593e8e7af4da433fae2252ad97aaca14.bindPopup(popup_afd7c298b12b4a0c900b75819ee30197)
+        ;
+
+        
+    
+    
+            circle_marker_593e8e7af4da433fae2252ad97aaca14.bindTooltip(
+                `<div>
+                     Tiv
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8702b7a919de49f3b8364c8e7f5546f8 = L.circleMarker(
+                [15.364795, -61.342957],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_f620266a652b4db2983733d2bbcb1da9 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_85ff6f3edec7499496c4344dcac8cb0b = $(`<div id="html_85ff6f3edec7499496c4344dcac8cb0b" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_f620266a652b4db2983733d2bbcb1da9.setContent(html_85ff6f3edec7499496c4344dcac8cb0b);
+        
+
+        circle_marker_8702b7a919de49f3b8364c8e7f5546f8.bindPopup(popup_f620266a652b4db2983733d2bbcb1da9)
+        ;
+
+        
+    
+    
+            circle_marker_8702b7a919de49f3b8364c8e7f5546f8.bindTooltip(
+                `<div>
+                     Callinago
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b070dc6f82b6461b87e939f2767d1628 = L.circleMarker(
+                [7.50851, -59.3528],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_d9b64542717f408e8b2454ac9d9f2b92 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_1d48ddbb949a4ed887585f4873375db3 = $(`<div id="html_1d48ddbb949a4ed887585f4873375db3" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_d9b64542717f408e8b2454ac9d9f2b92.setContent(html_1d48ddbb949a4ed887585f4873375db3);
+        
+
+        circle_marker_b070dc6f82b6461b87e939f2767d1628.bindPopup(popup_d9b64542717f408e8b2454ac9d9f2b92)
+        ;
+
+        
+    
+    
+            circle_marker_b070dc6f82b6461b87e939f2767d1628.bindTooltip(
+                `<div>
+                     Warao
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fc12983d653c43b7b6806a7e64848ba2 = L.circleMarker(
+                [1.67967, -64.8781],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_c4089d32377b47b6b4487b4ade01d36b = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_916185110bc44d3fbd45d919a2532805 = $(`<div id="html_916185110bc44d3fbd45d919a2532805" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_c4089d32377b47b6b4487b4ade01d36b.setContent(html_916185110bc44d3fbd45d919a2532805);
+        
+
+        circle_marker_fc12983d653c43b7b6806a7e64848ba2.bindPopup(popup_c4089d32377b47b6b4487b4ade01d36b)
+        ;
+
+        
+    
+    
+            circle_marker_fc12983d653c43b7b6806a7e64848ba2.bindTooltip(
+                `<div>
+                     Yanomami
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5d8d6816188d4feb8aaf5bcee79ec2f7 = L.circleMarker(
+                [-8.41095, -57.691],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_3c640ed0d1d94abdb5ad5d7ebe498066 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_5e1ed8e957854360b34a96a5c053d89f = $(`<div id="html_5e1ed8e957854360b34a96a5c053d89f" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_3c640ed0d1d94abdb5ad5d7ebe498066.setContent(html_5e1ed8e957854360b34a96a5c053d89f);
+        
+
+        circle_marker_5d8d6816188d4feb8aaf5bcee79ec2f7.bindPopup(popup_3c640ed0d1d94abdb5ad5d7ebe498066)
+        ;
+
+        
+    
+    
+            circle_marker_5d8d6816188d4feb8aaf5bcee79ec2f7.bindTooltip(
+                `<div>
+                     Munduruku
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_86e5c975eadb480ca91650dbed186d6e = L.circleMarker(
+                [1.32382, -70.1939],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_c68c476d092b4141914a7de8984eff6e = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_bdf6c63c4670452aa9cfa46d6b8cbc6c = $(`<div id="html_bdf6c63c4670452aa9cfa46d6b8cbc6c" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_c68c476d092b4141914a7de8984eff6e.setContent(html_bdf6c63c4670452aa9cfa46d6b8cbc6c);
+        
+
+        circle_marker_86e5c975eadb480ca91650dbed186d6e.bindPopup(popup_c68c476d092b4141914a7de8984eff6e)
+        ;
+
+        
+    
+    
+            circle_marker_86e5c975eadb480ca91650dbed186d6e.bindTooltip(
+                `<div>
+                     Cubeo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5deb26067e3e464f9493321b08bafb60 = L.circleMarker(
+                [-10.2012, -72.3208],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_5eef2f243e204e78b2f8dc0f97a84a68 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_ea040dfaa64c4decbe05710506193597 = $(`<div id="html_ea040dfaa64c4decbe05710506193597" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_5eef2f243e204e78b2f8dc0f97a84a68.setContent(html_ea040dfaa64c4decbe05710506193597);
+        
+
+        circle_marker_5deb26067e3e464f9493321b08bafb60.bindPopup(popup_5eef2f243e204e78b2f8dc0f97a84a68)
+        ;
+
+        
+    
+    
+            circle_marker_5deb26067e3e464f9493321b08bafb60.bindTooltip(
+                `<div>
+                     Amahuaca
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7f6e852a8a3a4474ba2a9fabbaed2047 = L.circleMarker(
+                [-14.3707, -59.5187],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_d8729a7edb0146d28e74bb608d90e8da = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_87ba0ff77f7a4af0880b23c0e1c23716 = $(`<div id="html_87ba0ff77f7a4af0880b23c0e1c23716" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_d8729a7edb0146d28e74bb608d90e8da.setContent(html_87ba0ff77f7a4af0880b23c0e1c23716);
+        
+
+        circle_marker_7f6e852a8a3a4474ba2a9fabbaed2047.bindPopup(popup_d8729a7edb0146d28e74bb608d90e8da)
+        ;
+
+        
+    
+    
+            circle_marker_7f6e852a8a3a4474ba2a9fabbaed2047.bindTooltip(
+                `<div>
+                     Nambikwara
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f1fb449b31fa4c139f7c4946c6494802 = L.circleMarker(
+                [-22.807778, -42.106389],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_8fd1a653642d4f5cab7f46e31cba1558 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_338719ea2ca542248935df6ec2778291 = $(`<div id="html_338719ea2ca542248935df6ec2778291" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_8fd1a653642d4f5cab7f46e31cba1558.setContent(html_338719ea2ca542248935df6ec2778291);
+        
+
+        circle_marker_f1fb449b31fa4c139f7c4946c6494802.bindPopup(popup_8fd1a653642d4f5cab7f46e31cba1558)
+        ;
+
+        
+    
+    
+            circle_marker_f1fb449b31fa4c139f7c4946c6494802.bindTooltip(
+                `<div>
+                     Tupinambá
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_234b59c4156043d0a90557ae7d41eee7 = L.circleMarker(
+                [-14.3017, -52.4367],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_ffbc994ed2cb4ec1b37fc901481f600a = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_ec44201f5c2a445987039ad08decb7e7 = $(`<div id="html_ec44201f5c2a445987039ad08decb7e7" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_ffbc994ed2cb4ec1b37fc901481f600a.setContent(html_ec44201f5c2a445987039ad08decb7e7);
+        
+
+        circle_marker_234b59c4156043d0a90557ae7d41eee7.bindPopup(popup_ffbc994ed2cb4ec1b37fc901481f600a)
+        ;
+
+        
+    
+    
+            circle_marker_234b59c4156043d0a90557ae7d41eee7.bindTooltip(
+                `<div>
+                     Shavante
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7020a109b6e7463c98e6d2f0b8114f71 = L.circleMarker(
+                [-26.9217, -49.5886],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_db0b1a745a0342be8202fca40a5a9def = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_e3abde3ed61147978263df49b49f64fd = $(`<div id="html_e3abde3ed61147978263df49b49f64fd" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_db0b1a745a0342be8202fca40a5a9def.setContent(html_e3abde3ed61147978263df49b49f64fd);
+        
+
+        circle_marker_7020a109b6e7463c98e6d2f0b8114f71.bindPopup(popup_db0b1a745a0342be8202fca40a5a9def)
+        ;
+
+        
+    
+    
+            circle_marker_7020a109b6e7463c98e6d2f0b8114f71.bindTooltip(
+                `<div>
+                     Aweikoma
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6646430f353e4706ade7c5b989c2ad3c = L.circleMarker(
+                [-55.2748, -68.2648],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_f51c2bf587cb49c1a4ddc2f533473455 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_2b703b378944474892b975de0bb25c25 = $(`<div id="html_2b703b378944474892b975de0bb25c25" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Birds or Waterfowl</div>`)[0];
+            popup_f51c2bf587cb49c1a4ddc2f533473455.setContent(html_2b703b378944474892b975de0bb25c25);
+        
+
+        circle_marker_6646430f353e4706ade7c5b989c2ad3c.bindPopup(popup_f51c2bf587cb49c1a4ddc2f533473455)
+        ;
+
+        
+    
+    
+            circle_marker_6646430f353e4706ade7c5b989c2ad3c.bindTooltip(
+                `<div>
+                     Yahgan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a37a2f37b7ae4ba8b1c2349575f82ad7 = L.circleMarker(
+                [4.62047, 26.7157],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_7828d2b33beb4de1a6c3573710cabf54 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_ce62265067e1446ca973d5a445d3af2c = $(`<div id="html_ce62265067e1446ca973d5a445d3af2c" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Active, but not supporting morality<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_7828d2b33beb4de1a6c3573710cabf54.setContent(html_ce62265067e1446ca973d5a445d3af2c);
+        
+
+        circle_marker_a37a2f37b7ae4ba8b1c2349575f82ad7.bindPopup(popup_7828d2b33beb4de1a6c3573710cabf54)
+        ;
+
+        
+    
+    
+            circle_marker_a37a2f37b7ae4ba8b1c2349575f82ad7.bindTooltip(
+                `<div>
+                     Azande
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_30a330819ac54fdc927e76e43dbe5341 = L.circleMarker(
+                [-5.76495, 17.7736],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_9bf20c07b350483eb1c6f27e993bfd64 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_cd5e6fcadfd94ad39ee86dec3e9dcf07 = $(`<div id="html_cd5e6fcadfd94ad39ee86dec3e9dcf07" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_9bf20c07b350483eb1c6f27e993bfd64.setContent(html_cd5e6fcadfd94ad39ee86dec3e9dcf07);
+        
+
+        circle_marker_30a330819ac54fdc927e76e43dbe5341.bindPopup(popup_9bf20c07b350483eb1c6f27e993bfd64)
+        ;
+
+        
+    
+    
+            circle_marker_30a330819ac54fdc927e76e43dbe5341.bindTooltip(
+                `<div>
+                     Suku
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0a0a73b732af47098faf80b09ab3325e = L.circleMarker(
+                [20.7926, 93.9665],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_23b003985148461badc3fc63c190ec42 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_7cb24ed9b651400b9cc95269911f63f5 = $(`<div id="html_7cb24ed9b651400b9cc95269911f63f5" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 5 (Mahayana Buddhism)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_23b003985148461badc3fc63c190ec42.setContent(html_7cb24ed9b651400b9cc95269911f63f5);
+        
+
+        circle_marker_0a0a73b732af47098faf80b09ab3325e.bindPopup(popup_23b003985148461badc3fc63c190ec42)
+        ;
+
+        
+    
+    
+            circle_marker_0a0a73b732af47098faf80b09ab3325e.bindTooltip(
+                `<div>
+                     Burmese
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7b12392a5f0f45309a784bf6b41ee7ab = L.circleMarker(
+                [5.98085, 101.026],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_c58add5e8efe47cfb640254ddacc4e57 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_82414e3046964c07ab87f3347ce57f02 = $(`<div id="html_82414e3046964c07ab87f3347ce57f02" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Active, but not supporting morality<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_c58add5e8efe47cfb640254ddacc4e57.setContent(html_82414e3046964c07ab87f3347ce57f02);
+        
+
+        circle_marker_7b12392a5f0f45309a784bf6b41ee7ab.bindPopup(popup_c58add5e8efe47cfb640254ddacc4e57)
+        ;
+
+        
+    
+    
+            circle_marker_7b12392a5f0f45309a784bf6b41ee7ab.bindTooltip(
+                `<div>
+                     Semang
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_28d268707d6b41468db773b6a4283f94 = L.circleMarker(
+                [6.97396, 81.2618],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_590fa427f5a34ce0b4e87742b61018dc = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_2ccbe121dd174abe9e289923c651d8c3 = $(`<div id="html_2ccbe121dd174abe9e289923c651d8c3" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_590fa427f5a34ce0b4e87742b61018dc.setContent(html_2ccbe121dd174abe9e289923c651d8c3);
+        
+
+        circle_marker_28d268707d6b41468db773b6a4283f94.bindPopup(popup_590fa427f5a34ce0b4e87742b61018dc)
+        ;
+
+        
+    
+    
+            circle_marker_28d268707d6b41468db773b6a4283f94.bindTooltip(
+                `<div>
+                     Vedda
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_de6cd1b83e874f778b1dceb78d7686e5 = L.circleMarker(
+                [-3.83115, 35.0458],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_c04116b91eef4e769ac5ca6e09e94883 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_125d8e96b8bb499e8f025285edcec3de = $(`<div id="html_125d8e96b8bb499e8f025285edcec3de" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_c04116b91eef4e769ac5ca6e09e94883.setContent(html_125d8e96b8bb499e8f025285edcec3de);
+        
+
+        circle_marker_de6cd1b83e874f778b1dceb78d7686e5.bindPopup(popup_c04116b91eef4e769ac5ca6e09e94883)
+        ;
+
+        
+    
+    
+            circle_marker_de6cd1b83e874f778b1dceb78d7686e5.bindTooltip(
+                `<div>
+                     Hadza
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a78c9cdd40b945f7a1303d5ceb05c688 = L.circleMarker(
+                [-11.6308, 130.949],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_658b132020b64220b264991277829733 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_a012631d81834d038b3d64eb00366122 = $(`<div id="html_a012631d81834d038b3d64eb00366122" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_658b132020b64220b264991277829733.setContent(html_a012631d81834d038b3d64eb00366122);
+        
+
+        circle_marker_a78c9cdd40b945f7a1303d5ceb05c688.bindPopup(popup_658b132020b64220b264991277829733)
+        ;
+
+        
+    
+    
+            circle_marker_a78c9cdd40b945f7a1303d5ceb05c688.bindTooltip(
+                `<div>
+                     Tiwi
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3febb30ee8744daab5f476b3ac98b449 = L.circleMarker(
+                [-23.3583, 135.046],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_f5a77eba05a2490f841ae82eef231d2f = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_46be9a72e2174c4e9f27d53f80b5b49b = $(`<div id="html_46be9a72e2174c4e9f27d53f80b5b49b" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Small Species<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_f5a77eba05a2490f841ae82eef231d2f.setContent(html_46be9a72e2174c4e9f27d53f80b5b49b);
+        
+
+        circle_marker_3febb30ee8744daab5f476b3ac98b449.bindPopup(popup_f5a77eba05a2490f841ae82eef231d2f)
+        ;
+
+        
+    
+    
+            circle_marker_3febb30ee8744daab5f476b3ac98b449.bindTooltip(
+                `<div>
+                     Northern Aranda
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a67ef67681b2430e9859a6fcbab621de = L.circleMarker(
+                [-15.9534, 168.228],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_d5c0482c58e540338a1630d9ba45075a = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_28d046badfea49e09a250d29dcc4642a = $(`<div id="html_28d046badfea49e09a250d29dcc4642a" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Birds or Waterfowl</div>`)[0];
+            popup_d5c0482c58e540338a1630d9ba45075a.setContent(html_28d046badfea49e09a250d29dcc4642a);
+        
+
+        circle_marker_a67ef67681b2430e9859a6fcbab621de.bindPopup(popup_d5c0482c58e540338a1630d9ba45075a)
+        ;
+
+        
+    
+    
+            circle_marker_a67ef67681b2430e9859a6fcbab621de.bindTooltip(
+                `<div>
+                     Bunlap
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f6bb90424e734ae7ac07d090de327d69 = L.circleMarker(
+                [-38.2881, 176.541],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_d18933cea2984cc6a5f0c239be4685a2 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_116c55ec99b448118716129d78482738 = $(`<div id="html_116c55ec99b448118716129d78482738" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Birds or Waterfowl</div>`)[0];
+            popup_d18933cea2984cc6a5f0c239be4685a2.setContent(html_116c55ec99b448118716129d78482738);
+        
+
+        circle_marker_f6bb90424e734ae7ac07d090de327d69.bindPopup(popup_d18933cea2984cc6a5f0c239be4685a2)
+        ;
+
+        
+    
+    
+            circle_marker_f6bb90424e734ae7ac07d090de327d69.bindTooltip(
+                `<div>
+                     Māori
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d03fbf07b467427aa040b3ba40af7c31 = L.circleMarker(
+                [-8.89412, -140.108],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_2c49af10e5c74f538fb811580af67b32 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_fb626dec93004f55971dc9462a4dfb5e = $(`<div id="html_fb626dec93004f55971dc9462a4dfb5e" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_2c49af10e5c74f538fb811580af67b32.setContent(html_fb626dec93004f55971dc9462a4dfb5e);
+        
+
+        circle_marker_d03fbf07b467427aa040b3ba40af7c31.bindPopup(popup_2c49af10e5c74f538fb811580af67b32)
+        ;
+
+        
+    
+    
+            circle_marker_d03fbf07b467427aa040b3ba40af7c31.bindTooltip(
+                `<div>
+                     Marquesans
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bb4498a72bc84ffdb971c1f8aa71e1b1 = L.circleMarker(
+                [-13.92, -171.83],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_42e3b4e0ff004bba964e501a551eb93a = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_fcc13cf69e2c442ba2c11306b71b9f22 = $(`<div id="html_fcc13cf69e2c442ba2c11306b71b9f22" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Birds or Waterfowl</div>`)[0];
+            popup_42e3b4e0ff004bba964e501a551eb93a.setContent(html_fcc13cf69e2c442ba2c11306b71b9f22);
+        
+
+        circle_marker_bb4498a72bc84ffdb971c1f8aa71e1b1.bindPopup(popup_42e3b4e0ff004bba964e501a551eb93a)
+        ;
+
+        
+    
+    
+            circle_marker_bb4498a72bc84ffdb971c1f8aa71e1b1.bindTooltip(
+                `<div>
+                     Upolu Samoans
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9b8bcb63b0944d1893a8b4aecc0190d1 = L.circleMarker(
+                [7.346993, 151.598607],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_8ed9bee6ea5248a5a4b3e33dd6738005 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_8b014a446b0142ee9cffb25ddd1f76a4 = $(`<div id="html_8b014a446b0142ee9cffb25ddd1f76a4" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Birds or Waterfowl</div>`)[0];
+            popup_8ed9bee6ea5248a5a4b3e33dd6738005.setContent(html_8b014a446b0142ee9cffb25ddd1f76a4);
+        
+
+        circle_marker_9b8bcb63b0944d1893a8b4aecc0190d1.bindPopup(popup_8ed9bee6ea5248a5a4b3e33dd6738005)
+        ;
+
+        
+    
+    
+            circle_marker_9b8bcb63b0944d1893a8b4aecc0190d1.bindTooltip(
+                `<div>
+                     Trukese
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_af80cf73fc004706b4b1e88bcd5fcba1 = L.circleMarker(
+                [16.6646, 121.113],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_41c7689016724c40b82768170618fe1c = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_1ea2206d17db4567b919cf424333fd90 = $(`<div id="html_1ea2206d17db4567b919cf424333fd90" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_41c7689016724c40b82768170618fe1c.setContent(html_1ea2206d17db4567b919cf424333fd90);
+        
+
+        circle_marker_af80cf73fc004706b4b1e88bcd5fcba1.bindPopup(popup_41c7689016724c40b82768170618fe1c)
+        ;
+
+        
+    
+    
+            circle_marker_af80cf73fc004706b4b1e88bcd5fcba1.bindTooltip(
+                `<div>
+                     Ifugao
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0494c7f034c14a5a83a7e05c0171716f = L.circleMarker(
+                [24.5209, 121.388],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_c32d3271ed7b4083a90b4bb28e15254a = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_1418ebbe558847b7a83e37e221f3833a = $(`<div id="html_1418ebbe558847b7a83e37e221f3833a" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_c32d3271ed7b4083a90b4bb28e15254a.setContent(html_1418ebbe558847b7a83e37e221f3833a);
+        
+
+        circle_marker_0494c7f034c14a5a83a7e05c0171716f.bindPopup(popup_c32d3271ed7b4083a90b4bb28e15254a)
+        ;
+
+        
+    
+    
+            circle_marker_0494c7f034c14a5a83a7e05c0171716f.bindTooltip(
+                `<div>
+                     Atayal
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9220a0aedfa748f3977c1b62c4030e09 = L.circleMarker(
+                [15.1576, -84.2942],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_1549032c92844d238f9bc757e22581ec = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_289491a86d0d41fb97b7eb1d1e582106 = $(`<div id="html_289491a86d0d41fb97b7eb1d1e582106" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_1549032c92844d238f9bc757e22581ec.setContent(html_289491a86d0d41fb97b7eb1d1e582106);
+        
+
+        circle_marker_9220a0aedfa748f3977c1b62c4030e09.bindPopup(popup_1549032c92844d238f9bc757e22581ec)
+        ;
+
+        
+    
+    
+            circle_marker_9220a0aedfa748f3977c1b62c4030e09.bindTooltip(
+                `<div>
+                     Miskito
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_464129d4e51a458d8ed3c58dbe3a0c68 = L.circleMarker(
+                [9.39794, -83.0539],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_7bb6ae631d6a45b8abb9b3a2b1f9e98c = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_5ceb124920dc4c43aaf1e132c203c5e6 = $(`<div id="html_5ceb124920dc4c43aaf1e132c203c5e6" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Active, but not supporting morality<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_7bb6ae631d6a45b8abb9b3a2b1f9e98c.setContent(html_5ceb124920dc4c43aaf1e132c203c5e6);
+        
+
+        circle_marker_464129d4e51a458d8ed3c58dbe3a0c68.bindPopup(popup_7bb6ae631d6a45b8abb9b3a2b1f9e98c)
+        ;
+
+        
+    
+    
+            circle_marker_464129d4e51a458d8ed3c58dbe3a0c68.bindTooltip(
+                `<div>
+                     Bribri
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e938891cbd3c46fe98a571669b2a999d = L.circleMarker(
+                [0.71489, -79.0508],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_aeb1f6f4f7c54b19b318d5e7a35620f6 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_87870e0ca32e4d05ae501d11afd3ed57 = $(`<div id="html_87870e0ca32e4d05ae501d11afd3ed57" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_aeb1f6f4f7c54b19b318d5e7a35620f6.setContent(html_87870e0ca32e4d05ae501d11afd3ed57);
+        
+
+        circle_marker_e938891cbd3c46fe98a571669b2a999d.bindPopup(popup_aeb1f6f4f7c54b19b318d5e7a35620f6)
+        ;
+
+        
+    
+    
+            circle_marker_e938891cbd3c46fe98a571669b2a999d.bindTooltip(
+                `<div>
+                     Chachi
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7dc9c8332f66441580ed41394ba709a0 = L.circleMarker(
+                [-3.45136, -78.1892],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_4d8ae1508ffc4e7199605d071c3d5dc4 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_cf16363b50554a16a1b440c4643621dd = $(`<div id="html_cf16363b50554a16a1b440c4643621dd" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_4d8ae1508ffc4e7199605d071c3d5dc4.setContent(html_cf16363b50554a16a1b440c4643621dd);
+        
+
+        circle_marker_7dc9c8332f66441580ed41394ba709a0.bindPopup(popup_4d8ae1508ffc4e7199605d071c3d5dc4)
+        ;
+
+        
+    
+    
+            circle_marker_7dc9c8332f66441580ed41394ba709a0.bindTooltip(
+                `<div>
+                     Shuar
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_952681c764fe457d823085f8c374f793 = L.circleMarker(
+                [-6.10712, -45.1299],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_7044ade58e074eed913308bcb578eb63 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_27560e1cec844aa5acedaca3b7f8d7bb = $(`<div id="html_27560e1cec844aa5acedaca3b7f8d7bb" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_7044ade58e074eed913308bcb578eb63.setContent(html_27560e1cec844aa5acedaca3b7f8d7bb);
+        
+
+        circle_marker_952681c764fe457d823085f8c374f793.bindPopup(popup_7044ade58e074eed913308bcb578eb63)
+        ;
+
+        
+    
+    
+            circle_marker_952681c764fe457d823085f8c374f793.bindTooltip(
+                `<div>
+                     Canela
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c5007cbe8eb74ca08b7c6204c3e1d8cd = L.circleMarker(
+                [7.15484, 1.66495],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_596d28713672416ebb629d64450e8e38 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_b68d94ca2fe245de884e0a1388d69bd1 = $(`<div id="html_b68d94ca2fe245de884e0a1388d69bd1" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_596d28713672416ebb629d64450e8e38.setContent(html_b68d94ca2fe245de884e0a1388d69bd1);
+        
+
+        circle_marker_c5007cbe8eb74ca08b7c6204c3e1d8cd.bindPopup(popup_596d28713672416ebb629d64450e8e38)
+        ;
+
+        
+    
+    
+            circle_marker_c5007cbe8eb74ca08b7c6204c3e1d8cd.bindTooltip(
+                `<div>
+                     Fon
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_93f7bbf407794c7e8a090abb4b6d18b3 = L.circleMarker(
+                [20.681188, 105.774071],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_38af1ad3a6d949388abf4d3320db1427 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_847e8071f7f544a295a5b13176c31687 = $(`<div id="html_847e8071f7f544a295a5b13176c31687" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 5 (Mahayana Buddhism)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_38af1ad3a6d949388abf4d3320db1427.setContent(html_847e8071f7f544a295a5b13176c31687);
+        
+
+        circle_marker_93f7bbf407794c7e8a090abb4b6d18b3.bindPopup(popup_38af1ad3a6d949388abf4d3320db1427)
+        ;
+
+        
+    
+    
+            circle_marker_93f7bbf407794c7e8a090abb4b6d18b3.bindTooltip(
+                `<div>
+                     Annamese
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_521fb0ab1e8343f9849957a5e2362d90 = L.circleMarker(
+                [13.4125, 103.866667],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_5494c177f1f24b179dd51fcece549a46 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_2aa0aa435c074d28a12c49f11e125c23 = $(`<div id="html_2aa0aa435c074d28a12c49f11e125c23" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 6 (Hinayana Buddhism)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_5494c177f1f24b179dd51fcece549a46.setContent(html_2aa0aa435c074d28a12c49f11e125c23);
+        
+
+        circle_marker_521fb0ab1e8343f9849957a5e2362d90.bindPopup(popup_5494c177f1f24b179dd51fcece549a46)
+        ;
+
+        
+    
+    
+            circle_marker_521fb0ab1e8343f9849957a5e2362d90.bindTooltip(
+                `<div>
+                     Ancient Khmer
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3ba6cfff82c0416f9b95d4e348d9dbfc = L.circleMarker(
+                [2.09041, 112.934],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_7640d2cb7845403e8ad578479a01c2d1 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_294538f778f84190b36887cc458f6037 = $(`<div id="html_294538f778f84190b36887cc458f6037" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_7640d2cb7845403e8ad578479a01c2d1.setContent(html_294538f778f84190b36887cc458f6037);
+        
+
+        circle_marker_3ba6cfff82c0416f9b95d4e348d9dbfc.bindPopup(popup_7640d2cb7845403e8ad578479a01c2d1)
+        ;
+
+        
+    
+    
+            circle_marker_3ba6cfff82c0416f9b95d4e348d9dbfc.bindTooltip(
+                `<div>
+                     Iban
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e5b4528f8ec1435dbf796e126a367983 = L.circleMarker(
+                [-8.31058, 124.588],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_a6cbe26c534a49beab55ef42a149a6fe = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_d0c94ec8cb2944b5aa61fc92ecc2ef0f = $(`<div id="html_d0c94ec8cb2944b5aa61fc92ecc2ef0f" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 3 (superficial Islamization)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Otiose<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_a6cbe26c534a49beab55ef42a149a6fe.setContent(html_d0c94ec8cb2944b5aa61fc92ecc2ef0f);
+        
+
+        circle_marker_e5b4528f8ec1435dbf796e126a367983.bindPopup(popup_a6cbe26c534a49beab55ef42a149a6fe)
+        ;
+
+        
+    
+    
+            circle_marker_e5b4528f8ec1435dbf796e126a367983.bindTooltip(
+                `<div>
+                     Alorese
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d84aa5fe549e48039daa91437eeef933 = L.circleMarker(
+                [-8.79019, 148.09],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_96913d9152394925930337e95503c90d = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_ae7ca644f1434c31821f1d3b3609db4a = $(`<div id="html_ae7ca644f1434c31821f1d3b3609db4a" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_96913d9152394925930337e95503c90d.setContent(html_ae7ca644f1434c31821f1d3b3609db4a);
+        
+
+        circle_marker_d84aa5fe549e48039daa91437eeef933.bindPopup(popup_96913d9152394925930337e95503c90d)
+        ;
+
+        
+    
+    
+            circle_marker_d84aa5fe549e48039daa91437eeef933.bindTooltip(
+                `<div>
+                     Orokaiva
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6e7b1c4fbe6848c09027fdb9c61a16be = L.circleMarker(
+                [-3.88974, 136.018],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_673e863c64be4e39a82d28b31f398018 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_01bf98aa9aba45368658f7b80a87610e = $(`<div id="html_01bf98aa9aba45368658f7b80a87610e" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Otiose<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_673e863c64be4e39a82d28b31f398018.setContent(html_01bf98aa9aba45368658f7b80a87610e);
+        
+
+        circle_marker_6e7b1c4fbe6848c09027fdb9c61a16be.bindPopup(popup_673e863c64be4e39a82d28b31f398018)
+        ;
+
+        
+    
+    
+            circle_marker_6e7b1c4fbe6848c09027fdb9c61a16be.bindTooltip(
+                `<div>
+                     Mee
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ad9729f6076b4a82b909690d8aa820c1 = L.circleMarker(
+                [-4.08721, 142.664],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_58b668924276472a9a0760046f35662d = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_361efe33291f4fe991375d3c7d65a5a1 = $(`<div id="html_361efe33291f4fe991375d3c7d65a5a1" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_58b668924276472a9a0760046f35662d.setContent(html_361efe33291f4fe991375d3c7d65a5a1);
+        
+
+        circle_marker_ad9729f6076b4a82b909690d8aa820c1.bindPopup(popup_58b668924276472a9a0760046f35662d)
+        ;
+
+        
+    
+    
+            circle_marker_ad9729f6076b4a82b909690d8aa820c1.bindTooltip(
+                `<div>
+                     Kwoma
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4e37ed43826b47bbbd56de1b6277dfd4 = L.circleMarker(
+                [-3.0557, 151.661],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_b5971c0329114f3cbcffd5f16a130d1b = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_e66d5060fcee44bd978f5964fbf6ee29 = $(`<div id="html_e66d5060fcee44bd978f5964fbf6ee29" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_b5971c0329114f3cbcffd5f16a130d1b.setContent(html_e66d5060fcee44bd978f5964fbf6ee29);
+        
+
+        circle_marker_4e37ed43826b47bbbd56de1b6277dfd4.bindPopup(popup_b5971c0329114f3cbcffd5f16a130d1b)
+        ;
+
+        
+    
+    
+            circle_marker_4e37ed43826b47bbbd56de1b6277dfd4.bindTooltip(
+                `<div>
+                     Lesu
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c308ba4b59d44cf0951222200a96654f = L.circleMarker(
+                [-8.72574, 151.072],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_77362da9693844fe9404a9a84d54dd9a = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_ce85289d27ab48e497881f1179e6d358 = $(`<div id="html_ce85289d27ab48e497881f1179e6d358" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Birds or Waterfowl</div>`)[0];
+            popup_77362da9693844fe9404a9a84d54dd9a.setContent(html_ce85289d27ab48e497881f1179e6d358);
+        
+
+        circle_marker_c308ba4b59d44cf0951222200a96654f.bindPopup(popup_77362da9693844fe9404a9a84d54dd9a)
+        ;
+
+        
+    
+    
+            circle_marker_c308ba4b59d44cf0951222200a96654f.bindTooltip(
+                `<div>
+                     Trobriands
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1ac5e5afa2c74ca2984ee9f81da693fc = L.circleMarker(
+                [-6.6429, 155.452],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_777fae6be5f74810926f558b48966efb = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_7a6ebf3ff87b4d99aa90aec050d48d12 = $(`<div id="html_7a6ebf3ff87b4d99aa90aec050d48d12" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Pigs<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_777fae6be5f74810926f558b48966efb.setContent(html_7a6ebf3ff87b4d99aa90aec050d48d12);
+        
+
+        circle_marker_1ac5e5afa2c74ca2984ee9f81da693fc.bindPopup(popup_777fae6be5f74810926f558b48966efb)
+        ;
+
+        
+    
+    
+            circle_marker_1ac5e5afa2c74ca2984ee9f81da693fc.bindTooltip(
+                `<div>
+                     Siuai
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d8294d95cbc848d8be127c70169cfab7 = L.circleMarker(
+                [-6.86828, 37.5557],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_f3a2f519f1df42b5b45120835b16c580 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_2a2ee706f4214121af59e56ac702ca32 = $(`<div id="html_2a2ee706f4214121af59e56ac702ca32" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Ovides<br />Role of God(s): Otiose<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_f3a2f519f1df42b5b45120835b16c580.setContent(html_2a2ee706f4214121af59e56ac702ca32);
+        
+
+        circle_marker_d8294d95cbc848d8be127c70169cfab7.bindPopup(popup_f3a2f519f1df42b5b45120835b16c580)
+        ;
+
+        
+    
+    
+            circle_marker_d8294d95cbc848d8be127c70169cfab7.bindTooltip(
+                `<div>
+                     Luguru
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4edd7a61ac284f489598ece0a11317d1 = L.circleMarker(
+                [0.66884, 32.15153],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_eef7dfc178454217bd18f8c12432f282 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_c9bcfaf035b24262b8787be2d9996bae = $(`<div id="html_c9bcfaf035b24262b8787be2d9996bae" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Ovides<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_eef7dfc178454217bd18f8c12432f282.setContent(html_c9bcfaf035b24262b8787be2d9996bae);
+        
+
+        circle_marker_4edd7a61ac284f489598ece0a11317d1.bindPopup(popup_eef7dfc178454217bd18f8c12432f282)
+        ;
+
+        
+    
+    
+            circle_marker_4edd7a61ac284f489598ece0a11317d1.bindTooltip(
+                `<div>
+                     Ganda
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e3a7a44be3e64fada21185e5326756b6 = L.circleMarker(
+                [35.0056, -108.782],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_84af6110b2ee4dceab795aeee387d83c = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_ec63ff16e54f478382d9dcb5b10241dd = $(`<div id="html_ec63ff16e54f478382d9dcb5b10241dd" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Ovides<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_84af6110b2ee4dceab795aeee387d83c.setContent(html_ec63ff16e54f478382d9dcb5b10241dd);
+        
+
+        circle_marker_e3a7a44be3e64fada21185e5326756b6.bindPopup(popup_84af6110b2ee4dceab795aeee387d83c)
+        ;
+
+        
+    
+    
+            circle_marker_e3a7a44be3e64fada21185e5326756b6.bindTooltip(
+                `<div>
+                     Zuni
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2d49045c6198434e9419f509fb62502b = L.circleMarker(
+                [-17.0, -68.5],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_c5be919203874fb8b718c7835f5b61de = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_d75a504986e04a498c525089705683af = $(`<div id="html_d75a504986e04a498c525089705683af" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Ovides<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Birds or Waterfowl</div>`)[0];
+            popup_c5be919203874fb8b718c7835f5b61de.setContent(html_d75a504986e04a498c525089705683af);
+        
+
+        circle_marker_2d49045c6198434e9419f509fb62502b.bindPopup(popup_c5be919203874fb8b718c7835f5b61de)
+        ;
+
+        
+    
+    
+            circle_marker_2d49045c6198434e9419f509fb62502b.bindTooltip(
+                `<div>
+                     Aymara
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_61c12311fb554b1e9f7faa955040cc4b = L.circleMarker(
+                [-38.7392, -71.277],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_55109f8bcb034b04a3cc84a3650ad0d9 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_21bd5e09e0e243a5adcff3dcaea78c45 = $(`<div id="html_21bd5e09e0e243a5adcff3dcaea78c45" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Ovides<br />Role of God(s): Active, but not supporting morality<br />Animals Hunted: Birds or Waterfowl</div>`)[0];
+            popup_55109f8bcb034b04a3cc84a3650ad0d9.setContent(html_21bd5e09e0e243a5adcff3dcaea78c45);
+        
+
+        circle_marker_61c12311fb554b1e9f7faa955040cc4b.bindPopup(popup_55109f8bcb034b04a3cc84a3650ad0d9)
+        ;
+
+        
+    
+    
+            circle_marker_61c12311fb554b1e9f7faa955040cc4b.bindTooltip(
+                `<div>
+                     Mapuche
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3eb504be76d140b3b8976b270ba88825 = L.circleMarker(
+                [7.90935, -10.9926],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_b0039779f32f4e3cad77f79dd916f626 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_3268212f44d048809087d1cdf1d6c3a4 = $(`<div id="html_3268212f44d048809087d1cdf1d6c3a4" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 3 (superficial Islamization)<br />Primary Domesticated Animal: Ovides<br />Role of God(s): Otiose<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_b0039779f32f4e3cad77f79dd916f626.setContent(html_3268212f44d048809087d1cdf1d6c3a4);
+        
+
+        circle_marker_3eb504be76d140b3b8976b270ba88825.bindPopup(popup_b0039779f32f4e3cad77f79dd916f626)
+        ;
+
+        
+    
+    
+            circle_marker_3eb504be76d140b3b8976b270ba88825.bindTooltip(
+                `<div>
+                     Mende
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dcb5ca2c3c01425f9059e99ee7271fd5 = L.circleMarker(
+                [9.38875, 34.60448],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_d16b19ef75be48ceac1262bf65c00b7d = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_94a2001cf22c45b78a6d65e71e191360 = $(`<div id="html_94a2001cf22c45b78a6d65e71e191360" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Ovides<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_d16b19ef75be48ceac1262bf65c00b7d.setContent(html_94a2001cf22c45b78a6d65e71e191360);
+        
+
+        circle_marker_dcb5ca2c3c01425f9059e99ee7271fd5.bindPopup(popup_d16b19ef75be48ceac1262bf65c00b7d)
+        ;
+
+        
+    
+    
+            circle_marker_dcb5ca2c3c01425f9059e99ee7271fd5.bindTooltip(
+                `<div>
+                     Mao
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e6dc6e3b0c694f41a1260aa5a0958f29 = L.circleMarker(
+                [21.2837, 31.8992],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_278ff9c9b7f745a58f5a774c76fcaabb = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_f19c089416354ad38d42dc2997d9cf19 = $(`<div id="html_f19c089416354ad38d42dc2997d9cf19" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 1 (deep Islamization)<br />Primary Domesticated Animal: Ovides<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_278ff9c9b7f745a58f5a774c76fcaabb.setContent(html_f19c089416354ad38d42dc2997d9cf19);
+        
+
+        circle_marker_e6dc6e3b0c694f41a1260aa5a0958f29.bindPopup(popup_278ff9c9b7f745a58f5a774c76fcaabb)
+        ;
+
+        
+    
+    
+            circle_marker_e6dc6e3b0c694f41a1260aa5a0958f29.bindTooltip(
+                `<div>
+                     Barabra
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a207f78628fa42aab010b6add661c2a5 = L.circleMarker(
+                [31.7761, 35.1725],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_2f27cf1f6548468c8862462567d43e2b = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_6ee583ae805042c3aa9581d68c8d2b4e = $(`<div id="html_6ee583ae805042c3aa9581d68c8d2b4e" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Ovides<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_2f27cf1f6548468c8862462567d43e2b.setContent(html_6ee583ae805042c3aa9581d68c8d2b4e);
+        
+
+        circle_marker_a207f78628fa42aab010b6add661c2a5.bindPopup(popup_2f27cf1f6548468c8862462567d43e2b)
+        ;
+
+        
+    
+    
+            circle_marker_a207f78628fa42aab010b6add661c2a5.bindTooltip(
+                `<div>
+                     Hebrews
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d23402ad224a4a4ca9e47870e21dd8e4 = L.circleMarker(
+                [35.6539, 45.8077],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_b97b5d986d664c1088c979858da782d0 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_8f24053568714bca8ab0a4677b797023 = $(`<div id="html_8f24053568714bca8ab0a4677b797023" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 1 (deep Islamization)<br />Primary Domesticated Animal: Ovides<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_b97b5d986d664c1088c979858da782d0.setContent(html_8f24053568714bca8ab0a4677b797023);
+        
+
+        circle_marker_d23402ad224a4a4ca9e47870e21dd8e4.bindPopup(popup_b97b5d986d664c1088c979858da782d0)
+        ;
+
+        
+    
+    
+            circle_marker_d23402ad224a4a4ca9e47870e21dd8e4.bindTooltip(
+                `<div>
+                     Kurd
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2c74a749c04849758f8a97ba96065264 = L.circleMarker(
+                [28.1947, 102.121],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_e698e8aaad0943019868618a35e1bf12 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_f84a0dbdee834086b9b9ddff12df7dd1 = $(`<div id="html_f84a0dbdee834086b9b9ddff12df7dd1" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Ovides<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_e698e8aaad0943019868618a35e1bf12.setContent(html_f84a0dbdee834086b9b9ddff12df7dd1);
+        
+
+        circle_marker_2c74a749c04849758f8a97ba96065264.bindPopup(popup_e698e8aaad0943019868618a35e1bf12)
+        ;
+
+        
+    
+    
+            circle_marker_2c74a749c04849758f8a97ba96065264.bindTooltip(
+                `<div>
+                     Lolo
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_15065f45cc8e4d89b9a94941c2607317 = L.circleMarker(
+                [42.5861, -121.704],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_ad0b06732561434e8dcb657db6c21452 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_88af43ea0dc24b9694d4dcfe1dc2bf90 = $(`<div id="html_88af43ea0dc24b9694d4dcfe1dc2bf90" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Equines<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_ad0b06732561434e8dcb657db6c21452.setContent(html_88af43ea0dc24b9694d4dcfe1dc2bf90);
+        
+
+        circle_marker_15065f45cc8e4d89b9a94941c2607317.bindPopup(popup_ad0b06732561434e8dcb657db6c21452)
+        ;
+
+        
+    
+    
+            circle_marker_15065f45cc8e4d89b9a94941c2607317.bindTooltip(
+                `<div>
+                     Klamath
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_76d070526f084aabbe936c706d1c7810 = L.circleMarker(
+                [48.7892, -115.065],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_ba2994c35f6e412da1909d762947122a = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_645ca540affe495bb3ea0379017031fb = $(`<div id="html_645ca540affe495bb3ea0379017031fb" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Equines<br />Role of God(s): Otiose<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_ba2994c35f6e412da1909d762947122a.setContent(html_645ca540affe495bb3ea0379017031fb);
+        
+
+        circle_marker_76d070526f084aabbe936c706d1c7810.bindPopup(popup_ba2994c35f6e412da1909d762947122a)
+        ;
+
+        
+    
+    
+            circle_marker_76d070526f084aabbe936c706d1c7810.bindTooltip(
+                `<div>
+                     Kutenai
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a0e58a48065b40dbaaca71055d34eebb = L.circleMarker(
+                [48.4834, -108.738],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_50c3cfb9a8d944e98f1e83cd26d2f158 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_b2b8d93c164c442b8962b7d0264451a8 = $(`<div id="html_b2b8d93c164c442b8962b7d0264451a8" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Equines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_50c3cfb9a8d944e98f1e83cd26d2f158.setContent(html_b2b8d93c164c442b8962b7d0264451a8);
+        
+
+        circle_marker_a0e58a48065b40dbaaca71055d34eebb.bindPopup(popup_50c3cfb9a8d944e98f1e83cd26d2f158)
+        ;
+
+        
+    
+    
+            circle_marker_a0e58a48065b40dbaaca71055d34eebb.bindTooltip(
+                `<div>
+                     Gros Ventre
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_caf46fb2cb454c9bb7ea7ae9255b7b05 = L.circleMarker(
+                [47.7534, -102.528],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_f65b7b2a4bcb44eab4321af41f844c43 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_50427de6d5594e57a8f3428910ce6632 = $(`<div id="html_50427de6d5594e57a8f3428910ce6632" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Equines<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_f65b7b2a4bcb44eab4321af41f844c43.setContent(html_50427de6d5594e57a8f3428910ce6632);
+        
+
+        circle_marker_caf46fb2cb454c9bb7ea7ae9255b7b05.bindPopup(popup_f65b7b2a4bcb44eab4321af41f844c43)
+        ;
+
+        
+    
+    
+            circle_marker_caf46fb2cb454c9bb7ea7ae9255b7b05.bindTooltip(
+                `<div>
+                     Hidatsa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9779cb2c1ab64b89925865258231d9e5 = L.circleMarker(
+                [36.2862, -96.8937],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_5b05130883084d9dba6645de8a753373 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_99c4aef721264f8a9d03e9454f8156af = $(`<div id="html_99c4aef721264f8a9d03e9454f8156af" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Equines<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_5b05130883084d9dba6645de8a753373.setContent(html_99c4aef721264f8a9d03e9454f8156af);
+        
+
+        circle_marker_9779cb2c1ab64b89925865258231d9e5.bindPopup(popup_5b05130883084d9dba6645de8a753373)
+        ;
+
+        
+    
+    
+            circle_marker_9779cb2c1ab64b89925865258231d9e5.bindTooltip(
+                `<div>
+                     Pawnee
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9f9209dbec8247b3af405d6e92ebf390 = L.circleMarker(
+                [31.0, -87.5],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_7fa2ae78a788423095772554c695b288 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_c03bb2e8b2fb412aac7113e9b018d8b1 = $(`<div id="html_c03bb2e8b2fb412aac7113e9b018d8b1" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Equines<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_7fa2ae78a788423095772554c695b288.setContent(html_c03bb2e8b2fb412aac7113e9b018d8b1);
+        
+
+        circle_marker_9f9209dbec8247b3af405d6e92ebf390.bindPopup(popup_7fa2ae78a788423095772554c695b288)
+        ;
+
+        
+    
+    
+            circle_marker_9f9209dbec8247b3af405d6e92ebf390.bindTooltip(
+                `<div>
+                     Muscogee
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_057bf568bd76440fb7b4381ac2da18c7 = L.circleMarker(
+                [33.1291, -105.566],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_d4912a2e5646465cb8094b9024759046 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_acdd3f4414a443d1bc45c1c8cb357616 = $(`<div id="html_acdd3f4414a443d1bc45c1c8cb357616" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Equines<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_d4912a2e5646465cb8094b9024759046.setContent(html_acdd3f4414a443d1bc45c1c8cb357616);
+        
+
+        circle_marker_057bf568bd76440fb7b4381ac2da18c7.bindPopup(popup_d4912a2e5646465cb8094b9024759046)
+        ;
+
+        
+    
+    
+            circle_marker_057bf568bd76440fb7b4381ac2da18c7.bindTooltip(
+                `<div>
+                     Chiricahua
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_51367bea572341b58553181035eb12ef = L.circleMarker(
+                [-22.6559, -58.9053],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_48bceeab880f4ab69614f52733b8447c = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_725034400dce4d59855e323a9fc8cc50 = $(`<div id="html_725034400dce4d59855e323a9fc8cc50" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Equines<br />Role of God(s): Otiose<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_48bceeab880f4ab69614f52733b8447c.setContent(html_725034400dce4d59855e323a9fc8cc50);
+        
+
+        circle_marker_51367bea572341b58553181035eb12ef.bindPopup(popup_48bceeab880f4ab69614f52733b8447c)
+        ;
+
+        
+    
+    
+            circle_marker_51367bea572341b58553181035eb12ef.bindTooltip(
+                `<div>
+                     Lengua
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b435c22804b44e07a20e8e868d9c6390 = L.circleMarker(
+                [-47.5796, -68.3235],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_d14faca8fe024a458d822d84d3cabede = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_d4e6a0de37434ad192c811e737cd8ba3 = $(`<div id="html_d4e6a0de37434ad192c811e737cd8ba3" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Equines<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_d14faca8fe024a458d822d84d3cabede.setContent(html_d4e6a0de37434ad192c811e737cd8ba3);
+        
+
+        circle_marker_b435c22804b44e07a20e8e868d9c6390.bindPopup(popup_d14faca8fe024a458d822d84d3cabede)
+        ;
+
+        
+    
+    
+            circle_marker_b435c22804b44e07a20e8e868d9c6390.bindTooltip(
+                `<div>
+                     Tehuelche
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_eb0a65c0637b4fe28db0d772c9183786 = L.circleMarker(
+                [68.6436, 170.045],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_e2e6c00dd05148efa672a7bc76cfbe2f = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_b1130d4ab2c448ad927a5ead903a3666 = $(`<div id="html_b1130d4ab2c448ad927a5ead903a3666" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Reindeer<br />Role of God(s): Active, but not supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_e2e6c00dd05148efa672a7bc76cfbe2f.setContent(html_b1130d4ab2c448ad927a5ead903a3666);
+        
+
+        circle_marker_eb0a65c0637b4fe28db0d772c9183786.bindPopup(popup_e2e6c00dd05148efa672a7bc76cfbe2f)
+        ;
+
+        
+    
+    
+            circle_marker_eb0a65c0637b4fe28db0d772c9183786.bindTooltip(
+                `<div>
+                     Chukchi
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d9baab313de3434a8b3debd16574dff8 = L.circleMarker(
+                [68.725, 22.1113],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_ce9157b6ef03409a995bcb8d5b6f9e0c = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_29b1d3ac8ce14e1992511c3541a3161e = $(`<div id="html_29b1d3ac8ce14e1992511c3541a3161e" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 2 (deep Christianization)<br />Primary Domesticated Animal: Reindeer<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_ce9157b6ef03409a995bcb8d5b6f9e0c.setContent(html_29b1d3ac8ce14e1992511c3541a3161e);
+        
+
+        circle_marker_d9baab313de3434a8b3debd16574dff8.bindPopup(popup_ce9157b6ef03409a995bcb8d5b6f9e0c)
+        ;
+
+        
+    
+    
+            circle_marker_d9baab313de3434a8b3debd16574dff8.bindTooltip(
+                `<div>
+                     Sami
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8217a34a49184841b5f4ed8efa3527b4 = L.circleMarker(
+                [66.1775, 71.0234],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_bce0823fd8974f08a334d4d1db136331 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_df6e1964d52e4bb59eafd9e0d1c1aa7a = $(`<div id="html_df6e1964d52e4bb59eafd9e0d1c1aa7a" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Reindeer<br />Role of God(s): Active, but not supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_bce0823fd8974f08a334d4d1db136331.setContent(html_df6e1964d52e4bb59eafd9e0d1c1aa7a);
+        
+
+        circle_marker_8217a34a49184841b5f4ed8efa3527b4.bindPopup(popup_bce0823fd8974f08a334d4d1db136331)
+        ;
+
+        
+    
+    
+            circle_marker_8217a34a49184841b5f4ed8efa3527b4.bindTooltip(
+                `<div>
+                     Yurak-Samoyeds
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_194314a4d58746a8b870e18bb7c184aa = L.circleMarker(
+                [-14.0853, -71.7663],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_f769a0f67e53424a8e30f108ec1dbfc3 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_6ce8e52d926b4c5ab939c8e254c7c735 = $(`<div id="html_6ce8e52d926b4c5ab939c8e254c7c735" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Camels<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_f769a0f67e53424a8e30f108ec1dbfc3.setContent(html_6ce8e52d926b4c5ab939c8e254c7c735);
+        
+
+        circle_marker_194314a4d58746a8b870e18bb7c184aa.bindPopup(popup_f769a0f67e53424a8e30f108ec1dbfc3)
+        ;
+
+        
+    
+    
+            circle_marker_194314a4d58746a8b870e18bb7c184aa.bindTooltip(
+                `<div>
+                     Inca
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d6332778fe5b42469a4a05dfcfec9cff = L.circleMarker(
+                [18.0426, 14.7717],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_f2e081a2cbc44754b568e5aa9cdd5795 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_213a4f071ad04b688bc37818be21be9f = $(`<div id="html_213a4f071ad04b688bc37818be21be9f" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 1 (deep Islamization)<br />Primary Domesticated Animal: Camels<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_f2e081a2cbc44754b568e5aa9cdd5795.setContent(html_213a4f071ad04b688bc37818be21be9f);
+        
+
+        circle_marker_d6332778fe5b42469a4a05dfcfec9cff.bindPopup(popup_f2e081a2cbc44754b568e5aa9cdd5795)
+        ;
+
+        
+    
+    
+            circle_marker_d6332778fe5b42469a4a05dfcfec9cff.bindTooltip(
+                `<div>
+                     Teda
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c9cd9dfd4a4f44b2a6dad18916216f32 = L.circleMarker(
+                [29.6742, 33.6113],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_cf60582b7a3a45d98ea0f42709a206a8 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_b7478db8a5614de0bb157ca4ebcad131 = $(`<div id="html_b7478db8a5614de0bb157ca4ebcad131" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 1 (deep Islamization)<br />Primary Domesticated Animal: Camels<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_cf60582b7a3a45d98ea0f42709a206a8.setContent(html_b7478db8a5614de0bb157ca4ebcad131);
+        
+
+        circle_marker_c9cd9dfd4a4f44b2a6dad18916216f32.bindPopup(popup_cf60582b7a3a45d98ea0f42709a206a8)
+        ;
+
+        
+    
+    
+            circle_marker_c9cd9dfd4a4f44b2a6dad18916216f32.bindTooltip(
+                `<div>
+                     Rwala
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_37a80d005c074a2f9290076adfb9fce5 = L.circleMarker(
+                [-0.29005, 36.719],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_208bce132c2143e289987edb2b73919c = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_4197a6d280c64a1c86a28e3d753f07df = $(`<div id="html_4197a6d280c64a1c86a28e3d753f07df" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, but not supporting morality<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_208bce132c2143e289987edb2b73919c.setContent(html_4197a6d280c64a1c86a28e3d753f07df);
+        
+
+        circle_marker_37a80d005c074a2f9290076adfb9fce5.bindPopup(popup_208bce132c2143e289987edb2b73919c)
+        ;
+
+        
+    
+    
+            circle_marker_37a80d005c074a2f9290076adfb9fce5.bindTooltip(
+                `<div>
+                     Kikuyu
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5e732df941614415b87667793f81d7fe = L.circleMarker(
+                [37.5, 128.0],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_52da1e0758764e78bec3b926f989fbab = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_168726734df64caebd9a9307c931a485 = $(`<div id="html_168726734df64caebd9a9307c931a485" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 5 (Mahayana Buddhism)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_52da1e0758764e78bec3b926f989fbab.setContent(html_168726734df64caebd9a9307c931a485);
+        
+
+        circle_marker_5e732df941614415b87667793f81d7fe.bindPopup(popup_52da1e0758764e78bec3b926f989fbab)
+        ;
+
+        
+    
+    
+            circle_marker_5e732df941614415b87667793f81d7fe.bindTooltip(
+                `<div>
+                     Koreans
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_32a5173684594771aa71726a4033cf81 = L.circleMarker(
+                [11.395566, -72.199791],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_f003b04019ea4647a4fa76653104ba3a = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_6ae40413619f41e5ac2890cf74220427 = $(`<div id="html_6ae40413619f41e5ac2890cf74220427" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, but not supporting morality<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_f003b04019ea4647a4fa76653104ba3a.setContent(html_6ae40413619f41e5ac2890cf74220427);
+        
+
+        circle_marker_32a5173684594771aa71726a4033cf81.bindPopup(popup_f003b04019ea4647a4fa76653104ba3a)
+        ;
+
+        
+    
+    
+            circle_marker_32a5173684594771aa71726a4033cf81.bindTooltip(
+                `<div>
+                     Wayuu
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_16ad94cf576c4d77962c6d2a01d2d219 = L.circleMarker(
+                [-29.0, -61.0],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_875e658d619f4f17b2d1710ce8e46460 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_d90eba1e0c6d4214a8a65fa9d9382ff8 = $(`<div id="html_d90eba1e0c6d4214a8a65fa9d9382ff8" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_875e658d619f4f17b2d1710ce8e46460.setContent(html_d90eba1e0c6d4214a8a65fa9d9382ff8);
+        
+
+        circle_marker_16ad94cf576c4d77962c6d2a01d2d219.bindPopup(popup_875e658d619f4f17b2d1710ce8e46460)
+        ;
+
+        
+    
+    
+            circle_marker_16ad94cf576c4d77962c6d2a01d2d219.bindTooltip(
+                `<div>
+                     Abipón
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d9e1cf93eec94d8d8f01b803e4f72e4c = L.circleMarker(
+                [15.2534, -15.383],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_d7204007f9304f9498a0c4a12a474206 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_914280ecda8244ed978a49609b96ab8f = $(`<div id="html_914280ecda8244ed978a49609b96ab8f" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 1 (deep Islamization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_d7204007f9304f9498a0c4a12a474206.setContent(html_914280ecda8244ed978a49609b96ab8f);
+        
+
+        circle_marker_d9e1cf93eec94d8d8f01b803e4f72e4c.bindPopup(popup_d7204007f9304f9498a0c4a12a474206)
+        ;
+
+        
+    
+    
+            circle_marker_d9e1cf93eec94d8d8f01b803e4f72e4c.bindTooltip(
+                `<div>
+                     Wolof
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_00b5874d8553490e92535b3071ce9f4e = L.circleMarker(
+                [12.9, -7.65],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_3a3c8e1a314c4f0da07706fc3036d8d4 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_3874ed7055694f32b11814b0cb01beea = $(`<div id="html_3874ed7055694f32b11814b0cb01beea" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 3 (superficial Islamization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_3a3c8e1a314c4f0da07706fc3036d8d4.setContent(html_3874ed7055694f32b11814b0cb01beea);
+        
+
+        circle_marker_00b5874d8553490e92535b3071ce9f4e.bindPopup(popup_3a3c8e1a314c4f0da07706fc3036d8d4)
+        ;
+
+        
+    
+    
+            circle_marker_00b5874d8553490e92535b3071ce9f4e.bindTooltip(
+                `<div>
+                     Bambara
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2e400995bb6d4975910e9e238db65620 = L.circleMarker(
+                [16.9634, -0.55187],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_4600fd1e172e43a79ac70d15f3f12e9f = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_60d17f4958e043d6abdccad05e33e73d = $(`<div id="html_60d17f4958e043d6abdccad05e33e73d" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 1 (deep Islamization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_4600fd1e172e43a79ac70d15f3f12e9f.setContent(html_60d17f4958e043d6abdccad05e33e73d);
+        
+
+        circle_marker_2e400995bb6d4975910e9e238db65620.bindPopup(popup_4600fd1e172e43a79ac70d15f3f12e9f)
+        ;
+
+        
+    
+    
+            circle_marker_2e400995bb6d4975910e9e238db65620.bindTooltip(
+                `<div>
+                     Songhai
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0d0e3f24af1146e18fa2723e9f0def9b = L.circleMarker(
+                [10.0606, 15.4748],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_684afc2ea21f4be5a790aaced1061cb9 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_46fc1168527f4c3f95d82b7bcea3a407 = $(`<div id="html_46fc1168527f4c3f95d82b7bcea3a407" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_684afc2ea21f4be5a790aaced1061cb9.setContent(html_46fc1168527f4c3f95d82b7bcea3a407);
+        
+
+        circle_marker_0d0e3f24af1146e18fa2723e9f0def9b.bindPopup(popup_684afc2ea21f4be5a790aaced1061cb9)
+        ;
+
+        
+    
+    
+            circle_marker_0d0e3f24af1146e18fa2723e9f0def9b.bindTooltip(
+                `<div>
+                     Masa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_193aee1b9d4a4073b22f66b0bc99aa13 = L.circleMarker(
+                [12.0455, 23.6401],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_9533634c1c494e259e132935c15bd8f9 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_555a920778564d4dab631f11c37aabac = $(`<div id="html_555a920778564d4dab631f11c37aabac" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 1 (deep Islamization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_9533634c1c494e259e132935c15bd8f9.setContent(html_555a920778564d4dab631f11c37aabac);
+        
+
+        circle_marker_193aee1b9d4a4073b22f66b0bc99aa13.bindPopup(popup_9533634c1c494e259e132935c15bd8f9)
+        ;
+
+        
+    
+    
+            circle_marker_193aee1b9d4a4073b22f66b0bc99aa13.bindTooltip(
+                `<div>
+                     Fur
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6a7126ab7bdf484c98d0c963c1b2996e = L.circleMarker(
+                [9.85472, 31.7926],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_494c365d4d014055be4ffe95da6e2a51 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_24b21ace32ae4fd49d834cf0efc86ea0 = $(`<div id="html_24b21ace32ae4fd49d834cf0efc86ea0" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Otiose<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_494c365d4d014055be4ffe95da6e2a51.setContent(html_24b21ace32ae4fd49d834cf0efc86ea0);
+        
+
+        circle_marker_6a7126ab7bdf484c98d0c963c1b2996e.bindPopup(popup_494c365d4d014055be4ffe95da6e2a51)
+        ;
+
+        
+    
+    
+            circle_marker_6a7126ab7bdf484c98d0c963c1b2996e.bindTooltip(
+                `<div>
+                     Shilluk
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_09ad7ab2e8894cd08b930cee900cf8e9 = L.circleMarker(
+                [7.34022, 36.1718],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_94fcce2e1a3847c2957f30ffe74f6aa0 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_f52dfa1aa31f475badaa85832455015a = $(`<div id="html_f52dfa1aa31f475badaa85832455015a" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 3 (superficial Islamization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_94fcce2e1a3847c2957f30ffe74f6aa0.setContent(html_f52dfa1aa31f475badaa85832455015a);
+        
+
+        circle_marker_09ad7ab2e8894cd08b930cee900cf8e9.bindPopup(popup_94fcce2e1a3847c2957f30ffe74f6aa0)
+        ;
+
+        
+    
+    
+            circle_marker_09ad7ab2e8894cd08b930cee900cf8e9.bindTooltip(
+                `<div>
+                     Kafa
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_bb74aba9e1a041a29f9df1c90654d020 = L.circleMarker(
+                [5.39111, 37.53],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_f8741f0c9f644fb2bec524cb4f3075cd = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_10fccf733ff04f0599dcc5f4aae5aab7 = $(`<div id="html_10fccf733ff04f0599dcc5f4aae5aab7" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Otiose<br />Animals Hunted: Large Game</div>`)[0];
+            popup_f8741f0c9f644fb2bec524cb4f3075cd.setContent(html_10fccf733ff04f0599dcc5f4aae5aab7);
+        
+
+        circle_marker_bb74aba9e1a041a29f9df1c90654d020.bindPopup(popup_f8741f0c9f644fb2bec524cb4f3075cd)
+        ;
+
+        
+    
+    
+            circle_marker_bb74aba9e1a041a29f9df1c90654d020.bindTooltip(
+                `<div>
+                     Konso
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d585d6e03fae4aa8b9eda7af5e16ed79 = L.circleMarker(
+                [11.708182, 39.543456],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_e0cc74649f5444ee983b4e6b169f9fbe = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_721e875aa4af4241a95404e575e55d89 = $(`<div id="html_721e875aa4af4241a95404e575e55d89" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 2 (deep Christianization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_e0cc74649f5444ee983b4e6b169f9fbe.setContent(html_721e875aa4af4241a95404e575e55d89);
+        
+
+        circle_marker_d585d6e03fae4aa8b9eda7af5e16ed79.bindPopup(popup_e0cc74649f5444ee983b4e6b169f9fbe)
+        ;
+
+        
+    
+    
+            circle_marker_d585d6e03fae4aa8b9eda7af5e16ed79.bindTooltip(
+                `<div>
+                     Amhara
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ea08b213ce7b40c19fb36bd5946c63c5 = L.circleMarker(
+                [15.7833, 38.3917],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_851f1519fa5c4b29bb1fdd6f6a8d3e36 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_9507521b34eb4b308d68ed61e1ab1ff3 = $(`<div id="html_9507521b34eb4b308d68ed61e1ab1ff3" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 4 (superficial Christianization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_851f1519fa5c4b29bb1fdd6f6a8d3e36.setContent(html_9507521b34eb4b308d68ed61e1ab1ff3);
+        
+
+        circle_marker_ea08b213ce7b40c19fb36bd5946c63c5.bindPopup(popup_851f1519fa5c4b29bb1fdd6f6a8d3e36)
+        ;
+
+        
+    
+    
+            circle_marker_ea08b213ce7b40c19fb36bd5946c63c5.bindTooltip(
+                `<div>
+                     Blin
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_58877a7246ef41048994de3c8e460f32 = L.circleMarker(
+                [-17.7052, 24.7398],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_cde3b8eefd6746b8a622a4e17b399eae = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_f1ffd1fb84bf4d138450469784c0fc34 = $(`<div id="html_f1ffd1fb84bf4d138450469784c0fc34" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Otiose<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_cde3b8eefd6746b8a622a4e17b399eae.setContent(html_f1ffd1fb84bf4d138450469784c0fc34);
+        
+
+        circle_marker_58877a7246ef41048994de3c8e460f32.bindPopup(popup_cde3b8eefd6746b8a622a4e17b399eae)
+        ;
+
+        
+    
+    
+            circle_marker_58877a7246ef41048994de3c8e460f32.bindTooltip(
+                `<div>
+                     Lozi
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3e2ce8206d7642f2a5f70a24f0237045 = L.circleMarker(
+                [34.916974, -3.430616],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_924220c13dbe497483561ce073ddd86f = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_8c668816a6b84dbda48d1a89d7c17be4 = $(`<div id="html_8c668816a6b84dbda48d1a89d7c17be4" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 1 (deep Islamization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_924220c13dbe497483561ce073ddd86f.setContent(html_8c668816a6b84dbda48d1a89d7c17be4);
+        
+
+        circle_marker_3e2ce8206d7642f2a5f70a24f0237045.bindPopup(popup_924220c13dbe497483561ce073ddd86f)
+        ;
+
+        
+    
+    
+            circle_marker_3e2ce8206d7642f2a5f70a24f0237045.bindTooltip(
+                `<div>
+                     Riffians
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fafa238bf1af4f969b765779eea73591 = L.circleMarker(
+                [33.1, 44.1],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_95dc2023cf3d4aea89b1ea2cdfa06e68 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_740e1ac904b5429caa9be7d9d0be6d2f = $(`<div id="html_740e1ac904b5429caa9be7d9d0be6d2f" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Absent<br />Animals Hunted: Large Game</div>`)[0];
+            popup_95dc2023cf3d4aea89b1ea2cdfa06e68.setContent(html_740e1ac904b5429caa9be7d9d0be6d2f);
+        
+
+        circle_marker_fafa238bf1af4f969b765779eea73591.bindPopup(popup_95dc2023cf3d4aea89b1ea2cdfa06e68)
+        ;
+
+        
+    
+    
+            circle_marker_fafa238bf1af4f969b765779eea73591.bindTooltip(
+                `<div>
+                     Babylonians
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b1fe819662354f0895357a9c30a72436 = L.circleMarker(
+                [42.317, 21.3837],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_81651b7966334ef1a659c628fbd942ac = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_24a2b3b6634243a08d73a60333cd7a94 = $(`<div id="html_24a2b3b6634243a08d73a60333cd7a94" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 1 (deep Islamization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_81651b7966334ef1a659c628fbd942ac.setContent(html_24a2b3b6634243a08d73a60333cd7a94);
+        
+
+        circle_marker_b1fe819662354f0895357a9c30a72436.bindPopup(popup_81651b7966334ef1a659c628fbd942ac)
+        ;
+
+        
+    
+    
+            circle_marker_b1fe819662354f0895357a9c30a72436.bindTooltip(
+                `<div>
+                     Gheg
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e2784fe5c90b4f95aa60f8f1b7595c82 = L.circleMarker(
+                [-12.4763, 14.4148],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_5dd4151f97894dfeb9d589d1e49e9f20 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_21cf24f7b9474cf4bbbb20c202558fe1 = $(`<div id="html_21cf24f7b9474cf4bbbb20c202558fe1" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Otiose<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_5dd4151f97894dfeb9d589d1e49e9f20.setContent(html_21cf24f7b9474cf4bbbb20c202558fe1);
+        
+
+        circle_marker_e2784fe5c90b4f95aa60f8f1b7595c82.bindPopup(popup_5dd4151f97894dfeb9d589d1e49e9f20)
+        ;
+
+        
+    
+    
+            circle_marker_e2784fe5c90b4f95aa60f8f1b7595c82.bindTooltip(
+                `<div>
+                     Mbundu
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8bb77f81d5d2495eba446310dd8a6a02 = L.circleMarker(
+                [43.056218, 41.159115],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_cf08c15231e04073be0e3cc2dfd06ebf = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_c943d1a0997b4cfcb778da8fde5bdb24 = $(`<div id="html_c943d1a0997b4cfcb778da8fde5bdb24" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Large Game</div>`)[0];
+            popup_cf08c15231e04073be0e3cc2dfd06ebf.setContent(html_c943d1a0997b4cfcb778da8fde5bdb24);
+        
+
+        circle_marker_8bb77f81d5d2495eba446310dd8a6a02.bindPopup(popup_cf08c15231e04073be0e3cc2dfd06ebf)
+        ;
+
+        
+    
+    
+            circle_marker_8bb77f81d5d2495eba446310dd8a6a02.bindTooltip(
+                `<div>
+                     Abkhaz
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_177868c8a8e749f98fdd8b65ea7b4a6a = L.circleMarker(
+                [30.0948, 75.3474],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_bb350cb18aed4a449645d7a2edb9d2b6 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_b27cfb22953044b38c0c1d60126fc165 = $(`<div id="html_b27cfb22953044b38c0c1d60126fc165" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 1 (deep Islamization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Birds or Waterfowl</div>`)[0];
+            popup_bb350cb18aed4a449645d7a2edb9d2b6.setContent(html_b27cfb22953044b38c0c1d60126fc165);
+        
+
+        circle_marker_177868c8a8e749f98fdd8b65ea7b4a6a.bindPopup(popup_bb350cb18aed4a449645d7a2edb9d2b6)
+        ;
+
+        
+    
+    
+            circle_marker_177868c8a8e749f98fdd8b65ea7b4a6a.bindTooltip(
+                `<div>
+                     Punjabi
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1e74ffcb100c4bf6a44f734693a3913a = L.circleMarker(
+                [19.7875, 79.9144],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_37b4893fa62242e394e70f37cabb6bc0 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_2458434f66904882abe5085942e5a272 = $(`<div id="html_2458434f66904882abe5085942e5a272" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 8 (Hinduism)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, but not supporting morality<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_37b4893fa62242e394e70f37cabb6bc0.setContent(html_2458434f66904882abe5085942e5a272);
+        
+
+        circle_marker_1e74ffcb100c4bf6a44f734693a3913a.bindPopup(popup_37b4893fa62242e394e70f37cabb6bc0)
+        ;
+
+        
+    
+    
+            circle_marker_1e74ffcb100c4bf6a44f734693a3913a.bindTooltip(
+                `<div>
+                     Madia
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4ca881d23e474249ac332cbceefc3c3f = L.circleMarker(
+                [25.0317, 87.8185],
+                {"bubblingMouseEvents": true, "color": "black", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "black", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_2320bd5beb694061ae62516abe184546 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_a13e0590f17442b9b34f2072ff6918bf = $(`<div id="html_a13e0590f17442b9b34f2072ff6918bf" style="width: 100.0%; height: 100.0%;">Cluster: 0<br />Religion: 8 (Hinduism)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Otiose<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_2320bd5beb694061ae62516abe184546.setContent(html_a13e0590f17442b9b34f2072ff6918bf);
+        
+
+        circle_marker_4ca881d23e474249ac332cbceefc3c3f.bindPopup(popup_2320bd5beb694061ae62516abe184546)
+        ;
+
+        
+    
+    
+            circle_marker_4ca881d23e474249ac332cbceefc3c3f.bindTooltip(
+                `<div>
+                     Santal
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_975daa2411a94267b9729143942be394 = L.circleMarker(
+                [41.8729, 65.7709],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_bec885ebd2434501ae41bd8b845d3379 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_382c30fa304245108686d0120518fa46 = $(`<div id="html_382c30fa304245108686d0120518fa46" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 3 (superficial Islamization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_bec885ebd2434501ae41bd8b845d3379.setContent(html_382c30fa304245108686d0120518fa46);
+        
+
+        circle_marker_975daa2411a94267b9729143942be394.bindPopup(popup_bec885ebd2434501ae41bd8b845d3379)
+        ;
+
+        
+    
+    
+            circle_marker_975daa2411a94267b9729143942be394.bindTooltip(
+                `<div>
+                     Kazakh
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_edf177c5ef2b4f65bea299a6c8307fe9 = L.circleMarker(
+                [27.0869, 88.5726],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_b5b73fbb3ab14860ad07eba032dcd15f = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_12afc7ac3a534e22b689b1dd4000aee9 = $(`<div id="html_12afc7ac3a534e22b689b1dd4000aee9" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 7 (Vajrayana Buddhism)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, but not supporting morality<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_b5b73fbb3ab14860ad07eba032dcd15f.setContent(html_12afc7ac3a534e22b689b1dd4000aee9);
+        
+
+        circle_marker_edf177c5ef2b4f65bea299a6c8307fe9.bindPopup(popup_b5b73fbb3ab14860ad07eba032dcd15f)
+        ;
+
+        
+    
+    
+            circle_marker_edf177c5ef2b4f65bea299a6c8307fe9.bindTooltip(
+                `<div>
+                     Lepcha
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4fa38146ad82484687bc91a172a6ebb0 = L.circleMarker(
+                [22.1138, 93.0387],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_aed540af563f4f1eaa983afdef5c99d6 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_22b63e52fd8241c38915c6299ec1a889 = $(`<div id="html_22b63e52fd8241c38915c6299ec1a889" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_aed540af563f4f1eaa983afdef5c99d6.setContent(html_22b63e52fd8241c38915c6299ec1a889);
+        
+
+        circle_marker_4fa38146ad82484687bc91a172a6ebb0.bindPopup(popup_aed540af563f4f1eaa983afdef5c99d6)
+        ;
+
+        
+    
+    
+            circle_marker_4fa38146ad82484687bc91a172a6ebb0.bindTooltip(
+                `<div>
+                     Maras
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d2a3a34bc6354c189b896e6c5416bf44 = L.circleMarker(
+                [19.8829, 100.268],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_749b3d8f2d824d85a684f3310869e006 = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_3d778ec45b0b4045afd815aa11f84cb8 = $(`<div id="html_3d778ec45b0b4045afd815aa11f84cb8" style="width: 100.0%; height: 100.0%;">Cluster: 2<br />Religion: 0 (indigenous religion)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Absent<br />Animals Hunted: Two or more of above</div>`)[0];
+            popup_749b3d8f2d824d85a684f3310869e006.setContent(html_3d778ec45b0b4045afd815aa11f84cb8);
+        
+
+        circle_marker_d2a3a34bc6354c189b896e6c5416bf44.bindPopup(popup_749b3d8f2d824d85a684f3310869e006)
+        ;
+
+        
+    
+    
+            circle_marker_d2a3a34bc6354c189b896e6c5416bf44.bindTooltip(
+                `<div>
+                     Lamet
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7f336d96bd114600a35c68f0e7e00527 = L.circleMarker(
+                [2.66503, 102.291],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_9b81a20926e547708e7932d09cc1f4ae = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_68949b635a7d4b0a9ad31217ffa25aab = $(`<div id="html_68949b635a7d4b0a9ad31217ffa25aab" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 1 (deep Islamization)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Active, supporting morality<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_9b81a20926e547708e7932d09cc1f4ae.setContent(html_68949b635a7d4b0a9ad31217ffa25aab);
+        
+
+        circle_marker_7f336d96bd114600a35c68f0e7e00527.bindPopup(popup_9b81a20926e547708e7932d09cc1f4ae)
+        ;
+
+        
+    
+    
+            circle_marker_7f336d96bd114600a35c68f0e7e00527.bindTooltip(
+                `<div>
+                     Negri Sembilan
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e5dc079673e2431a9e08db39252be519 = L.circleMarker(
+                [-8.35714, 115.075],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.9, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 1}
+            ).addTo(map_50fa001c23294e4d9a08f404f915737d);
+        
+    
+        var popup_829768b0ef3648ad87ab5096d0d73ebc = L.popup({"maxWidth": 250, "minWidth": 250});
+
+        
+            var html_d8f87b1894c44584b996ca196535e5c5 = $(`<div id="html_d8f87b1894c44584b996ca196535e5c5" style="width: 100.0%; height: 100.0%;">Cluster: 1<br />Religion: 8 (Hinduism)<br />Primary Domesticated Animal: Bovines<br />Role of God(s): Absent<br />Animals Hunted: Small Mammals</div>`)[0];
+            popup_829768b0ef3648ad87ab5096d0d73ebc.setContent(html_d8f87b1894c44584b996ca196535e5c5);
+        
+
+        circle_marker_e5dc079673e2431a9e08db39252be519.bindPopup(popup_829768b0ef3648ad87ab5096d0d73ebc)
+        ;
+
+        
+    
+    
+            circle_marker_e5dc079673e2431a9e08db39252be519.bindTooltip(
+                `<div>
+                     Balinese
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>

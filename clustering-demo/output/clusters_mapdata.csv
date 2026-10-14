@@ -1,0 +1,119 @@
+society_id,society_name,society_xd_id,language_glottocode,language_name,language_family,variable_id,domesticated,domesticated_label,focal_year,sub_case,roleofgods,roleofgods_label,animalshunted,animalshunted_label,religion,religion_label,Cluster,latitude,longitude
+SCCS111,Palauans,xd824,pala1344,Palauan,Austronesian,SCCS6,1,Small Species,1947,Ulimang village,1,Absent,1,Birds or Waterfowl,4,4 (superficial Christianization),0,7.34138,134.476678
+SCCS118,Ainu,xd635,ainu1240,Hokkaido Ainu,Ainu,SCCS6,1,Small Species,1880,Saru Basin in Hokkaido,1,Absent,3,Large Game,0,0 (indigenous religion),0,43.633654,142.46167
+SCCS119,Nivkh,xd617,gily1242,Nivkh,,SCCS6,1,Small Species,1890,Sakhalin Island,2,Otiose,3,Large Game,0,0 (indigenous religion),1,52.59,140.681
+SCCS122,Deg Xit'an,xd1066,dege1248,Degexit'an,Athabaskan-Eyak-Tlingit,SCCS6,1,Small Species,1885,Shageluk village,2,Otiose,4,Two or more of above,0,0 (indigenous religion),1,62.0697,-160.044
+SCCS125,Montagnais,xd1048,mont1268,Montagnais,Algic,SCCS6,1,Small Species,1910,Lake St. John & Mistassahi band,1,Absent,3,Large Game,0,0 (indigenous religion),0,49.0533,-68.7376
+SCCS126,Mi'kmaq,xd1058,mikm1235,Mi'kmaq,Algic,SCCS6,1,Small Species,1650,Mainland division,2,Otiose,3,Large Game,0,0 (indigenous religion),1,45.9941,-65.5766
+SCCS128,DeneTha,xd1034,sout2959,South Slavey,Athabaskan-Eyak-Tlingit,SCCS6,1,Small Species,1940,Lynx Point band,2,Otiose,3,Large Game,4,4 (superficial Christianization),1,59.8794,-117.047
+SCCS129,Kaska,xd1056,kask1239,Kaska,Athabaskan-Eyak-Tlingit,SCCS6,1,Small Species,1900,Upper Liard River group,1,Absent,4,Two or more of above,4,4 (superficial Christianization),1,61.9942,-132.412
+SCCS13,Mbuti,xd5,bila1255,Bila,Atlantic-Congo,SCCS6,1,Small Species,1950,"Epulu net-hunters, Ituri forest",1,Absent,4,Two or more of above,0,0 (indigenous religion),1,1.16839,28.7626
+SCCS130,Eyak,xd1102,eyak1241,Eyak,Athabaskan-Eyak-Tlingit,SCCS6,1,Small Species,1890,Tribe,1,Absent,2,Small Mammals,0,0 (indigenous religion),0,60.4232,-144.762
+SCCS131,Haida,xd1068,nort2938,Northern Haida,Haida,SCCS6,1,Small Species,1875,Masset town,1,Absent,4,Two or more of above,0,0 (indigenous religion),1,54.004532,-132.079257
+SCCS132,Nuxalk,xd1106,bell1243,Bella Coola,Salishan,SCCS6,1,Small Species,1880,"Central group, lower B.C. River",2,Otiose,3,Large Game,0,0 (indigenous religion),1,52.3448,-126.689
+SCCS133,Twana,xd1079,twan1247,Twana,Salishan,SCCS6,1,Small Species,1860,Tribe,1,Absent,3,Large Game,0,0 (indigenous religion),0,47.7419,-121.765
+SCCS134,Yurok,xd1101,yuro1248,Yurok,Algic,SCCS6,1,Small Species,1850,Tsurai village,1,Absent,3,Large Game,0,0 (indigenous religion),0,41.3262,-123.824
+SCCS144,Huron,xd1244,wyan1247,Wyandot,Iroquoian,SCCS6,1,Small Species,1634,Bear and Cord subtribes,2,Otiose,3,Large Game,0,0 (indigenous religion),1,44.33,-77.5
+SCCS146,Natchez,xd1256,natc1249,Natchez,,SCCS6,1,Small Species,1718,Kingdom,2,Otiose,3,Large Game,0,0 (indigenous religion),1,31.75,-91.33
+SCCS15,Banen,xd173,tune1261,Tunen,Atlantic-Congo,SCCS6,1,Small Species,1935,Ndiki subtribe,2,Otiose,4,Two or more of above,0,0 (indigenous religion),1,4.75,10.67
+SCCS153,Aztec,xd1301,clas1250,Classical Nahuatl,Uto-Aztecan,SCCS6,1,Small Species,1520,City & environs of Tenochtitlan,3,"Active, but not supporting morality",4,Two or more of above,0,0 (indigenous religion),1,19.72,-96.97
+SCCS154,Sierra Popoluca,xd1302,high1276,Highland Popoluca,Mixe-Zoque,SCCS6,1,Small Species,1940,Town and environs of Soteapan,4,"Active, supporting morality",4,Two or more of above,4,4 (superficial Christianization),1,18.198,-94.9109
+SCCS158,Guna,xd1309,bord1248,Border Kuna,Chibchan,SCCS6,1,Small Species,1927,San Blas Archipelago,4,"Active, supporting morality",2,Small Mammals,0,0 (indigenous religion),1,7.92993,-77.1664
+SCCS16,Tiv,xd320,tivv1240,Tiv,Atlantic-Congo,SCCS6,1,Small Species,1920,Tar of Benue Province,1,Absent,3,Large Game,0,0 (indigenous religion),0,6.88039,9.26287
+SCCS161,Callinago,xd1326,isla1278,Island Carib,Arawakan,SCCS6,1,Small Species,1650,Dominica Island,2,Otiose,2,Small Mammals,0,0 (indigenous religion),1,15.364795,-61.342957
+SCCS162,Warao,xd1335,wara1303,Warao,,SCCS6,1,Small Species,1935,Winikina of Orinoco Delta,4,"Active, supporting morality",2,Small Mammals,0,0 (indigenous religion),1,7.50851,-59.3528
+SCCS163,Yanomami,xd1361,yano1261,Yanomamö,Yanomamic,SCCS6,1,Small Species,1965,Shamatari tribe,1,Absent,2,Small Mammals,0,0 (indigenous religion),0,1.67967,-64.8781
+SCCS166,Munduruku,xd1353,mund1330,Mundurukú,Tupian,SCCS6,1,Small Species,1850,Cabrua village,1,Absent,3,Large Game,0,0 (indigenous religion),0,-8.41095,-57.691
+SCCS167,Cubeo,xd1369,cube1242,Cubeo,Tucanoan,SCCS6,1,Small Species,1939,Village on Caduiari River,1,Absent,2,Small Mammals,0,0 (indigenous religion),0,1.32382,-70.1939
+SCCS170,Amahuaca,xd1372,amah1246,Amahuaca,Pano-Tacanan,SCCS6,1,Small Species,1960,Upper Inuya River,1,Absent,4,Two or more of above,0,0 (indigenous religion),1,-10.2012,-72.3208
+SCCS174,Nambikwara,xd1401,sout2994,Southern Nambikuára,Nambiquaran,SCCS6,1,Small Species,1940,Cocozu Group,1,Absent,4,Two or more of above,0,0 (indigenous religion),1,-14.3707,-59.5187
+SCCS177,Tupinambá,xd1416,tupi1273,Tupinambá,Tupian,SCCS6,1,Small Species,1550,Hinterland of Rio de Janeiro,2,Otiose,4,Two or more of above,0,0 (indigenous religion),1,-22.807778,-42.106389
+SCCS179,Shavante,xd1409,xava1240,Xavánte,Nuclear-Macro-Je,SCCS6,1,Small Species,1958,Village of Sao Domingo,1,Absent,2,Small Mammals,0,0 (indigenous religion),0,-14.3017,-52.4367
+SCCS180,Aweikoma,xd1411,xokl1240,Xokleng,Nuclear-Macro-Je,SCCS6,1,Small Species,1932,Duque de Caxias Reservation,1,Absent,3,Large Game,0,0 (indigenous religion),0,-26.9217,-49.5886
+SCCS186,Yahgan,xd1383,yama1264,Yámana,,SCCS6,1,Small Species,1865,Eastern and central,4,"Active, supporting morality",1,Birds or Waterfowl,0,0 (indigenous religion),1,-55.2748,-68.2648
+SCCS28,Azande,xd359,zand1248,Zande,Atlantic-Congo,SCCS6,1,Small Species,1905,Yambio Chiefdom,3,"Active, but not supporting morality",4,Two or more of above,0,0 (indigenous religion),1,4.62047,26.7157
+SCCS6,Suku,xd41,suku1259,Suku,Atlantic-Congo,SCCS6,1,Small Species,1920,Feshi territory lineage center,2,Otiose,4,Two or more of above,0,0 (indigenous religion),1,-5.76495,17.7736
+SCCS71,Burmese,xd709,nucl1310,Burmese,Sino-Tibetan,SCCS6,1,Small Species,1965,Nondwin village,1,Absent,4,Two or more of above,5,5 (Mahayana Buddhism),1,20.7926,93.9665
+SCCS77,Semang,xd725,kens1248,Kensiu,Austroasiatic,SCCS6,1,Small Species,1925,Jehai Group or subtribe,3,"Active, but not supporting morality",2,Small Mammals,0,0 (indigenous religion),1,5.98085,101.026
+SCCS80,Vedda,xd690,vedd1240,Veddah,Indo-European,SCCS6,1,Small Species,1860,Danigala Forest hunting group,1,Absent,3,Large Game,0,0 (indigenous religion),0,6.97396,81.2618
+SCCS9,Hadza,xd9,hadz1240,Hadza,,SCCS6,1,Small Species,1930,Tribe,1,Absent,3,Large Game,0,0 (indigenous religion),0,-3.83115,35.0458
+SCCS90,Tiwi,xd778,tiwi1244,Tiwi,,SCCS6,1,Small Species,1929,Tribe: Melville Island,2,Otiose,3,Large Game,0,0 (indigenous religion),1,-11.6308,130.949
+SCCS91,Northern Aranda,xd772,east2379,Eastern Arrernte,Pama-Nyungan,SCCS6,1,Small Species,1896,Alice Springs and environs,1,Absent,4,Two or more of above,0,0 (indigenous religion),1,-23.3583,135.046
+SCCS101,Bunlap,xd869,saaa1241,Sa,Austronesian,SCCS6,2,Pigs,1953,Bunlap village,1,Absent,1,Birds or Waterfowl,4,4 (superficial Christianization),0,-15.9534,168.228
+SCCS104,Māori,xd891,maor1246,Maori,Austronesian,SCCS6,2,Pigs,1820,Nga Puhi Tribe,1,Absent,1,Birds or Waterfowl,0,0 (indigenous religion),0,-38.2881,176.541
+SCCS105,Marquesans,xd892,nort2845,North Marquesan,Austronesian,SCCS6,2,Pigs,1800,Te-i'i Chiefdom S.W. Nuku Hiva,1,Absent,2,Small Mammals,0,0 (indigenous religion),0,-8.89412,-140.108
+SCCS106,Upolu Samoans,xd880,samo1305,Samoan,Austronesian,SCCS6,2,Pigs,1829,Aana in Western Upolu Island,1,Absent,1,Birds or Waterfowl,0,0 (indigenous religion),0,-13.92,-171.83
+SCCS109,Trukese,xd833,chuu1238,Chuukese,Austronesian,SCCS6,2,Pigs,1947,Romonum Island,1,Absent,1,Birds or Waterfowl,4,4 (superficial Christianization),0,7.346993,151.598607
+SCCS112,Ifugao,xd743,tuwa1243,Tuwali Ifugao,Austronesian,SCCS6,2,Pigs,1910,Kiangan group,1,Absent,4,Two or more of above,0,0 (indigenous religion),0,16.6646,121.113
+SCCS113,Atayal,xd732,atay1247,Atayal,Austronesian,SCCS6,2,Pigs,1930,Tribe (excluding Sedeq),1,Absent,2,Small Mammals,0,0 (indigenous religion),0,24.5209,121.388
+SCCS156,Miskito,xd1325,misk1235,Mískito,Misumalpan,SCCS6,2,Pigs,1921,Vicinity: Cape Gracias a Dios,4,"Active, supporting morality",2,Small Mammals,4,4 (superficial Christianization),0,15.1576,-84.2942
+SCCS157,Bribri,xd1321,brib1243,Bribri,Chibchan,SCCS6,2,Pigs,1917,Tribe,3,"Active, but not supporting morality",4,Two or more of above,4,4 (superficial Christianization),0,9.39794,-83.0539
+SCCS168,Chachi,xd1376,chac1249,Cha'palaa,Barbacoan,SCCS6,2,Pigs,1908,Rio Cayapas Basin,1,Absent,4,Two or more of above,0,0 (indigenous religion),0,0.71489,-79.0508
+SCCS169,Shuar,xd1367,shua1257,Shuar,Chicham,SCCS6,2,Pigs,1920,Tribe,1,Absent,2,Small Mammals,0,0 (indigenous religion),0,-3.45136,-78.1892
+SCCS176,Canela,xd1412,cane1242,Canela-Krahô,Nuclear-Macro-Je,SCCS6,2,Pigs,1915,Ramcocamecra or Canella,1,Absent,4,Two or more of above,0,0 (indigenous religion),0,-6.10712,-45.1299
+SCCS18,Fon,xd186,fonn1241,Fon,Atlantic-Congo,SCCS6,2,Pigs,1890,City and environs of Abomey,1,Absent,3,Large Game,0,0 (indigenous religion),0,7.15484,1.66495
+SCCS73,Annamese,xd726,viet1252,Vietnamese,Austroasiatic,SCCS6,2,Pigs,1930,Red River Delta in Tonkin,1,Absent,2,Small Mammals,5,5 (Mahayana Buddhism),0,20.681188,105.774071
+SCCS75,Ancient Khmer,xd722,oldk1249,Old Khmer,Austroasiatic,SCCS6,2,Pigs,1292,"City of Angkor, Capital",2,Otiose,3,Large Game,6,6 (Hinayana Buddhism),0,13.4125,103.866667
+SCCS85,Iban,xd750,iban1264,Iban,Austronesian,SCCS6,2,Pigs,1950,Ulu Ai group,1,Absent,4,Two or more of above,0,0 (indigenous religion),0,2.09041,112.934
+SCCS89,Alorese,xd764,abui1241,Abui,Timor-Alor-Pantar,SCCS6,2,Pigs,1938,Abui of Atimelang village,2,Otiose,2,Small Mammals,3,3 (superficial Islamization),0,-8.31058,124.588
+SCCS92,Orokaiva,xd823,orok1269,Orokaiva,Nuclear Trans New Guinea,SCCS6,2,Pigs,1925,Aiga subtribe,1,Absent,4,Two or more of above,0,0 (indigenous religion),0,-8.79019,148.09
+SCCS94,Mee,xd785,ekar1243,Ekari,Nuclear Trans New Guinea,SCCS6,2,Pigs,1955,Botukebo village,2,Otiose,4,Two or more of above,0,0 (indigenous religion),1,-3.88974,136.018
+SCCS95,Kwoma,xd788,kwom1262,Kwoma,Sepik,SCCS6,2,Pigs,1937,Hongwam subtribe,1,Absent,2,Small Mammals,0,0 (indigenous religion),0,-4.08721,142.664
+SCCS97,Lesu,xd856,nots1237,Notsi,Austronesian,SCCS6,2,Pigs,1930,Lesu village,1,Absent,2,Small Mammals,0,0 (indigenous religion),0,-3.0557,151.661
+SCCS98,Trobriands,xd852,kili1267,Kilivila,Austronesian,SCCS6,2,Pigs,1914,Kiriwina Island,1,Absent,1,Birds or Waterfowl,0,0 (indigenous religion),0,-8.72574,151.072
+SCCS99,Siuai,xd841,siwa1245,Siwai,South Bougainville,SCCS6,2,Pigs,1939,Northeastern group,1,Absent,2,Small Mammals,4,4 (superficial Christianization),0,-6.6429,155.452
+SCCS10,Luguru,xd81,lugu1238,Luguru,Atlantic-Congo,SCCS6,3,Ovides,1925,Morogoro District,2,Otiose,2,Small Mammals,0,0 (indigenous religion),1,-6.86828,37.5557
+SCCS12,Ganda,xd124,gand1255,Ganda,Atlantic-Congo,SCCS6,3,Ovides,1875,Kyaddondo district (V: Kampala),2,Otiose,3,Large Game,0,0 (indigenous religion),0,0.66884,32.15153
+SCCS149,Zuni,xd1280,zuni1245,Zuni,,SCCS6,3,Ovides,1880,Pueblo,1,Absent,3,Large Game,0,0 (indigenous religion),0,35.0056,-108.782
+SCCS172,Aymara,xd1375,cent2142,Central Aymara,Aymaran,SCCS6,3,Ovides,1940,Chucuito clan community in Peru,4,"Active, supporting morality",1,Birds or Waterfowl,4,4 (superficial Christianization),2,-17.0,-68.5
+SCCS184,Mapuche,xd1384,mapu1245,Mapudungun,Araucanian,SCCS6,3,Ovides,1950,Vicinity of Temuco,3,"Active, but not supporting morality",1,Birds or Waterfowl,0,0 (indigenous religion),0,-38.7392,-71.277
+SCCS20,Mende,xd230,mend1266,Mende (Sierra Leone),Mande,SCCS6,3,Ovides,1945,Vicinity of town of Bo,2,Otiose,2,Small Mammals,3,3 (superficial Islamization),1,7.90935,-10.9926
+SCCS32,Mao,xd378,hozo1236,Hozo,Blue Nile Mao,SCCS6,3,Ovides,1939,Northern division,2,Otiose,3,Large Game,0,0 (indigenous religion),0,9.38875,34.60448
+SCCS39,Barabra,xd507,kenu1236,Kenuzi-Dongola,Nubian,SCCS6,3,Ovides,1900,Kenuzi Nubians of Dahmit,4,"Active, supporting morality",3,Large Game,1,1 (deep Islamization),2,21.2837,31.8992
+SCCS44,Hebrews,xd589,anci1244,Ancient Hebrew,Afro-Asiatic,SCCS6,3,Ovides,-621,Kingdom of Judea,4,"Active, supporting morality",3,Large Game,0,0 (indigenous religion),0,31.7761,35.1725
+SCCS57,Kurd,xd576,cent1972,Central Kurdish,Indo-European,SCCS6,3,Ovides,1951,Town and environs of Rowanduz,4,"Active, supporting morality",4,Two or more of above,1,1 (deep Islamization),2,35.6539,45.8077
+SCCS67,Lolo,xd645,sich1238,Sichuan Yi,Sino-Tibetan,SCCS6,3,Ovides,1910,Liang Shan and Taliang Shan,1,Absent,3,Large Game,0,0 (indigenous religion),0,28.1947,102.121
+SCCS138,Klamath,xd1139,klam1254,Klamath-Modoc,,SCCS6,4,Equines,1860,Tribe,1,Absent,3,Large Game,0,0 (indigenous religion),0,42.5861,-121.704
+SCCS139,Kutenai,xd1205,kute1249,Kutenai,,SCCS6,4,Equines,1890,Lower or eastern branch,2,Otiose,4,Two or more of above,0,0 (indigenous religion),1,48.7892,-115.065
+SCCS140,Gros Ventre,xd1208,gros1243,Gros Ventre,Algic,SCCS6,4,Equines,1880,Tribe,4,"Active, supporting morality",3,Large Game,0,0 (indigenous religion),0,48.4834,-108.738
+SCCS141,Hidatsa,xd1214,hida1246,Hidatsa,Siouan,SCCS6,4,Equines,1836,Village,2,Otiose,3,Large Game,0,0 (indigenous religion),0,47.7534,-102.528
+SCCS142,Pawnee,xd1240,pawn1254,Pawnee,Caddoan,SCCS6,4,Equines,1867,Skidi band or subtribe,2,Otiose,3,Large Game,0,0 (indigenous religion),0,36.2862,-96.8937
+SCCS145,Muscogee,xd1252,cree1270,Creek,Muskogean,SCCS6,4,Equines,1800,Upper division in Alabama,2,Otiose,3,Large Game,0,0 (indigenous religion),0,31.0,-87.5
+SCCS148,Chiricahua,xd1259,mesc1238,Mescalero-Chiricahua Apache,Athabaskan-Eyak-Tlingit,SCCS6,4,Equines,1870,Central band,1,Absent,3,Large Game,0,0 (indigenous religion),0,33.1291,-105.566
+SCCS182,Lengua,xd1396,leng1262,Lengua,Lengua-Mascoy,SCCS6,4,Equines,1889,Those in contact with mission,2,Otiose,4,Two or more of above,0,0 (indigenous religion),1,-22.6559,-58.9053
+SCCS185,Tehuelche,xd1386,tehu1242,Tehuelche,Chonan,SCCS6,4,Equines,1870,Equestrian,2,Otiose,3,Large Game,0,0 (indigenous religion),0,-47.5796,-68.3235
+SCCS121,Chukchi,xd631,chuk1273,Chukchi,Chukotko-Kamchatkan,SCCS6,5,Reindeer,1900,Reindeer division,3,"Active, but not supporting morality",3,Large Game,4,4 (superficial Christianization),0,68.6436,170.045
+SCCS52,Sami,xd544,nort2671,North Saami,Uralic,SCCS6,5,Reindeer,1950,Konkama District,4,"Active, supporting morality",4,Two or more of above,2,2 (deep Christianization),1,68.725,22.1113
+SCCS53,Yurak-Samoyeds,xd632,nene1249,Tundra Nenets,Uralic,SCCS6,5,Reindeer,1894,Tribe,3,"Active, but not supporting morality",3,Large Game,4,4 (superficial Christianization),0,66.1775,71.0234
+SCCS171,Inca,xd1374,cusc1236,Cusco Quechua,Quechuan,SCCS6,6,Camels,1530,City and environs of Cuzco,2,Otiose,3,Large Game,0,0 (indigenous religion),0,-14.0853,-71.7663
+SCCS40,Teda,xd498,teda1241,Tedaga,Saharan,SCCS6,6,Camels,1950,Nomads of Tibesti,4,"Active, supporting morality",3,Large Game,1,1 (deep Islamization),2,18.0426,14.7717
+SCCS46,Rwala,xd588,east2690,Eastern Egyptian Bedawi Arabic,Afro-Asiatic,SCCS6,6,Camels,1913,Unspecified,4,"Active, supporting morality",4,Two or more of above,1,1 (deep Islamization),2,29.6742,33.6113
+SCCS11,Kikuyu,xd109,kiku1240,Kikuyu,Atlantic-Congo,SCCS6,7,Bovines,1920,Fort Hall or Metume District,3,"Active, but not supporting morality",2,Small Mammals,0,0 (indigenous religion),0,-0.29005,36.719
+SCCS116,Koreans,xd638,kore1280,Korean,Koreanic,SCCS6,7,Bovines,1947,Kanghwa Island,1,Absent,3,Large Game,5,5 (Mahayana Buddhism),0,37.5,128.0
+SCCS159,Wayuu,xd1331,wayu1243,Wayuu,Arawakan,SCCS6,7,Bovines,1947,Tribe,3,"Active, but not supporting morality",4,Two or more of above,0,0 (indigenous religion),1,11.395566,-72.199791
+SCCS183,Abipón,xd1390,abip1241,Abipon,Guaicuruan,SCCS6,7,Bovines,1750,Those in contact with mission,1,Absent,3,Large Game,0,0 (indigenous religion),0,-29.0,-61.0
+SCCS21,Wolof,xd469,nucl1347,Wolof,Atlantic-Congo,SCCS6,7,Bovines,1950,Upper and lower Salum in Gambia,4,"Active, supporting morality",3,Large Game,1,1 (deep Islamization),2,15.2534,-15.383
+SCCS22,Bambara,xd244,bamb1269,Bambara,Mande,SCCS6,7,Bovines,1902,Segou to Bamako on Niger River,1,Absent,3,Large Game,3,3 (superficial Islamization),0,12.9,-7.65
+SCCS24,Songhai,xd480,koyr1242,Koyraboro Senni Songhai,Songhay,SCCS6,7,Bovines,1940,Bamba division,4,"Active, supporting morality",3,Large Game,1,1 (deep Islamization),2,16.9634,-0.55187
+SCCS27,Masa,xd383,masa1322,Masana,Afro-Asiatic,SCCS6,7,Bovines,1910,Around Yagoua in Cameroon,2,Otiose,3,Large Game,0,0 (indigenous religion),0,10.0606,15.4748
+SCCS29,Fur,xd466,furr1244,Fur,Furan,SCCS6,7,Bovines,1880,Jebel Marra,4,"Active, supporting morality",3,Large Game,1,1 (deep Islamization),2,12.0455,23.6401
+SCCS31,Shilluk,xd380,shil1265,Shilluk,Nilotic,SCCS6,7,Bovines,1910,Kingdom,2,Otiose,4,Two or more of above,0,0 (indigenous religion),1,9.85472,31.7926
+SCCS33,Kafa,xd438,kafa1242,Kafa,Ta-Ne-Omotic,SCCS6,7,Bovines,1905,Kingdom,2,Otiose,3,Large Game,3,3 (superficial Islamization),2,7.34022,36.1718
+SCCS35,Konso,xd415,kons1243,Konso,Afro-Asiatic,SCCS6,7,Bovines,1935,Town of Buso,2,Otiose,3,Large Game,4,4 (superficial Christianization),2,5.39111,37.53
+SCCS37,Amhara,xd455,amha1245,Amharic,Afro-Asiatic,SCCS6,7,Bovines,1953,Gondar district,4,"Active, supporting morality",3,Large Game,2,2 (deep Christianization),2,11.708182,39.543456
+SCCS38,Blin,xd445,bili1260,Bilin,Afro-Asiatic,SCCS6,7,Bovines,1855,Tribe,4,"Active, supporting morality",3,Large Game,4,4 (superficial Christianization),2,15.7833,38.3917
+SCCS4,Lozi,xd26,lozi1239,Lozi,Atlantic-Congo,SCCS6,7,Bovines,1900,Ruling Luyana,2,Otiose,4,Two or more of above,0,0 (indigenous religion),1,-17.7052,24.7398
+SCCS42,Riffians,xd521,tari1263,Tarifiyt-Beni-Iznasen-Eastern Middle Atlas Berber,Afro-Asiatic,SCCS6,7,Bovines,1926,Entirety: Moroccan,4,"Active, supporting morality",4,Two or more of above,1,1 (deep Islamization),2,34.916974,-3.430616
+SCCS45,Babylonians,xd590,akka1240,Akkadian,Afro-Asiatic,SCCS6,7,Bovines,-1750,City and environs of Babylon,1,Absent,3,Large Game,0,0 (indigenous religion),0,33.1,44.1
+SCCS48,Gheg,xd528,gheg1238,Gheg Albanian,Indo-European,SCCS6,7,Bovines,1910,Mountain Gheg of No. Albania,4,"Active, supporting morality",2,Small Mammals,1,1 (deep Islamization),2,42.317,21.3837
+SCCS5,Mbundu,xd28,umbu1257,Umbundu,Atlantic-Congo,SCCS6,7,Bovines,1890,Bailundo subtribe,2,Otiose,2,Small Mammals,0,0 (indigenous religion),1,-12.4763,14.4148
+SCCS55,Abkhaz,xd577,abkh1244,Abkhazian,Abkhaz-Adyge,SCCS6,7,Bovines,1880,Tribe,4,"Active, supporting morality",3,Large Game,0,0 (indigenous religion),2,43.056218,41.159115
+SCCS59,Punjabi,xd600,west2386,Western Panjabi,Indo-European,SCCS6,7,Bovines,1950,Mohla village,4,"Active, supporting morality",1,Birds or Waterfowl,1,1 (deep Islamization),2,30.0948,75.3474
+SCCS60,Madia,xd679,mari1414,Maria (India),Dravidian,SCCS6,7,Bovines,1938,Hill Maria,3,"Active, but not supporting morality",2,Small Mammals,8,8 (Hinduism),2,19.7875,79.9144
+SCCS62,Santal,xd661,sant1410,Santali,Austroasiatic,SCCS6,7,Bovines,1940,Bankura and Berghum Districts,2,Otiose,2,Small Mammals,8,8 (Hinduism),1,25.0317,87.8185
+SCCS65,Kazakh,xd609,kaza1248,Kazakh,Turkic,SCCS6,7,Bovines,1885,Great Horde,4,"Active, supporting morality",2,Small Mammals,3,3 (superficial Islamization),2,41.8729,65.7709
+SCCS68,Lepcha,xd655,lepc1244,Lepcha,Sino-Tibetan,SCCS6,7,Bovines,1937,Lingthem and vicinity,3,"Active, but not supporting morality",4,Two or more of above,7,7 (Vajrayana Buddhism),1,27.0869,88.5726
+SCCS70,Maras,xd710,mara1382,Mara Chin,Sino-Tibetan,SCCS6,7,Bovines,1930,Tribe,4,"Active, supporting morality",4,Two or more of above,0,0 (indigenous religion),1,22.1138,93.0387
+SCCS72,Lamet,xd716,lame1256,Lamet,Austroasiatic,SCCS6,7,Bovines,1940,"Tribe, Northwestern Laos",1,Absent,4,Two or more of above,0,0 (indigenous religion),0,19.8829,100.268
+SCCS82,Negri Sembilan,xd723,nege1240,Negeri Sembilan Malay,Austronesian,SCCS6,7,Bovines,1958,Inas District,4,"Active, supporting morality",2,Small Mammals,1,1 (deep Islamization),2,2.66503,102.291
+SCCS84,Balinese,xd752,bali1278,Balinese,Austronesian,SCCS6,7,Bovines,1958,Tihingan village,1,Absent,2,Small Mammals,8,8 (Hinduism),0,-8.35714,115.075

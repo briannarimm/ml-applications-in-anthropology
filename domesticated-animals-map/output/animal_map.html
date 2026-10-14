@@ -1,0 +1,5303 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_48e959ec8cd28b4f8933e10611054874 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_48e959ec8cd28b4f8933e10611054874" ></div>
+        
+    
+<div style="position: fixed; bottom: 30px; left: 30px; z-index: 9999; font-size: 14px; background-color: rgba(255,255,255,0.85); padding: 8px 14px; border-radius: 6px;">
+    <p><img src="../../assets/icons/chicken.png" alt="Small Species icon" width="25" height="25">&emsp;Small Species</p>
+    <p><img src="../../assets/icons/pig.png" alt="Pigs icon" width="25" height="25">&emsp;Pigs</p>
+    <p><img src="../../assets/icons/sheep.png" alt="Ovis icon" width="25" height="25">&emsp;Ovis</p>
+    <p><img src="../../assets/icons/horse.png" alt="Equines icon" width="25" height="25">&emsp;Equines</p>
+    <p><img src="../../assets/icons/reindeer.png" alt="Reindeer icon" width="25" height="25">&emsp;Reindeer</p>
+    <p><img src="../../assets/icons/camel.png" alt="Camels icon" width="25" height="25">&emsp;Camels</p>
+    <p><img src="../../assets/icons/cow.png" alt="Bovines icon" width="25" height="25">&emsp;Bovines</p>
+</div>
+</body>
+<script>
+    
+    
+            var map_48e959ec8cd28b4f8933e10611054874 = L.map(
+                "map_48e959ec8cd28b4f8933e10611054874",
+                {
+                    center: [10.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 2,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_e343f7e4b99e2636bcc720cd9503bfba = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_e343f7e4b99e2636bcc720cd9503bfba.addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+            var marker_00dabb1f002fea6505d7206bdae205c3 = L.marker(
+                [7.34138, 134.476678],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_d6d15f0adf14868da00013c1ebd1f90f = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_fb59dc9e9bbc3fd5c106c2fbe758d50b = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_aeee27359c6fb7323246430dcb0af36a = $(`<div id="html_aeee27359c6fb7323246430dcb0af36a" style="width: 100.0%; height: 100.0%;">Focal Year: 1947<br>Role of Gods: Absent<br>Animals Hunted: Birds or Waterfowl<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_fb59dc9e9bbc3fd5c106c2fbe758d50b.setContent(html_aeee27359c6fb7323246430dcb0af36a);
+            
+        
+
+        marker_00dabb1f002fea6505d7206bdae205c3.bindPopup(popup_fb59dc9e9bbc3fd5c106c2fbe758d50b)
+        ;
+
+        
+    
+    
+            marker_00dabb1f002fea6505d7206bdae205c3.bindTooltip(
+                `<div>
+                     Palauans
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_00dabb1f002fea6505d7206bdae205c3.setIcon(icon_d6d15f0adf14868da00013c1ebd1f90f);
+            
+    
+            var marker_2a5a7c128bf9947676afcd2f06d3fcc6 = L.marker(
+                [43.633654, 142.46167],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_d7d27ace659795984c06df93baf45182 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_5aa9e9c11dc5be996f704418d60e912a = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_800b11229b36c1aed55e356900b00a2b = $(`<div id="html_800b11229b36c1aed55e356900b00a2b" style="width: 100.0%; height: 100.0%;">Focal Year: 1880<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_5aa9e9c11dc5be996f704418d60e912a.setContent(html_800b11229b36c1aed55e356900b00a2b);
+            
+        
+
+        marker_2a5a7c128bf9947676afcd2f06d3fcc6.bindPopup(popup_5aa9e9c11dc5be996f704418d60e912a)
+        ;
+
+        
+    
+    
+            marker_2a5a7c128bf9947676afcd2f06d3fcc6.bindTooltip(
+                `<div>
+                     Ainu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2a5a7c128bf9947676afcd2f06d3fcc6.setIcon(icon_d7d27ace659795984c06df93baf45182);
+            
+    
+            var marker_2b9a1129261928b5cb9b14c3498cbd83 = L.marker(
+                [52.59, 140.681],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_4f369ea0f3926843e371d53219aefdb9 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_c948623d1f9fcdc7eb46b80ffcf13b58 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_d48895a1b3afa85d596aee4ad711a18a = $(`<div id="html_d48895a1b3afa85d596aee4ad711a18a" style="width: 100.0%; height: 100.0%;">Focal Year: 1890<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_c948623d1f9fcdc7eb46b80ffcf13b58.setContent(html_d48895a1b3afa85d596aee4ad711a18a);
+            
+        
+
+        marker_2b9a1129261928b5cb9b14c3498cbd83.bindPopup(popup_c948623d1f9fcdc7eb46b80ffcf13b58)
+        ;
+
+        
+    
+    
+            marker_2b9a1129261928b5cb9b14c3498cbd83.bindTooltip(
+                `<div>
+                     Nivkh
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2b9a1129261928b5cb9b14c3498cbd83.setIcon(icon_4f369ea0f3926843e371d53219aefdb9);
+            
+    
+            var marker_b0bdb3426f82e3f978e87de8cd2693c7 = L.marker(
+                [62.0697, -160.044],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_5b3c899c6901fd916be90229f3ed8831 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_7d907da356630e1edcbb9d2ead1923d6 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_c6c7b0dac529ec9921627d9abc733da4 = $(`<div id="html_c6c7b0dac529ec9921627d9abc733da4" style="width: 100.0%; height: 100.0%;">Focal Year: 1885<br>Role of Gods: Otiose<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_7d907da356630e1edcbb9d2ead1923d6.setContent(html_c6c7b0dac529ec9921627d9abc733da4);
+            
+        
+
+        marker_b0bdb3426f82e3f978e87de8cd2693c7.bindPopup(popup_7d907da356630e1edcbb9d2ead1923d6)
+        ;
+
+        
+    
+    
+            marker_b0bdb3426f82e3f978e87de8cd2693c7.bindTooltip(
+                `<div>
+                     Deg Xit'an
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b0bdb3426f82e3f978e87de8cd2693c7.setIcon(icon_5b3c899c6901fd916be90229f3ed8831);
+            
+    
+            var marker_928a98261c9b8ed5145ae02a02f97190 = L.marker(
+                [49.0533, -68.7376],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_b5da7df716cacf26f623acf3fd49bfab = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_d1a74fb5c88b815958029b40195b0ac4 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_261de2963513ce3e50d08e6ce7c65885 = $(`<div id="html_261de2963513ce3e50d08e6ce7c65885" style="width: 100.0%; height: 100.0%;">Focal Year: 1910<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_d1a74fb5c88b815958029b40195b0ac4.setContent(html_261de2963513ce3e50d08e6ce7c65885);
+            
+        
+
+        marker_928a98261c9b8ed5145ae02a02f97190.bindPopup(popup_d1a74fb5c88b815958029b40195b0ac4)
+        ;
+
+        
+    
+    
+            marker_928a98261c9b8ed5145ae02a02f97190.bindTooltip(
+                `<div>
+                     Montagnais
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_928a98261c9b8ed5145ae02a02f97190.setIcon(icon_b5da7df716cacf26f623acf3fd49bfab);
+            
+    
+            var marker_bf28e808efe6b80183b6530d6ac63e92 = L.marker(
+                [45.9941, -65.5766],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_c07bfe1158d8be08ccb58f5cbe797835 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_008f48601e97aafcb53c6f5e907c3c21 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_63db051e3c145624d88501342498b966 = $(`<div id="html_63db051e3c145624d88501342498b966" style="width: 100.0%; height: 100.0%;">Focal Year: 1650<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_008f48601e97aafcb53c6f5e907c3c21.setContent(html_63db051e3c145624d88501342498b966);
+            
+        
+
+        marker_bf28e808efe6b80183b6530d6ac63e92.bindPopup(popup_008f48601e97aafcb53c6f5e907c3c21)
+        ;
+
+        
+    
+    
+            marker_bf28e808efe6b80183b6530d6ac63e92.bindTooltip(
+                `<div>
+                     Mi'kmaq
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bf28e808efe6b80183b6530d6ac63e92.setIcon(icon_c07bfe1158d8be08ccb58f5cbe797835);
+            
+    
+            var marker_b12e3bf82fc034f17a6a61725d2861a2 = L.marker(
+                [59.8794, -117.047],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_e75df7e8fc46c2df2c4e936669277eb1 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_9a8e4601c86d7c2c662f94be72cf1672 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_6123e9926a8f5e2acdaeb5da482cb1ec = $(`<div id="html_6123e9926a8f5e2acdaeb5da482cb1ec" style="width: 100.0%; height: 100.0%;">Focal Year: 1940<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_9a8e4601c86d7c2c662f94be72cf1672.setContent(html_6123e9926a8f5e2acdaeb5da482cb1ec);
+            
+        
+
+        marker_b12e3bf82fc034f17a6a61725d2861a2.bindPopup(popup_9a8e4601c86d7c2c662f94be72cf1672)
+        ;
+
+        
+    
+    
+            marker_b12e3bf82fc034f17a6a61725d2861a2.bindTooltip(
+                `<div>
+                     DeneTha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b12e3bf82fc034f17a6a61725d2861a2.setIcon(icon_e75df7e8fc46c2df2c4e936669277eb1);
+            
+    
+            var marker_6895beee66b8c06b30cc0eda11373fb7 = L.marker(
+                [61.9942, -132.412],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_f688ccb02335bfad899c8839abd769f0 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_6f4b058fe77ddbb99ec03f209c046482 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_7fa287bb2e13285a30efdd8f8eb8dc97 = $(`<div id="html_7fa287bb2e13285a30efdd8f8eb8dc97" style="width: 100.0%; height: 100.0%;">Focal Year: 1900<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_6f4b058fe77ddbb99ec03f209c046482.setContent(html_7fa287bb2e13285a30efdd8f8eb8dc97);
+            
+        
+
+        marker_6895beee66b8c06b30cc0eda11373fb7.bindPopup(popup_6f4b058fe77ddbb99ec03f209c046482)
+        ;
+
+        
+    
+    
+            marker_6895beee66b8c06b30cc0eda11373fb7.bindTooltip(
+                `<div>
+                     Kaska
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6895beee66b8c06b30cc0eda11373fb7.setIcon(icon_f688ccb02335bfad899c8839abd769f0);
+            
+    
+            var marker_119b1b6d848bf62c07ff377d69c35f49 = L.marker(
+                [1.16839, 28.7626],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_c3dbf014f925b03c6ed8268f192cdcbf = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_f55f84185b1ceb3af7fd86280c5493be = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_6554475128da44c28458774386823f03 = $(`<div id="html_6554475128da44c28458774386823f03" style="width: 100.0%; height: 100.0%;">Focal Year: 1950<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_f55f84185b1ceb3af7fd86280c5493be.setContent(html_6554475128da44c28458774386823f03);
+            
+        
+
+        marker_119b1b6d848bf62c07ff377d69c35f49.bindPopup(popup_f55f84185b1ceb3af7fd86280c5493be)
+        ;
+
+        
+    
+    
+            marker_119b1b6d848bf62c07ff377d69c35f49.bindTooltip(
+                `<div>
+                     Mbuti
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_119b1b6d848bf62c07ff377d69c35f49.setIcon(icon_c3dbf014f925b03c6ed8268f192cdcbf);
+            
+    
+            var marker_01127f9793f590bac3afbf9c62c3af2b = L.marker(
+                [60.4232, -144.762],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_059c2ff055af50e92f79c8fb47899d66 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_84e8d35b6e142cd8d5764e33ef8143f0 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_fd66e96117cbbc915d38c65ae7549267 = $(`<div id="html_fd66e96117cbbc915d38c65ae7549267" style="width: 100.0%; height: 100.0%;">Focal Year: 1890<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_84e8d35b6e142cd8d5764e33ef8143f0.setContent(html_fd66e96117cbbc915d38c65ae7549267);
+            
+        
+
+        marker_01127f9793f590bac3afbf9c62c3af2b.bindPopup(popup_84e8d35b6e142cd8d5764e33ef8143f0)
+        ;
+
+        
+    
+    
+            marker_01127f9793f590bac3afbf9c62c3af2b.bindTooltip(
+                `<div>
+                     Eyak
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_01127f9793f590bac3afbf9c62c3af2b.setIcon(icon_059c2ff055af50e92f79c8fb47899d66);
+            
+    
+            var marker_1379c6b19bc286b9a1178f6d67a6a053 = L.marker(
+                [54.004532, -132.079257],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_c570f853d1c09846956bbde8693100eb = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_a4513059b9fc514ee5c094fb25dab1e3 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_7f49967e60d31e4901aadee83e32efdd = $(`<div id="html_7f49967e60d31e4901aadee83e32efdd" style="width: 100.0%; height: 100.0%;">Focal Year: 1875<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_a4513059b9fc514ee5c094fb25dab1e3.setContent(html_7f49967e60d31e4901aadee83e32efdd);
+            
+        
+
+        marker_1379c6b19bc286b9a1178f6d67a6a053.bindPopup(popup_a4513059b9fc514ee5c094fb25dab1e3)
+        ;
+
+        
+    
+    
+            marker_1379c6b19bc286b9a1178f6d67a6a053.bindTooltip(
+                `<div>
+                     Haida
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1379c6b19bc286b9a1178f6d67a6a053.setIcon(icon_c570f853d1c09846956bbde8693100eb);
+            
+    
+            var marker_30fa51348c72982b19e81a633b8ced2c = L.marker(
+                [52.3448, -126.689],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_1730352a1c761363b36b5f8a8c3f2bf0 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_5b3626bd27e5b6fc6b0629a352c1087b = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_7c0880e2c62a3a7d2981c665f610e3f2 = $(`<div id="html_7c0880e2c62a3a7d2981c665f610e3f2" style="width: 100.0%; height: 100.0%;">Focal Year: 1880<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_5b3626bd27e5b6fc6b0629a352c1087b.setContent(html_7c0880e2c62a3a7d2981c665f610e3f2);
+            
+        
+
+        marker_30fa51348c72982b19e81a633b8ced2c.bindPopup(popup_5b3626bd27e5b6fc6b0629a352c1087b)
+        ;
+
+        
+    
+    
+            marker_30fa51348c72982b19e81a633b8ced2c.bindTooltip(
+                `<div>
+                     Nuxalk
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_30fa51348c72982b19e81a633b8ced2c.setIcon(icon_1730352a1c761363b36b5f8a8c3f2bf0);
+            
+    
+            var marker_1a6f1cce1fac2f420e61d3fd0f3b0d45 = L.marker(
+                [47.7419, -121.765],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_5cc759d68f409f7fbbd74e484ccc5a20 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_d1b8056d138cdfbc0e050f2a271502f3 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_28c3dba6a5d67a0a92e2adaa0625d4a7 = $(`<div id="html_28c3dba6a5d67a0a92e2adaa0625d4a7" style="width: 100.0%; height: 100.0%;">Focal Year: 1860<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_d1b8056d138cdfbc0e050f2a271502f3.setContent(html_28c3dba6a5d67a0a92e2adaa0625d4a7);
+            
+        
+
+        marker_1a6f1cce1fac2f420e61d3fd0f3b0d45.bindPopup(popup_d1b8056d138cdfbc0e050f2a271502f3)
+        ;
+
+        
+    
+    
+            marker_1a6f1cce1fac2f420e61d3fd0f3b0d45.bindTooltip(
+                `<div>
+                     Twana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a6f1cce1fac2f420e61d3fd0f3b0d45.setIcon(icon_5cc759d68f409f7fbbd74e484ccc5a20);
+            
+    
+            var marker_97114f3c01eb7530975062d12dbfce04 = L.marker(
+                [41.3262, -123.824],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_7bf7927e280429319abd12fce52560af = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_df9251da1e03866ed3960bd43c320c35 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_742167f77485253c4d674cab9d5e9c49 = $(`<div id="html_742167f77485253c4d674cab9d5e9c49" style="width: 100.0%; height: 100.0%;">Focal Year: 1850<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_df9251da1e03866ed3960bd43c320c35.setContent(html_742167f77485253c4d674cab9d5e9c49);
+            
+        
+
+        marker_97114f3c01eb7530975062d12dbfce04.bindPopup(popup_df9251da1e03866ed3960bd43c320c35)
+        ;
+
+        
+    
+    
+            marker_97114f3c01eb7530975062d12dbfce04.bindTooltip(
+                `<div>
+                     Yurok
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_97114f3c01eb7530975062d12dbfce04.setIcon(icon_7bf7927e280429319abd12fce52560af);
+            
+    
+            var marker_d83d688c6070f54b3faadfd9a39326fa = L.marker(
+                [44.33, -77.5],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_34da1b1ce1c7410cc941020a04e542dd = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_fc1c99dabb30dd217f6f2f58294bbc3f = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_98a442dbe644e6a08feb5227370325ad = $(`<div id="html_98a442dbe644e6a08feb5227370325ad" style="width: 100.0%; height: 100.0%;">Focal Year: 1634<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_fc1c99dabb30dd217f6f2f58294bbc3f.setContent(html_98a442dbe644e6a08feb5227370325ad);
+            
+        
+
+        marker_d83d688c6070f54b3faadfd9a39326fa.bindPopup(popup_fc1c99dabb30dd217f6f2f58294bbc3f)
+        ;
+
+        
+    
+    
+            marker_d83d688c6070f54b3faadfd9a39326fa.bindTooltip(
+                `<div>
+                     Huron
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d83d688c6070f54b3faadfd9a39326fa.setIcon(icon_34da1b1ce1c7410cc941020a04e542dd);
+            
+    
+            var marker_754f9368954004886f4831b5f29db9d0 = L.marker(
+                [31.75, -91.33],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_53346ceb478fb4adf0741d47cae23c31 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_6eb164ffc0c7588f3596cdf7cfe96cd7 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_6fc02c148befbdad77fd9c8b0a207116 = $(`<div id="html_6fc02c148befbdad77fd9c8b0a207116" style="width: 100.0%; height: 100.0%;">Focal Year: 1718<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_6eb164ffc0c7588f3596cdf7cfe96cd7.setContent(html_6fc02c148befbdad77fd9c8b0a207116);
+            
+        
+
+        marker_754f9368954004886f4831b5f29db9d0.bindPopup(popup_6eb164ffc0c7588f3596cdf7cfe96cd7)
+        ;
+
+        
+    
+    
+            marker_754f9368954004886f4831b5f29db9d0.bindTooltip(
+                `<div>
+                     Natchez
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_754f9368954004886f4831b5f29db9d0.setIcon(icon_53346ceb478fb4adf0741d47cae23c31);
+            
+    
+            var marker_d9124eed430038fb1c2f5f2f938f2921 = L.marker(
+                [4.75, 10.67],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_4848771743364478f0729af4e2738253 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_a7eaccbabd1532e669a28391f456ea7c = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_3de37aa3d5b8a6d1fe801c4e099a2d43 = $(`<div id="html_3de37aa3d5b8a6d1fe801c4e099a2d43" style="width: 100.0%; height: 100.0%;">Focal Year: 1935<br>Role of Gods: Otiose<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_a7eaccbabd1532e669a28391f456ea7c.setContent(html_3de37aa3d5b8a6d1fe801c4e099a2d43);
+            
+        
+
+        marker_d9124eed430038fb1c2f5f2f938f2921.bindPopup(popup_a7eaccbabd1532e669a28391f456ea7c)
+        ;
+
+        
+    
+    
+            marker_d9124eed430038fb1c2f5f2f938f2921.bindTooltip(
+                `<div>
+                     Banen
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d9124eed430038fb1c2f5f2f938f2921.setIcon(icon_4848771743364478f0729af4e2738253);
+            
+    
+            var marker_1dc102ff86f497801e2df480f4a83938 = L.marker(
+                [19.72, -96.97],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_65b6a17d278808c39149d6523b7543eb = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_97309b3cdbf30142ed118307fda861bc = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_7ba9bee765fbbc9fa986dd9d358d2e83 = $(`<div id="html_7ba9bee765fbbc9fa986dd9d358d2e83" style="width: 100.0%; height: 100.0%;">Focal Year: 1520<br>Role of Gods: Active, but not supporting morality<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_97309b3cdbf30142ed118307fda861bc.setContent(html_7ba9bee765fbbc9fa986dd9d358d2e83);
+            
+        
+
+        marker_1dc102ff86f497801e2df480f4a83938.bindPopup(popup_97309b3cdbf30142ed118307fda861bc)
+        ;
+
+        
+    
+    
+            marker_1dc102ff86f497801e2df480f4a83938.bindTooltip(
+                `<div>
+                     Aztec
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1dc102ff86f497801e2df480f4a83938.setIcon(icon_65b6a17d278808c39149d6523b7543eb);
+            
+    
+            var marker_3439e3ccbd0a9591c32b5aac90435651 = L.marker(
+                [18.198, -94.9109],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_9dcacf28bff55133fea7804516c553ff = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_ccfe69bd880fa3bf36b8e243f84389d9 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_792bb7e7a4c65b1edddd386469641462 = $(`<div id="html_792bb7e7a4c65b1edddd386469641462" style="width: 100.0%; height: 100.0%;">Focal Year: 1940<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Two or more of above<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_ccfe69bd880fa3bf36b8e243f84389d9.setContent(html_792bb7e7a4c65b1edddd386469641462);
+            
+        
+
+        marker_3439e3ccbd0a9591c32b5aac90435651.bindPopup(popup_ccfe69bd880fa3bf36b8e243f84389d9)
+        ;
+
+        
+    
+    
+            marker_3439e3ccbd0a9591c32b5aac90435651.bindTooltip(
+                `<div>
+                     Sierra Popoluca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3439e3ccbd0a9591c32b5aac90435651.setIcon(icon_9dcacf28bff55133fea7804516c553ff);
+            
+    
+            var marker_cd27c00f63e0bd8e6f127b6df1f7dfd6 = L.marker(
+                [7.92993, -77.1664],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_38422cba11026592679f1b1279bc9e2c = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_a810e1fc5f81bb5af9c48f974253b345 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_61c72404e0fd93f128eeb3a103fd6d79 = $(`<div id="html_61c72404e0fd93f128eeb3a103fd6d79" style="width: 100.0%; height: 100.0%;">Focal Year: 1927<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_a810e1fc5f81bb5af9c48f974253b345.setContent(html_61c72404e0fd93f128eeb3a103fd6d79);
+            
+        
+
+        marker_cd27c00f63e0bd8e6f127b6df1f7dfd6.bindPopup(popup_a810e1fc5f81bb5af9c48f974253b345)
+        ;
+
+        
+    
+    
+            marker_cd27c00f63e0bd8e6f127b6df1f7dfd6.bindTooltip(
+                `<div>
+                     Guna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cd27c00f63e0bd8e6f127b6df1f7dfd6.setIcon(icon_38422cba11026592679f1b1279bc9e2c);
+            
+    
+            var marker_08a0a3dd47191a92f1c181ecc499455a = L.marker(
+                [6.88039, 9.26287],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_4a7723a29a4caf8774a1140d76cab346 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_635eb50eb594bba8896429d1e4a4a0cb = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_077ce78b33586c40e1f689ace976ce40 = $(`<div id="html_077ce78b33586c40e1f689ace976ce40" style="width: 100.0%; height: 100.0%;">Focal Year: 1920<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_635eb50eb594bba8896429d1e4a4a0cb.setContent(html_077ce78b33586c40e1f689ace976ce40);
+            
+        
+
+        marker_08a0a3dd47191a92f1c181ecc499455a.bindPopup(popup_635eb50eb594bba8896429d1e4a4a0cb)
+        ;
+
+        
+    
+    
+            marker_08a0a3dd47191a92f1c181ecc499455a.bindTooltip(
+                `<div>
+                     Tiv
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_08a0a3dd47191a92f1c181ecc499455a.setIcon(icon_4a7723a29a4caf8774a1140d76cab346);
+            
+    
+            var marker_f6f632933d2774d67b63a0c85f3014e8 = L.marker(
+                [15.364795, -61.342957],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_ea7364083fd51af115ddd95e4cf0e7f6 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_d955eea687152d464ec92eeb3a700ce2 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_d9a47dfcb02e803f4dcfbcffd9991be1 = $(`<div id="html_d9a47dfcb02e803f4dcfbcffd9991be1" style="width: 100.0%; height: 100.0%;">Focal Year: 1650<br>Role of Gods: Otiose<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_d955eea687152d464ec92eeb3a700ce2.setContent(html_d9a47dfcb02e803f4dcfbcffd9991be1);
+            
+        
+
+        marker_f6f632933d2774d67b63a0c85f3014e8.bindPopup(popup_d955eea687152d464ec92eeb3a700ce2)
+        ;
+
+        
+    
+    
+            marker_f6f632933d2774d67b63a0c85f3014e8.bindTooltip(
+                `<div>
+                     Callinago
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f6f632933d2774d67b63a0c85f3014e8.setIcon(icon_ea7364083fd51af115ddd95e4cf0e7f6);
+            
+    
+            var marker_0779ff0b9aeeaff210282488560d7e77 = L.marker(
+                [7.50851, -59.3528],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_ed6f56f86b360011af66c9e3c257dc2a = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_8dc0995826ef512201e9e6f632832aa4 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_feae4341912618fba8a0dc7fef935325 = $(`<div id="html_feae4341912618fba8a0dc7fef935325" style="width: 100.0%; height: 100.0%;">Focal Year: 1935<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_8dc0995826ef512201e9e6f632832aa4.setContent(html_feae4341912618fba8a0dc7fef935325);
+            
+        
+
+        marker_0779ff0b9aeeaff210282488560d7e77.bindPopup(popup_8dc0995826ef512201e9e6f632832aa4)
+        ;
+
+        
+    
+    
+            marker_0779ff0b9aeeaff210282488560d7e77.bindTooltip(
+                `<div>
+                     Warao
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0779ff0b9aeeaff210282488560d7e77.setIcon(icon_ed6f56f86b360011af66c9e3c257dc2a);
+            
+    
+            var marker_37b98c223d92d9784817e123264889f9 = L.marker(
+                [1.67967, -64.8781],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_2d04350d7f43eb78e64739bd9e7771ca = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_ab010fcdcdf90da4a21c6023a3d320e9 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_3a41f0a09fd369a6bdbec8029dfcf04e = $(`<div id="html_3a41f0a09fd369a6bdbec8029dfcf04e" style="width: 100.0%; height: 100.0%;">Focal Year: 1965<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_ab010fcdcdf90da4a21c6023a3d320e9.setContent(html_3a41f0a09fd369a6bdbec8029dfcf04e);
+            
+        
+
+        marker_37b98c223d92d9784817e123264889f9.bindPopup(popup_ab010fcdcdf90da4a21c6023a3d320e9)
+        ;
+
+        
+    
+    
+            marker_37b98c223d92d9784817e123264889f9.bindTooltip(
+                `<div>
+                     Yanomami
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_37b98c223d92d9784817e123264889f9.setIcon(icon_2d04350d7f43eb78e64739bd9e7771ca);
+            
+    
+            var marker_3b1091bf39a036296f600f6ca511688e = L.marker(
+                [-8.41095, -57.691],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_31dc8dd8754ca08eec64a139990c115e = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_8d83a129eaab5872ad5aa8339e74c5b7 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_6222c6f536422c4d1db3840b24d92c8b = $(`<div id="html_6222c6f536422c4d1db3840b24d92c8b" style="width: 100.0%; height: 100.0%;">Focal Year: 1850<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_8d83a129eaab5872ad5aa8339e74c5b7.setContent(html_6222c6f536422c4d1db3840b24d92c8b);
+            
+        
+
+        marker_3b1091bf39a036296f600f6ca511688e.bindPopup(popup_8d83a129eaab5872ad5aa8339e74c5b7)
+        ;
+
+        
+    
+    
+            marker_3b1091bf39a036296f600f6ca511688e.bindTooltip(
+                `<div>
+                     Munduruku
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b1091bf39a036296f600f6ca511688e.setIcon(icon_31dc8dd8754ca08eec64a139990c115e);
+            
+    
+            var marker_2f68b6c42c492171776ceb14ff2cab4b = L.marker(
+                [1.32382, -70.1939],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_85e2c715d3c48af5ccd63616c73698c7 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_cd7ecb4ff7093a5fd9326dbf754e4838 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_a753e962ff9f94f287e91ccae3b29ff8 = $(`<div id="html_a753e962ff9f94f287e91ccae3b29ff8" style="width: 100.0%; height: 100.0%;">Focal Year: 1939<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_cd7ecb4ff7093a5fd9326dbf754e4838.setContent(html_a753e962ff9f94f287e91ccae3b29ff8);
+            
+        
+
+        marker_2f68b6c42c492171776ceb14ff2cab4b.bindPopup(popup_cd7ecb4ff7093a5fd9326dbf754e4838)
+        ;
+
+        
+    
+    
+            marker_2f68b6c42c492171776ceb14ff2cab4b.bindTooltip(
+                `<div>
+                     Cubeo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2f68b6c42c492171776ceb14ff2cab4b.setIcon(icon_85e2c715d3c48af5ccd63616c73698c7);
+            
+    
+            var marker_f6c4b1d8bce82db816a5a6a1b308ffa7 = L.marker(
+                [-10.2012, -72.3208],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_016e190ceacd95ebce63f00c5dc81f77 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_265be7e6bd66a41b3677cd054b27ebaf = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_3d71a6a16975171838fe7f81a8ea2f66 = $(`<div id="html_3d71a6a16975171838fe7f81a8ea2f66" style="width: 100.0%; height: 100.0%;">Focal Year: 1960<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_265be7e6bd66a41b3677cd054b27ebaf.setContent(html_3d71a6a16975171838fe7f81a8ea2f66);
+            
+        
+
+        marker_f6c4b1d8bce82db816a5a6a1b308ffa7.bindPopup(popup_265be7e6bd66a41b3677cd054b27ebaf)
+        ;
+
+        
+    
+    
+            marker_f6c4b1d8bce82db816a5a6a1b308ffa7.bindTooltip(
+                `<div>
+                     Amahuaca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f6c4b1d8bce82db816a5a6a1b308ffa7.setIcon(icon_016e190ceacd95ebce63f00c5dc81f77);
+            
+    
+            var marker_876523a2b1c14e7410e5a7aa8039687a = L.marker(
+                [-14.3707, -59.5187],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_a05dba662e8af6f586a79bb6bc1e83cb = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_847c1d47cc3686bc43411a371a7f7b21 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_8065525281c24b9d97dfed6b6042df2f = $(`<div id="html_8065525281c24b9d97dfed6b6042df2f" style="width: 100.0%; height: 100.0%;">Focal Year: 1940<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_847c1d47cc3686bc43411a371a7f7b21.setContent(html_8065525281c24b9d97dfed6b6042df2f);
+            
+        
+
+        marker_876523a2b1c14e7410e5a7aa8039687a.bindPopup(popup_847c1d47cc3686bc43411a371a7f7b21)
+        ;
+
+        
+    
+    
+            marker_876523a2b1c14e7410e5a7aa8039687a.bindTooltip(
+                `<div>
+                     Nambikwara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_876523a2b1c14e7410e5a7aa8039687a.setIcon(icon_a05dba662e8af6f586a79bb6bc1e83cb);
+            
+    
+            var marker_c57de2c692890a0ac1435e669e111c70 = L.marker(
+                [-22.807778, -42.106389],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_d29a522661669c355d22e1e0ae3fcfd4 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_1649df21c4c93b1ea25378b59f310e05 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_8bb671c6616dcb4f0855f27157cb82ca = $(`<div id="html_8bb671c6616dcb4f0855f27157cb82ca" style="width: 100.0%; height: 100.0%;">Focal Year: 1550<br>Role of Gods: Otiose<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_1649df21c4c93b1ea25378b59f310e05.setContent(html_8bb671c6616dcb4f0855f27157cb82ca);
+            
+        
+
+        marker_c57de2c692890a0ac1435e669e111c70.bindPopup(popup_1649df21c4c93b1ea25378b59f310e05)
+        ;
+
+        
+    
+    
+            marker_c57de2c692890a0ac1435e669e111c70.bindTooltip(
+                `<div>
+                     Tupinambá
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c57de2c692890a0ac1435e669e111c70.setIcon(icon_d29a522661669c355d22e1e0ae3fcfd4);
+            
+    
+            var marker_13ab6df56a3efdfb758ed221866d90b0 = L.marker(
+                [-14.3017, -52.4367],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_f819dfc4335b61b3ea03e27b1dd095c6 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_69a4809d2ac046a3e8fb990cafc3b13c = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_95ef7dd96af436339efdb288ecee9913 = $(`<div id="html_95ef7dd96af436339efdb288ecee9913" style="width: 100.0%; height: 100.0%;">Focal Year: 1958<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_69a4809d2ac046a3e8fb990cafc3b13c.setContent(html_95ef7dd96af436339efdb288ecee9913);
+            
+        
+
+        marker_13ab6df56a3efdfb758ed221866d90b0.bindPopup(popup_69a4809d2ac046a3e8fb990cafc3b13c)
+        ;
+
+        
+    
+    
+            marker_13ab6df56a3efdfb758ed221866d90b0.bindTooltip(
+                `<div>
+                     Shavante
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_13ab6df56a3efdfb758ed221866d90b0.setIcon(icon_f819dfc4335b61b3ea03e27b1dd095c6);
+            
+    
+            var marker_9fd5d4187ba83a7b50e779a22010d5b2 = L.marker(
+                [-26.9217, -49.5886],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_3588c6a4a8be409e0c2572e29fca650a = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_9958d9c15b3dd8fba5d25e94dd9e58f6 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_1ba89d8157394a25327f3284eedfced9 = $(`<div id="html_1ba89d8157394a25327f3284eedfced9" style="width: 100.0%; height: 100.0%;">Focal Year: 1932<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_9958d9c15b3dd8fba5d25e94dd9e58f6.setContent(html_1ba89d8157394a25327f3284eedfced9);
+            
+        
+
+        marker_9fd5d4187ba83a7b50e779a22010d5b2.bindPopup(popup_9958d9c15b3dd8fba5d25e94dd9e58f6)
+        ;
+
+        
+    
+    
+            marker_9fd5d4187ba83a7b50e779a22010d5b2.bindTooltip(
+                `<div>
+                     Aweikoma
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9fd5d4187ba83a7b50e779a22010d5b2.setIcon(icon_3588c6a4a8be409e0c2572e29fca650a);
+            
+    
+            var marker_aae58342ca574e92b5c58070b8915854 = L.marker(
+                [-55.2748, -68.2648],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_c96f9e6f0534c722ea8c531cb868dba0 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_5356c6184c8e4d884a5b8b8ae26c3e90 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_f9c855193d7c70599f5f2bddb28664f6 = $(`<div id="html_f9c855193d7c70599f5f2bddb28664f6" style="width: 100.0%; height: 100.0%;">Focal Year: 1865<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Birds or Waterfowl<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_5356c6184c8e4d884a5b8b8ae26c3e90.setContent(html_f9c855193d7c70599f5f2bddb28664f6);
+            
+        
+
+        marker_aae58342ca574e92b5c58070b8915854.bindPopup(popup_5356c6184c8e4d884a5b8b8ae26c3e90)
+        ;
+
+        
+    
+    
+            marker_aae58342ca574e92b5c58070b8915854.bindTooltip(
+                `<div>
+                     Yahgan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aae58342ca574e92b5c58070b8915854.setIcon(icon_c96f9e6f0534c722ea8c531cb868dba0);
+            
+    
+            var marker_3f4d37a9ae61c78d2d2df343d86e1d90 = L.marker(
+                [4.62047, 26.7157],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_fc4df12ba1f3d740faa14d0893594aa7 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_ecb58f21163aa796fa10c4f25a7b4821 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_d0643ed5968e40f34913486c25de546a = $(`<div id="html_d0643ed5968e40f34913486c25de546a" style="width: 100.0%; height: 100.0%;">Focal Year: 1905<br>Role of Gods: Active, but not supporting morality<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_ecb58f21163aa796fa10c4f25a7b4821.setContent(html_d0643ed5968e40f34913486c25de546a);
+            
+        
+
+        marker_3f4d37a9ae61c78d2d2df343d86e1d90.bindPopup(popup_ecb58f21163aa796fa10c4f25a7b4821)
+        ;
+
+        
+    
+    
+            marker_3f4d37a9ae61c78d2d2df343d86e1d90.bindTooltip(
+                `<div>
+                     Azande
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3f4d37a9ae61c78d2d2df343d86e1d90.setIcon(icon_fc4df12ba1f3d740faa14d0893594aa7);
+            
+    
+            var marker_676c185667adf4ca738556c5f29cb26e = L.marker(
+                [-5.76495, 17.7736],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_230032eb31f1ce97a58f1e9571a08526 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_b0345456e2c5c6bac5288741ded7dc68 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_93bc51c5b432f7218279ca4ef465bbfc = $(`<div id="html_93bc51c5b432f7218279ca4ef465bbfc" style="width: 100.0%; height: 100.0%;">Focal Year: 1920<br>Role of Gods: Otiose<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_b0345456e2c5c6bac5288741ded7dc68.setContent(html_93bc51c5b432f7218279ca4ef465bbfc);
+            
+        
+
+        marker_676c185667adf4ca738556c5f29cb26e.bindPopup(popup_b0345456e2c5c6bac5288741ded7dc68)
+        ;
+
+        
+    
+    
+            marker_676c185667adf4ca738556c5f29cb26e.bindTooltip(
+                `<div>
+                     Suku
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_676c185667adf4ca738556c5f29cb26e.setIcon(icon_230032eb31f1ce97a58f1e9571a08526);
+            
+    
+            var marker_6b7f97f7e6208935b22fcd8bff68582b = L.marker(
+                [20.7926, 93.9665],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_c0fd28a7f0c94b39e41810303d642b9e = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_f1fa558ac965678597fb13ddde78f47e = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_6bb3f696df5c4c49c652541160585925 = $(`<div id="html_6bb3f696df5c4c49c652541160585925" style="width: 100.0%; height: 100.0%;">Focal Year: 1965<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 5 (Mahayana Buddhism)</div>`)[0];
+                popup_f1fa558ac965678597fb13ddde78f47e.setContent(html_6bb3f696df5c4c49c652541160585925);
+            
+        
+
+        marker_6b7f97f7e6208935b22fcd8bff68582b.bindPopup(popup_f1fa558ac965678597fb13ddde78f47e)
+        ;
+
+        
+    
+    
+            marker_6b7f97f7e6208935b22fcd8bff68582b.bindTooltip(
+                `<div>
+                     Burmese
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6b7f97f7e6208935b22fcd8bff68582b.setIcon(icon_c0fd28a7f0c94b39e41810303d642b9e);
+            
+    
+            var marker_0c201400b3e87d60f9619881be77f98a = L.marker(
+                [5.98085, 101.026],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_ad6d0eabb12e3355c44d91b0cab1ad95 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_dbaf2b70493b0e320b40941b2df46eaf = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_4449a5bcf3db8811015b8bde262c70ea = $(`<div id="html_4449a5bcf3db8811015b8bde262c70ea" style="width: 100.0%; height: 100.0%;">Focal Year: 1925<br>Role of Gods: Active, but not supporting morality<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_dbaf2b70493b0e320b40941b2df46eaf.setContent(html_4449a5bcf3db8811015b8bde262c70ea);
+            
+        
+
+        marker_0c201400b3e87d60f9619881be77f98a.bindPopup(popup_dbaf2b70493b0e320b40941b2df46eaf)
+        ;
+
+        
+    
+    
+            marker_0c201400b3e87d60f9619881be77f98a.bindTooltip(
+                `<div>
+                     Semang
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0c201400b3e87d60f9619881be77f98a.setIcon(icon_ad6d0eabb12e3355c44d91b0cab1ad95);
+            
+    
+            var marker_e8cdf716ba6536d136db6a4992841d9d = L.marker(
+                [6.97396, 81.2618],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_a7c3287e5d84909909a1b28cf870c9dd = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_469679b4dc6a6d115921b827f2d50457 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_437e03447e7b60769cee38de204c1f39 = $(`<div id="html_437e03447e7b60769cee38de204c1f39" style="width: 100.0%; height: 100.0%;">Focal Year: 1860<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_469679b4dc6a6d115921b827f2d50457.setContent(html_437e03447e7b60769cee38de204c1f39);
+            
+        
+
+        marker_e8cdf716ba6536d136db6a4992841d9d.bindPopup(popup_469679b4dc6a6d115921b827f2d50457)
+        ;
+
+        
+    
+    
+            marker_e8cdf716ba6536d136db6a4992841d9d.bindTooltip(
+                `<div>
+                     Vedda
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e8cdf716ba6536d136db6a4992841d9d.setIcon(icon_a7c3287e5d84909909a1b28cf870c9dd);
+            
+    
+            var marker_f1843ebaaebc9fbbeacb765e2511ad4a = L.marker(
+                [-3.83115, 35.0458],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_c8593ae1acaeef7856549c67753bce08 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_4b3953488186c70d98a4815c5ad38fab = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_8bed48e4542d6178185c219e9cb925a7 = $(`<div id="html_8bed48e4542d6178185c219e9cb925a7" style="width: 100.0%; height: 100.0%;">Focal Year: 1930<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_4b3953488186c70d98a4815c5ad38fab.setContent(html_8bed48e4542d6178185c219e9cb925a7);
+            
+        
+
+        marker_f1843ebaaebc9fbbeacb765e2511ad4a.bindPopup(popup_4b3953488186c70d98a4815c5ad38fab)
+        ;
+
+        
+    
+    
+            marker_f1843ebaaebc9fbbeacb765e2511ad4a.bindTooltip(
+                `<div>
+                     Hadza
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f1843ebaaebc9fbbeacb765e2511ad4a.setIcon(icon_c8593ae1acaeef7856549c67753bce08);
+            
+    
+            var marker_bfc73ff5d188cf0cfd997517fe02c388 = L.marker(
+                [-11.6308, 130.949],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_28953da0931ad13a9d333d0461143c80 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_a46ad282b0ddee6c01fd9ba147cd84ab = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_7fc4f7da09a1ecb22c54e1ebbcda043d = $(`<div id="html_7fc4f7da09a1ecb22c54e1ebbcda043d" style="width: 100.0%; height: 100.0%;">Focal Year: 1929<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_a46ad282b0ddee6c01fd9ba147cd84ab.setContent(html_7fc4f7da09a1ecb22c54e1ebbcda043d);
+            
+        
+
+        marker_bfc73ff5d188cf0cfd997517fe02c388.bindPopup(popup_a46ad282b0ddee6c01fd9ba147cd84ab)
+        ;
+
+        
+    
+    
+            marker_bfc73ff5d188cf0cfd997517fe02c388.bindTooltip(
+                `<div>
+                     Tiwi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bfc73ff5d188cf0cfd997517fe02c388.setIcon(icon_28953da0931ad13a9d333d0461143c80);
+            
+    
+            var marker_b07ac7457a46a7b787c73c480338fc1a = L.marker(
+                [-23.3583, 135.046],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_1044acb0a8a28c632c1af43c052f6058 = L.icon({
+  "iconUrl": "../../assets/icons/chicken.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_204d6f08d7b949c974426af057e760b8 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_80c8d45f5bbc0d6805141e7f45564969 = $(`<div id="html_80c8d45f5bbc0d6805141e7f45564969" style="width: 100.0%; height: 100.0%;">Focal Year: 1896<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_204d6f08d7b949c974426af057e760b8.setContent(html_80c8d45f5bbc0d6805141e7f45564969);
+            
+        
+
+        marker_b07ac7457a46a7b787c73c480338fc1a.bindPopup(popup_204d6f08d7b949c974426af057e760b8)
+        ;
+
+        
+    
+    
+            marker_b07ac7457a46a7b787c73c480338fc1a.bindTooltip(
+                `<div>
+                     Northern Aranda
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b07ac7457a46a7b787c73c480338fc1a.setIcon(icon_1044acb0a8a28c632c1af43c052f6058);
+            
+    
+            var marker_48a0a4685d7fe4a6c15e9c922ff2d982 = L.marker(
+                [-15.9534, 168.228],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_6dfd5ea64086c7c5845fbe420dfc2cdb = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_8add25af308845a6f4dda15774de1700 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_1f7cfa168c992cab689e50b150ff4fe2 = $(`<div id="html_1f7cfa168c992cab689e50b150ff4fe2" style="width: 100.0%; height: 100.0%;">Focal Year: 1953<br>Role of Gods: Absent<br>Animals Hunted: Birds or Waterfowl<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_8add25af308845a6f4dda15774de1700.setContent(html_1f7cfa168c992cab689e50b150ff4fe2);
+            
+        
+
+        marker_48a0a4685d7fe4a6c15e9c922ff2d982.bindPopup(popup_8add25af308845a6f4dda15774de1700)
+        ;
+
+        
+    
+    
+            marker_48a0a4685d7fe4a6c15e9c922ff2d982.bindTooltip(
+                `<div>
+                     Bunlap
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_48a0a4685d7fe4a6c15e9c922ff2d982.setIcon(icon_6dfd5ea64086c7c5845fbe420dfc2cdb);
+            
+    
+            var marker_af11341576c823ad700db69096e9e312 = L.marker(
+                [-38.2881, 176.541],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_c54b27f943407135d4859fdb4a6c4036 = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_2e1c83f1a1c499ea74f9e4f3bbabc54f = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_15180cf035e99325d4c6ab1b76a0d11b = $(`<div id="html_15180cf035e99325d4c6ab1b76a0d11b" style="width: 100.0%; height: 100.0%;">Focal Year: 1820<br>Role of Gods: Absent<br>Animals Hunted: Birds or Waterfowl<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_2e1c83f1a1c499ea74f9e4f3bbabc54f.setContent(html_15180cf035e99325d4c6ab1b76a0d11b);
+            
+        
+
+        marker_af11341576c823ad700db69096e9e312.bindPopup(popup_2e1c83f1a1c499ea74f9e4f3bbabc54f)
+        ;
+
+        
+    
+    
+            marker_af11341576c823ad700db69096e9e312.bindTooltip(
+                `<div>
+                     Māori
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_af11341576c823ad700db69096e9e312.setIcon(icon_c54b27f943407135d4859fdb4a6c4036);
+            
+    
+            var marker_8098335f75ea543b95ebdc72b11b7803 = L.marker(
+                [-8.89412, -140.108],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_0063194500cb8c02a2721719e577d0c2 = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_f51c9bb3df6d46ed05b58019fa5ae968 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_1eb548cf9c1b17054b236a67f58491a6 = $(`<div id="html_1eb548cf9c1b17054b236a67f58491a6" style="width: 100.0%; height: 100.0%;">Focal Year: 1800<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_f51c9bb3df6d46ed05b58019fa5ae968.setContent(html_1eb548cf9c1b17054b236a67f58491a6);
+            
+        
+
+        marker_8098335f75ea543b95ebdc72b11b7803.bindPopup(popup_f51c9bb3df6d46ed05b58019fa5ae968)
+        ;
+
+        
+    
+    
+            marker_8098335f75ea543b95ebdc72b11b7803.bindTooltip(
+                `<div>
+                     Marquesans
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8098335f75ea543b95ebdc72b11b7803.setIcon(icon_0063194500cb8c02a2721719e577d0c2);
+            
+    
+            var marker_adf5cff91536e6a2cc8674475546195c = L.marker(
+                [-13.92, -171.83],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_88e1cadb0191c94d2cb1ddf65a3fe586 = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_ada637836d114a08c019b9714064841f = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_76923a14c0f2756e3c4587b0ef44a027 = $(`<div id="html_76923a14c0f2756e3c4587b0ef44a027" style="width: 100.0%; height: 100.0%;">Focal Year: 1829<br>Role of Gods: Absent<br>Animals Hunted: Birds or Waterfowl<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_ada637836d114a08c019b9714064841f.setContent(html_76923a14c0f2756e3c4587b0ef44a027);
+            
+        
+
+        marker_adf5cff91536e6a2cc8674475546195c.bindPopup(popup_ada637836d114a08c019b9714064841f)
+        ;
+
+        
+    
+    
+            marker_adf5cff91536e6a2cc8674475546195c.bindTooltip(
+                `<div>
+                     Upolu Samoans
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_adf5cff91536e6a2cc8674475546195c.setIcon(icon_88e1cadb0191c94d2cb1ddf65a3fe586);
+            
+    
+            var marker_ab76e7d8106d4e54325f975a88ebaea3 = L.marker(
+                [7.346993, 151.598607],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_fe87e4c97414c09a5c3da27672d8ccec = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_000bbb90b9ae4dff61f7a7f8bb5a3fef = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_5b6c3fa34fcdb5ea23ece9df36ed9fa4 = $(`<div id="html_5b6c3fa34fcdb5ea23ece9df36ed9fa4" style="width: 100.0%; height: 100.0%;">Focal Year: 1947<br>Role of Gods: Absent<br>Animals Hunted: Birds or Waterfowl<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_000bbb90b9ae4dff61f7a7f8bb5a3fef.setContent(html_5b6c3fa34fcdb5ea23ece9df36ed9fa4);
+            
+        
+
+        marker_ab76e7d8106d4e54325f975a88ebaea3.bindPopup(popup_000bbb90b9ae4dff61f7a7f8bb5a3fef)
+        ;
+
+        
+    
+    
+            marker_ab76e7d8106d4e54325f975a88ebaea3.bindTooltip(
+                `<div>
+                     Trukese
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ab76e7d8106d4e54325f975a88ebaea3.setIcon(icon_fe87e4c97414c09a5c3da27672d8ccec);
+            
+    
+            var marker_ab2464f031c9a8661b6e181d5588fdd0 = L.marker(
+                [16.6646, 121.113],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_4a072ef667fe0ca23e5603e0be1e9f0e = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_38326717794817c6657510c7789befd4 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_92adadcdbc630e2d5c5e2245d5661f3f = $(`<div id="html_92adadcdbc630e2d5c5e2245d5661f3f" style="width: 100.0%; height: 100.0%;">Focal Year: 1910<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_38326717794817c6657510c7789befd4.setContent(html_92adadcdbc630e2d5c5e2245d5661f3f);
+            
+        
+
+        marker_ab2464f031c9a8661b6e181d5588fdd0.bindPopup(popup_38326717794817c6657510c7789befd4)
+        ;
+
+        
+    
+    
+            marker_ab2464f031c9a8661b6e181d5588fdd0.bindTooltip(
+                `<div>
+                     Ifugao
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ab2464f031c9a8661b6e181d5588fdd0.setIcon(icon_4a072ef667fe0ca23e5603e0be1e9f0e);
+            
+    
+            var marker_1480dfe785d2bf11467a70657dd9c1f0 = L.marker(
+                [24.5209, 121.388],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_5adc706c88431d1d24de77a14550cf53 = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_7ca0788b0b64a374e92a8f48eb60a7fd = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_406144ac6b39996cf1a37049fd4f3d34 = $(`<div id="html_406144ac6b39996cf1a37049fd4f3d34" style="width: 100.0%; height: 100.0%;">Focal Year: 1930<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_7ca0788b0b64a374e92a8f48eb60a7fd.setContent(html_406144ac6b39996cf1a37049fd4f3d34);
+            
+        
+
+        marker_1480dfe785d2bf11467a70657dd9c1f0.bindPopup(popup_7ca0788b0b64a374e92a8f48eb60a7fd)
+        ;
+
+        
+    
+    
+            marker_1480dfe785d2bf11467a70657dd9c1f0.bindTooltip(
+                `<div>
+                     Atayal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1480dfe785d2bf11467a70657dd9c1f0.setIcon(icon_5adc706c88431d1d24de77a14550cf53);
+            
+    
+            var marker_278869f1493ec4c40d23386a465b34e3 = L.marker(
+                [15.1576, -84.2942],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_b44b9d473eb2d3187cf150061656cf52 = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_ae66138bb82f379668e1ebff5b733080 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_86979c585eac5b9ad91fe3a5e66a9023 = $(`<div id="html_86979c585eac5b9ad91fe3a5e66a9023" style="width: 100.0%; height: 100.0%;">Focal Year: 1921<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Small Mammals<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_ae66138bb82f379668e1ebff5b733080.setContent(html_86979c585eac5b9ad91fe3a5e66a9023);
+            
+        
+
+        marker_278869f1493ec4c40d23386a465b34e3.bindPopup(popup_ae66138bb82f379668e1ebff5b733080)
+        ;
+
+        
+    
+    
+            marker_278869f1493ec4c40d23386a465b34e3.bindTooltip(
+                `<div>
+                     Miskito
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_278869f1493ec4c40d23386a465b34e3.setIcon(icon_b44b9d473eb2d3187cf150061656cf52);
+            
+    
+            var marker_0b9c665064bdd036ee1ee924b4c66d88 = L.marker(
+                [9.39794, -83.0539],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_a05fc8a538e426962a4eed515d41f942 = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_08bf45d69c35e2216289c180a7f1ea6e = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_002e9f3389b4b3c7af6f97dc6631880d = $(`<div id="html_002e9f3389b4b3c7af6f97dc6631880d" style="width: 100.0%; height: 100.0%;">Focal Year: 1917<br>Role of Gods: Active, but not supporting morality<br>Animals Hunted: Two or more of above<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_08bf45d69c35e2216289c180a7f1ea6e.setContent(html_002e9f3389b4b3c7af6f97dc6631880d);
+            
+        
+
+        marker_0b9c665064bdd036ee1ee924b4c66d88.bindPopup(popup_08bf45d69c35e2216289c180a7f1ea6e)
+        ;
+
+        
+    
+    
+            marker_0b9c665064bdd036ee1ee924b4c66d88.bindTooltip(
+                `<div>
+                     Bribri
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0b9c665064bdd036ee1ee924b4c66d88.setIcon(icon_a05fc8a538e426962a4eed515d41f942);
+            
+    
+            var marker_bc432ffce4f1300c0d31f74d97c93598 = L.marker(
+                [0.71489, -79.0508],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_d28e0205bc654e17e3297a4ad8f80ba8 = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_31e7a4a6f67ab824e406f0e681ebad96 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_b875aad585e81500ab57c5dce7cc0ea5 = $(`<div id="html_b875aad585e81500ab57c5dce7cc0ea5" style="width: 100.0%; height: 100.0%;">Focal Year: 1908<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_31e7a4a6f67ab824e406f0e681ebad96.setContent(html_b875aad585e81500ab57c5dce7cc0ea5);
+            
+        
+
+        marker_bc432ffce4f1300c0d31f74d97c93598.bindPopup(popup_31e7a4a6f67ab824e406f0e681ebad96)
+        ;
+
+        
+    
+    
+            marker_bc432ffce4f1300c0d31f74d97c93598.bindTooltip(
+                `<div>
+                     Chachi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_bc432ffce4f1300c0d31f74d97c93598.setIcon(icon_d28e0205bc654e17e3297a4ad8f80ba8);
+            
+    
+            var marker_4acbc2ef259d131e42b9cb9ad99e4f09 = L.marker(
+                [-3.45136, -78.1892],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_f4de53defd293191fc21f2047dcb7016 = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_032cb5dc4013b512678fc1ee93bc273b = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_f6560d3e03c3ec0e3079babbc6d5a4e5 = $(`<div id="html_f6560d3e03c3ec0e3079babbc6d5a4e5" style="width: 100.0%; height: 100.0%;">Focal Year: 1920<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_032cb5dc4013b512678fc1ee93bc273b.setContent(html_f6560d3e03c3ec0e3079babbc6d5a4e5);
+            
+        
+
+        marker_4acbc2ef259d131e42b9cb9ad99e4f09.bindPopup(popup_032cb5dc4013b512678fc1ee93bc273b)
+        ;
+
+        
+    
+    
+            marker_4acbc2ef259d131e42b9cb9ad99e4f09.bindTooltip(
+                `<div>
+                     Shuar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4acbc2ef259d131e42b9cb9ad99e4f09.setIcon(icon_f4de53defd293191fc21f2047dcb7016);
+            
+    
+            var marker_a40d587ea85cbe7152619a0b0ca1c02c = L.marker(
+                [-6.10712, -45.1299],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_47de2215ffcd3d78451d8939681b2c07 = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_aa069c69c08d8bb89ac47f49a269ed58 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_63fe18935299079be9bc377c5f2ced85 = $(`<div id="html_63fe18935299079be9bc377c5f2ced85" style="width: 100.0%; height: 100.0%;">Focal Year: 1915<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_aa069c69c08d8bb89ac47f49a269ed58.setContent(html_63fe18935299079be9bc377c5f2ced85);
+            
+        
+
+        marker_a40d587ea85cbe7152619a0b0ca1c02c.bindPopup(popup_aa069c69c08d8bb89ac47f49a269ed58)
+        ;
+
+        
+    
+    
+            marker_a40d587ea85cbe7152619a0b0ca1c02c.bindTooltip(
+                `<div>
+                     Canela
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a40d587ea85cbe7152619a0b0ca1c02c.setIcon(icon_47de2215ffcd3d78451d8939681b2c07);
+            
+    
+            var marker_9ed7e20ee8b069886c22da21d14f57bd = L.marker(
+                [7.15484, 1.66495],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_e1ad1a8cf0c67aa23fe3bcdec22b5eba = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_057461b2e8fb718f41e1e1d42bd8df5f = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_70880857e750fc5e31eb075c1c5a30f3 = $(`<div id="html_70880857e750fc5e31eb075c1c5a30f3" style="width: 100.0%; height: 100.0%;">Focal Year: 1890<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_057461b2e8fb718f41e1e1d42bd8df5f.setContent(html_70880857e750fc5e31eb075c1c5a30f3);
+            
+        
+
+        marker_9ed7e20ee8b069886c22da21d14f57bd.bindPopup(popup_057461b2e8fb718f41e1e1d42bd8df5f)
+        ;
+
+        
+    
+    
+            marker_9ed7e20ee8b069886c22da21d14f57bd.bindTooltip(
+                `<div>
+                     Fon
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9ed7e20ee8b069886c22da21d14f57bd.setIcon(icon_e1ad1a8cf0c67aa23fe3bcdec22b5eba);
+            
+    
+            var marker_8a57eee9e684ec952bfa5d729b0814c0 = L.marker(
+                [20.681188, 105.774071],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_b2b0c6372374ce1dcae148ad542deaba = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_b34a251627a0e2b7644f4d826059d78f = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_e2651f2738aa055a3cbbe1ce1a244179 = $(`<div id="html_e2651f2738aa055a3cbbe1ce1a244179" style="width: 100.0%; height: 100.0%;">Focal Year: 1930<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 5 (Mahayana Buddhism)</div>`)[0];
+                popup_b34a251627a0e2b7644f4d826059d78f.setContent(html_e2651f2738aa055a3cbbe1ce1a244179);
+            
+        
+
+        marker_8a57eee9e684ec952bfa5d729b0814c0.bindPopup(popup_b34a251627a0e2b7644f4d826059d78f)
+        ;
+
+        
+    
+    
+            marker_8a57eee9e684ec952bfa5d729b0814c0.bindTooltip(
+                `<div>
+                     Annamese
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8a57eee9e684ec952bfa5d729b0814c0.setIcon(icon_b2b0c6372374ce1dcae148ad542deaba);
+            
+    
+            var marker_3d22e01ac6200fe503acbfdf23022497 = L.marker(
+                [13.4125, 103.866667],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_553fa23556c91989485ae3d022e348dc = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_c1cdf4d3c4c909659a7e7e8e38b1aebc = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_1fb81766f58bd9fe175b6b88ddf4226f = $(`<div id="html_1fb81766f58bd9fe175b6b88ddf4226f" style="width: 100.0%; height: 100.0%;">Focal Year: 1292<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 6 (Hinayana Buddhism)</div>`)[0];
+                popup_c1cdf4d3c4c909659a7e7e8e38b1aebc.setContent(html_1fb81766f58bd9fe175b6b88ddf4226f);
+            
+        
+
+        marker_3d22e01ac6200fe503acbfdf23022497.bindPopup(popup_c1cdf4d3c4c909659a7e7e8e38b1aebc)
+        ;
+
+        
+    
+    
+            marker_3d22e01ac6200fe503acbfdf23022497.bindTooltip(
+                `<div>
+                     Ancient Khmer
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d22e01ac6200fe503acbfdf23022497.setIcon(icon_553fa23556c91989485ae3d022e348dc);
+            
+    
+            var marker_270d5d003f70cf03148dcc8a952dc1dc = L.marker(
+                [2.09041, 112.934],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_0a897db20d2c8c38f91ada02198eab1e = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_2992cc25be7e522af59992cb4cdbfe87 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_03ca484626d25bdd99aab130ff0b5beb = $(`<div id="html_03ca484626d25bdd99aab130ff0b5beb" style="width: 100.0%; height: 100.0%;">Focal Year: 1950<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_2992cc25be7e522af59992cb4cdbfe87.setContent(html_03ca484626d25bdd99aab130ff0b5beb);
+            
+        
+
+        marker_270d5d003f70cf03148dcc8a952dc1dc.bindPopup(popup_2992cc25be7e522af59992cb4cdbfe87)
+        ;
+
+        
+    
+    
+            marker_270d5d003f70cf03148dcc8a952dc1dc.bindTooltip(
+                `<div>
+                     Iban
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_270d5d003f70cf03148dcc8a952dc1dc.setIcon(icon_0a897db20d2c8c38f91ada02198eab1e);
+            
+    
+            var marker_022636dfc92fae41c0e21eee6e61d3ba = L.marker(
+                [-8.31058, 124.588],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_5444df42ff06a8909df3a64f62461f5c = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_1f0b60d48e610a31cc4e637a3cbda2f5 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_1ee9d7310e38b70043047b1ef0e7bf2e = $(`<div id="html_1ee9d7310e38b70043047b1ef0e7bf2e" style="width: 100.0%; height: 100.0%;">Focal Year: 1938<br>Role of Gods: Otiose<br>Animals Hunted: Small Mammals<br>Religion: 3 (superficial Islamization)</div>`)[0];
+                popup_1f0b60d48e610a31cc4e637a3cbda2f5.setContent(html_1ee9d7310e38b70043047b1ef0e7bf2e);
+            
+        
+
+        marker_022636dfc92fae41c0e21eee6e61d3ba.bindPopup(popup_1f0b60d48e610a31cc4e637a3cbda2f5)
+        ;
+
+        
+    
+    
+            marker_022636dfc92fae41c0e21eee6e61d3ba.bindTooltip(
+                `<div>
+                     Alorese
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_022636dfc92fae41c0e21eee6e61d3ba.setIcon(icon_5444df42ff06a8909df3a64f62461f5c);
+            
+    
+            var marker_0d4a3721c21fc657c274f0f79e12a771 = L.marker(
+                [-8.79019, 148.09],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_aa9762f198b662b235a1927e2929c3fa = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_676dfabbf3409bfe7a54c6c6fea17f1b = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_97f310c2cc5a40dc7533954b40cddc5e = $(`<div id="html_97f310c2cc5a40dc7533954b40cddc5e" style="width: 100.0%; height: 100.0%;">Focal Year: 1925<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_676dfabbf3409bfe7a54c6c6fea17f1b.setContent(html_97f310c2cc5a40dc7533954b40cddc5e);
+            
+        
+
+        marker_0d4a3721c21fc657c274f0f79e12a771.bindPopup(popup_676dfabbf3409bfe7a54c6c6fea17f1b)
+        ;
+
+        
+    
+    
+            marker_0d4a3721c21fc657c274f0f79e12a771.bindTooltip(
+                `<div>
+                     Orokaiva
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0d4a3721c21fc657c274f0f79e12a771.setIcon(icon_aa9762f198b662b235a1927e2929c3fa);
+            
+    
+            var marker_1908672ef70fdcf8d66c6cb2bccb9ef8 = L.marker(
+                [-3.88974, 136.018],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_795040e91640391c90909935bc191bbf = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_c6a626af2903c5ffdf0c522fadcaefbc = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_a377123c5417178c33656d12c0428eef = $(`<div id="html_a377123c5417178c33656d12c0428eef" style="width: 100.0%; height: 100.0%;">Focal Year: 1955<br>Role of Gods: Otiose<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_c6a626af2903c5ffdf0c522fadcaefbc.setContent(html_a377123c5417178c33656d12c0428eef);
+            
+        
+
+        marker_1908672ef70fdcf8d66c6cb2bccb9ef8.bindPopup(popup_c6a626af2903c5ffdf0c522fadcaefbc)
+        ;
+
+        
+    
+    
+            marker_1908672ef70fdcf8d66c6cb2bccb9ef8.bindTooltip(
+                `<div>
+                     Mee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1908672ef70fdcf8d66c6cb2bccb9ef8.setIcon(icon_795040e91640391c90909935bc191bbf);
+            
+    
+            var marker_58c5c0938bb67474ab8d5b21998d3358 = L.marker(
+                [-4.08721, 142.664],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_9a7df00e60654db0475ff821fff9b06c = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_85c9afa329610b3a41b147581215f8d2 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_5f10ddc54aae2d3bc6c0e5add8cd5408 = $(`<div id="html_5f10ddc54aae2d3bc6c0e5add8cd5408" style="width: 100.0%; height: 100.0%;">Focal Year: 1937<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_85c9afa329610b3a41b147581215f8d2.setContent(html_5f10ddc54aae2d3bc6c0e5add8cd5408);
+            
+        
+
+        marker_58c5c0938bb67474ab8d5b21998d3358.bindPopup(popup_85c9afa329610b3a41b147581215f8d2)
+        ;
+
+        
+    
+    
+            marker_58c5c0938bb67474ab8d5b21998d3358.bindTooltip(
+                `<div>
+                     Kwoma
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_58c5c0938bb67474ab8d5b21998d3358.setIcon(icon_9a7df00e60654db0475ff821fff9b06c);
+            
+    
+            var marker_e084928b21e5013dc0dee207a5f17eff = L.marker(
+                [-3.0557, 151.661],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_971571cf5e76ecb314c2b93ae3623c2a = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_a7b18a474f159d131c1eddec35b17e12 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_e59d9efcd51cc7dfead6bb9b9fa86e07 = $(`<div id="html_e59d9efcd51cc7dfead6bb9b9fa86e07" style="width: 100.0%; height: 100.0%;">Focal Year: 1930<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_a7b18a474f159d131c1eddec35b17e12.setContent(html_e59d9efcd51cc7dfead6bb9b9fa86e07);
+            
+        
+
+        marker_e084928b21e5013dc0dee207a5f17eff.bindPopup(popup_a7b18a474f159d131c1eddec35b17e12)
+        ;
+
+        
+    
+    
+            marker_e084928b21e5013dc0dee207a5f17eff.bindTooltip(
+                `<div>
+                     Lesu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e084928b21e5013dc0dee207a5f17eff.setIcon(icon_971571cf5e76ecb314c2b93ae3623c2a);
+            
+    
+            var marker_c0671ac733e2ed9b9e878e3ed74568c2 = L.marker(
+                [-8.72574, 151.072],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_abca72836c7538886f81aa037eb1291d = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_caadf576f0c2c27a421c038e54ae8990 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_e2e67da2892b77bf16d39490508fdcf1 = $(`<div id="html_e2e67da2892b77bf16d39490508fdcf1" style="width: 100.0%; height: 100.0%;">Focal Year: 1914<br>Role of Gods: Absent<br>Animals Hunted: Birds or Waterfowl<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_caadf576f0c2c27a421c038e54ae8990.setContent(html_e2e67da2892b77bf16d39490508fdcf1);
+            
+        
+
+        marker_c0671ac733e2ed9b9e878e3ed74568c2.bindPopup(popup_caadf576f0c2c27a421c038e54ae8990)
+        ;
+
+        
+    
+    
+            marker_c0671ac733e2ed9b9e878e3ed74568c2.bindTooltip(
+                `<div>
+                     Trobriands
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c0671ac733e2ed9b9e878e3ed74568c2.setIcon(icon_abca72836c7538886f81aa037eb1291d);
+            
+    
+            var marker_32320aeafb7dd312bde7bb600f75776d = L.marker(
+                [-6.6429, 155.452],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_8d0e5a7b08f826955761597f83028b70 = L.icon({
+  "iconUrl": "../../assets/icons/pig.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_ee4efe8d04b43856a3a74e325ee13101 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_6f277fc622699181df9541266f7021ca = $(`<div id="html_6f277fc622699181df9541266f7021ca" style="width: 100.0%; height: 100.0%;">Focal Year: 1939<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_ee4efe8d04b43856a3a74e325ee13101.setContent(html_6f277fc622699181df9541266f7021ca);
+            
+        
+
+        marker_32320aeafb7dd312bde7bb600f75776d.bindPopup(popup_ee4efe8d04b43856a3a74e325ee13101)
+        ;
+
+        
+    
+    
+            marker_32320aeafb7dd312bde7bb600f75776d.bindTooltip(
+                `<div>
+                     Siuai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_32320aeafb7dd312bde7bb600f75776d.setIcon(icon_8d0e5a7b08f826955761597f83028b70);
+            
+    
+            var marker_c88f9a25ad4bdbd416b3383509476f19 = L.marker(
+                [-6.86828, 37.5557],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_3c4d244cdd6c799a6b4709381b9fa56c = L.icon({
+  "iconUrl": "../../assets/icons/sheep.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_4dc128bb83c66b896ee68e7dd342f5e7 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_e82dbeadd3eade7732e03ef83317ccc6 = $(`<div id="html_e82dbeadd3eade7732e03ef83317ccc6" style="width: 100.0%; height: 100.0%;">Focal Year: 1925<br>Role of Gods: Otiose<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_4dc128bb83c66b896ee68e7dd342f5e7.setContent(html_e82dbeadd3eade7732e03ef83317ccc6);
+            
+        
+
+        marker_c88f9a25ad4bdbd416b3383509476f19.bindPopup(popup_4dc128bb83c66b896ee68e7dd342f5e7)
+        ;
+
+        
+    
+    
+            marker_c88f9a25ad4bdbd416b3383509476f19.bindTooltip(
+                `<div>
+                     Luguru
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c88f9a25ad4bdbd416b3383509476f19.setIcon(icon_3c4d244cdd6c799a6b4709381b9fa56c);
+            
+    
+            var marker_2364a9422f595385aab719999b4130e6 = L.marker(
+                [0.66884, 32.15153],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_476c7c4087f64771fa3d8aef9b4db9d1 = L.icon({
+  "iconUrl": "../../assets/icons/sheep.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_0147689f15796393dad800151681adea = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_a19fc30c88ad7d3e9dbe1ca2b0bc339a = $(`<div id="html_a19fc30c88ad7d3e9dbe1ca2b0bc339a" style="width: 100.0%; height: 100.0%;">Focal Year: 1875<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_0147689f15796393dad800151681adea.setContent(html_a19fc30c88ad7d3e9dbe1ca2b0bc339a);
+            
+        
+
+        marker_2364a9422f595385aab719999b4130e6.bindPopup(popup_0147689f15796393dad800151681adea)
+        ;
+
+        
+    
+    
+            marker_2364a9422f595385aab719999b4130e6.bindTooltip(
+                `<div>
+                     Ganda
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2364a9422f595385aab719999b4130e6.setIcon(icon_476c7c4087f64771fa3d8aef9b4db9d1);
+            
+    
+            var marker_3d5798983fedab3e112e5fdff13f9c76 = L.marker(
+                [35.0056, -108.782],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_c118454f0584e1fdba04d0f7c515612a = L.icon({
+  "iconUrl": "../../assets/icons/sheep.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_53dde56a6460b08c05198564a02fc2bf = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_49ccec8b93935ef370220015cc258a54 = $(`<div id="html_49ccec8b93935ef370220015cc258a54" style="width: 100.0%; height: 100.0%;">Focal Year: 1880<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_53dde56a6460b08c05198564a02fc2bf.setContent(html_49ccec8b93935ef370220015cc258a54);
+            
+        
+
+        marker_3d5798983fedab3e112e5fdff13f9c76.bindPopup(popup_53dde56a6460b08c05198564a02fc2bf)
+        ;
+
+        
+    
+    
+            marker_3d5798983fedab3e112e5fdff13f9c76.bindTooltip(
+                `<div>
+                     Zuni
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3d5798983fedab3e112e5fdff13f9c76.setIcon(icon_c118454f0584e1fdba04d0f7c515612a);
+            
+    
+            var marker_eff90ea45142b21f40207e159be4b9ca = L.marker(
+                [-17.0, -68.5],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_1e995298af6699c84c7978598fd5e8dc = L.icon({
+  "iconUrl": "../../assets/icons/sheep.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_f323b300655e56ad5bd5395b3539c6a5 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_82d2f087c923e05feea14e9570dfe593 = $(`<div id="html_82d2f087c923e05feea14e9570dfe593" style="width: 100.0%; height: 100.0%;">Focal Year: 1940<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Birds or Waterfowl<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_f323b300655e56ad5bd5395b3539c6a5.setContent(html_82d2f087c923e05feea14e9570dfe593);
+            
+        
+
+        marker_eff90ea45142b21f40207e159be4b9ca.bindPopup(popup_f323b300655e56ad5bd5395b3539c6a5)
+        ;
+
+        
+    
+    
+            marker_eff90ea45142b21f40207e159be4b9ca.bindTooltip(
+                `<div>
+                     Aymara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eff90ea45142b21f40207e159be4b9ca.setIcon(icon_1e995298af6699c84c7978598fd5e8dc);
+            
+    
+            var marker_960f691bb0618add3cd5f091c0311b22 = L.marker(
+                [-38.7392, -71.277],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_ea6eb5b7128310df59b0685b9e3f43d8 = L.icon({
+  "iconUrl": "../../assets/icons/sheep.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_3c663540567553233b4cdc6ba7517cee = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_d1c7e38aaec28bf95d69e7414aa8365b = $(`<div id="html_d1c7e38aaec28bf95d69e7414aa8365b" style="width: 100.0%; height: 100.0%;">Focal Year: 1950<br>Role of Gods: Active, but not supporting morality<br>Animals Hunted: Birds or Waterfowl<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_3c663540567553233b4cdc6ba7517cee.setContent(html_d1c7e38aaec28bf95d69e7414aa8365b);
+            
+        
+
+        marker_960f691bb0618add3cd5f091c0311b22.bindPopup(popup_3c663540567553233b4cdc6ba7517cee)
+        ;
+
+        
+    
+    
+            marker_960f691bb0618add3cd5f091c0311b22.bindTooltip(
+                `<div>
+                     Mapuche
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_960f691bb0618add3cd5f091c0311b22.setIcon(icon_ea6eb5b7128310df59b0685b9e3f43d8);
+            
+    
+            var marker_39549bb806137b175a3d1956d4bf72e0 = L.marker(
+                [7.90935, -10.9926],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_72fb19a7e0488ce1b421a5f91c06fb44 = L.icon({
+  "iconUrl": "../../assets/icons/sheep.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_3ccb8e844a69bb2fe1568a9152482d8d = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_51165a63618bdbeccfd028596ab5d48c = $(`<div id="html_51165a63618bdbeccfd028596ab5d48c" style="width: 100.0%; height: 100.0%;">Focal Year: 1945<br>Role of Gods: Otiose<br>Animals Hunted: Small Mammals<br>Religion: 3 (superficial Islamization)</div>`)[0];
+                popup_3ccb8e844a69bb2fe1568a9152482d8d.setContent(html_51165a63618bdbeccfd028596ab5d48c);
+            
+        
+
+        marker_39549bb806137b175a3d1956d4bf72e0.bindPopup(popup_3ccb8e844a69bb2fe1568a9152482d8d)
+        ;
+
+        
+    
+    
+            marker_39549bb806137b175a3d1956d4bf72e0.bindTooltip(
+                `<div>
+                     Mende
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_39549bb806137b175a3d1956d4bf72e0.setIcon(icon_72fb19a7e0488ce1b421a5f91c06fb44);
+            
+    
+            var marker_3b3987582c64e72e48d0999644560eeb = L.marker(
+                [9.38875, 34.60448],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_e26708ac08ba9ab5b7103191beb8d120 = L.icon({
+  "iconUrl": "../../assets/icons/sheep.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_370b19f6ffa53f21a1b7ad6fa81197ef = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_7e7f5b72fd0f309fde5afa4c1f22d4c5 = $(`<div id="html_7e7f5b72fd0f309fde5afa4c1f22d4c5" style="width: 100.0%; height: 100.0%;">Focal Year: 1939<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_370b19f6ffa53f21a1b7ad6fa81197ef.setContent(html_7e7f5b72fd0f309fde5afa4c1f22d4c5);
+            
+        
+
+        marker_3b3987582c64e72e48d0999644560eeb.bindPopup(popup_370b19f6ffa53f21a1b7ad6fa81197ef)
+        ;
+
+        
+    
+    
+            marker_3b3987582c64e72e48d0999644560eeb.bindTooltip(
+                `<div>
+                     Mao
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3b3987582c64e72e48d0999644560eeb.setIcon(icon_e26708ac08ba9ab5b7103191beb8d120);
+            
+    
+            var marker_ab37a48a9200a9cb1a7b15a03a138bf5 = L.marker(
+                [21.2837, 31.8992],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_8563e9bfd543b058534d31139e2c4c63 = L.icon({
+  "iconUrl": "../../assets/icons/sheep.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_6f013865d313e1c5d46870ecf28dc44c = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_2b1ae68d2b772fba73153f8063378763 = $(`<div id="html_2b1ae68d2b772fba73153f8063378763" style="width: 100.0%; height: 100.0%;">Focal Year: 1900<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Large Game<br>Religion: 1 (deep Islamization)</div>`)[0];
+                popup_6f013865d313e1c5d46870ecf28dc44c.setContent(html_2b1ae68d2b772fba73153f8063378763);
+            
+        
+
+        marker_ab37a48a9200a9cb1a7b15a03a138bf5.bindPopup(popup_6f013865d313e1c5d46870ecf28dc44c)
+        ;
+
+        
+    
+    
+            marker_ab37a48a9200a9cb1a7b15a03a138bf5.bindTooltip(
+                `<div>
+                     Barabra
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ab37a48a9200a9cb1a7b15a03a138bf5.setIcon(icon_8563e9bfd543b058534d31139e2c4c63);
+            
+    
+            var marker_13364822efab222e5c0769ae485db265 = L.marker(
+                [31.7761, 35.1725],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_a8c83ea9e406eeffc6b04d9f2b0193dd = L.icon({
+  "iconUrl": "../../assets/icons/sheep.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_f75dd57bd4d97fb55e7e963e05485374 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_472cd522c06e63d037cbdd189600d8d6 = $(`<div id="html_472cd522c06e63d037cbdd189600d8d6" style="width: 100.0%; height: 100.0%;">Focal Year: -621<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_f75dd57bd4d97fb55e7e963e05485374.setContent(html_472cd522c06e63d037cbdd189600d8d6);
+            
+        
+
+        marker_13364822efab222e5c0769ae485db265.bindPopup(popup_f75dd57bd4d97fb55e7e963e05485374)
+        ;
+
+        
+    
+    
+            marker_13364822efab222e5c0769ae485db265.bindTooltip(
+                `<div>
+                     Hebrews
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_13364822efab222e5c0769ae485db265.setIcon(icon_a8c83ea9e406eeffc6b04d9f2b0193dd);
+            
+    
+            var marker_6425992519eb4e1f1f94e635978de4a3 = L.marker(
+                [35.6539, 45.8077],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_29dad897b3fc0e0658e3e9fe7159f427 = L.icon({
+  "iconUrl": "../../assets/icons/sheep.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_dbb923966667ea4e208cef2794c13f2c = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_05dc3b18e1095259bc6c16ef3fc0f656 = $(`<div id="html_05dc3b18e1095259bc6c16ef3fc0f656" style="width: 100.0%; height: 100.0%;">Focal Year: 1951<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Two or more of above<br>Religion: 1 (deep Islamization)</div>`)[0];
+                popup_dbb923966667ea4e208cef2794c13f2c.setContent(html_05dc3b18e1095259bc6c16ef3fc0f656);
+            
+        
+
+        marker_6425992519eb4e1f1f94e635978de4a3.bindPopup(popup_dbb923966667ea4e208cef2794c13f2c)
+        ;
+
+        
+    
+    
+            marker_6425992519eb4e1f1f94e635978de4a3.bindTooltip(
+                `<div>
+                     Kurd
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6425992519eb4e1f1f94e635978de4a3.setIcon(icon_29dad897b3fc0e0658e3e9fe7159f427);
+            
+    
+            var marker_6c5d331b32b83d4ddedae2d10eee4b58 = L.marker(
+                [28.1947, 102.121],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_1a9e6d10a537d805b6bee48baa9c9cb0 = L.icon({
+  "iconUrl": "../../assets/icons/sheep.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_f18c26cf7949689246ec1bd9956d6092 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_c5f510bee5919c8aff48b09252e24b4c = $(`<div id="html_c5f510bee5919c8aff48b09252e24b4c" style="width: 100.0%; height: 100.0%;">Focal Year: 1910<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_f18c26cf7949689246ec1bd9956d6092.setContent(html_c5f510bee5919c8aff48b09252e24b4c);
+            
+        
+
+        marker_6c5d331b32b83d4ddedae2d10eee4b58.bindPopup(popup_f18c26cf7949689246ec1bd9956d6092)
+        ;
+
+        
+    
+    
+            marker_6c5d331b32b83d4ddedae2d10eee4b58.bindTooltip(
+                `<div>
+                     Lolo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6c5d331b32b83d4ddedae2d10eee4b58.setIcon(icon_1a9e6d10a537d805b6bee48baa9c9cb0);
+            
+    
+            var marker_f49aab923a88b7965649d5c9e7805769 = L.marker(
+                [42.5861, -121.704],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_2d427dabcb4511f7c59bbd4c86bd1fa9 = L.icon({
+  "iconUrl": "../../assets/icons/horse.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_4f59d1ba78ad752e600ef805531eeb4a = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_832bf2a3021fcef5d51ba493d6f53c24 = $(`<div id="html_832bf2a3021fcef5d51ba493d6f53c24" style="width: 100.0%; height: 100.0%;">Focal Year: 1860<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_4f59d1ba78ad752e600ef805531eeb4a.setContent(html_832bf2a3021fcef5d51ba493d6f53c24);
+            
+        
+
+        marker_f49aab923a88b7965649d5c9e7805769.bindPopup(popup_4f59d1ba78ad752e600ef805531eeb4a)
+        ;
+
+        
+    
+    
+            marker_f49aab923a88b7965649d5c9e7805769.bindTooltip(
+                `<div>
+                     Klamath
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f49aab923a88b7965649d5c9e7805769.setIcon(icon_2d427dabcb4511f7c59bbd4c86bd1fa9);
+            
+    
+            var marker_31f4e40cfd2543f930efd0723f509660 = L.marker(
+                [48.7892, -115.065],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_bf4c03e1b313d467870d7d1fea29f527 = L.icon({
+  "iconUrl": "../../assets/icons/horse.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_d57ca708197eecfbdb1e14f732917c25 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_11b6e96de26bf114d787159dbc87adbf = $(`<div id="html_11b6e96de26bf114d787159dbc87adbf" style="width: 100.0%; height: 100.0%;">Focal Year: 1890<br>Role of Gods: Otiose<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_d57ca708197eecfbdb1e14f732917c25.setContent(html_11b6e96de26bf114d787159dbc87adbf);
+            
+        
+
+        marker_31f4e40cfd2543f930efd0723f509660.bindPopup(popup_d57ca708197eecfbdb1e14f732917c25)
+        ;
+
+        
+    
+    
+            marker_31f4e40cfd2543f930efd0723f509660.bindTooltip(
+                `<div>
+                     Kutenai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_31f4e40cfd2543f930efd0723f509660.setIcon(icon_bf4c03e1b313d467870d7d1fea29f527);
+            
+    
+            var marker_45619837578f22cb6157030c821f0f32 = L.marker(
+                [48.4834, -108.738],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_c4dc89f5c986498129d925ee364c043e = L.icon({
+  "iconUrl": "../../assets/icons/horse.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_e0a6640f73defb6164c6ada82babe444 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_8803c9bc77745695863986fbf4c484bd = $(`<div id="html_8803c9bc77745695863986fbf4c484bd" style="width: 100.0%; height: 100.0%;">Focal Year: 1880<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_e0a6640f73defb6164c6ada82babe444.setContent(html_8803c9bc77745695863986fbf4c484bd);
+            
+        
+
+        marker_45619837578f22cb6157030c821f0f32.bindPopup(popup_e0a6640f73defb6164c6ada82babe444)
+        ;
+
+        
+    
+    
+            marker_45619837578f22cb6157030c821f0f32.bindTooltip(
+                `<div>
+                     Gros Ventre
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_45619837578f22cb6157030c821f0f32.setIcon(icon_c4dc89f5c986498129d925ee364c043e);
+            
+    
+            var marker_9c07c9bdd145cf40aab0bbeca0644053 = L.marker(
+                [47.7534, -102.528],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_6722a3daff94e9594c109b49f406c62a = L.icon({
+  "iconUrl": "../../assets/icons/horse.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_936a4319619e46094cdf67b417f12375 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_8069d92c92e8591508a2b0cae3988a58 = $(`<div id="html_8069d92c92e8591508a2b0cae3988a58" style="width: 100.0%; height: 100.0%;">Focal Year: 1836<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_936a4319619e46094cdf67b417f12375.setContent(html_8069d92c92e8591508a2b0cae3988a58);
+            
+        
+
+        marker_9c07c9bdd145cf40aab0bbeca0644053.bindPopup(popup_936a4319619e46094cdf67b417f12375)
+        ;
+
+        
+    
+    
+            marker_9c07c9bdd145cf40aab0bbeca0644053.bindTooltip(
+                `<div>
+                     Hidatsa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9c07c9bdd145cf40aab0bbeca0644053.setIcon(icon_6722a3daff94e9594c109b49f406c62a);
+            
+    
+            var marker_e4d9c99736501f69a10433bbc0ea837d = L.marker(
+                [36.2862, -96.8937],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_023efdcc1e83c7b8cfe304c3f515a053 = L.icon({
+  "iconUrl": "../../assets/icons/horse.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_cb6bb530752db30d0fda911edb449b35 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_d9d73fc91bc271be436b2fc779cf8930 = $(`<div id="html_d9d73fc91bc271be436b2fc779cf8930" style="width: 100.0%; height: 100.0%;">Focal Year: 1867<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_cb6bb530752db30d0fda911edb449b35.setContent(html_d9d73fc91bc271be436b2fc779cf8930);
+            
+        
+
+        marker_e4d9c99736501f69a10433bbc0ea837d.bindPopup(popup_cb6bb530752db30d0fda911edb449b35)
+        ;
+
+        
+    
+    
+            marker_e4d9c99736501f69a10433bbc0ea837d.bindTooltip(
+                `<div>
+                     Pawnee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e4d9c99736501f69a10433bbc0ea837d.setIcon(icon_023efdcc1e83c7b8cfe304c3f515a053);
+            
+    
+            var marker_1fcbaedccb316882d012d2f321c7e7dd = L.marker(
+                [31.0, -87.5],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_852899b280c581ea2b3ea109a2b9a4a6 = L.icon({
+  "iconUrl": "../../assets/icons/horse.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_69caf95f8125566c08a01fe8815a795d = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_4ecb2d51898c1dd9929dfcd69f3673eb = $(`<div id="html_4ecb2d51898c1dd9929dfcd69f3673eb" style="width: 100.0%; height: 100.0%;">Focal Year: 1800<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_69caf95f8125566c08a01fe8815a795d.setContent(html_4ecb2d51898c1dd9929dfcd69f3673eb);
+            
+        
+
+        marker_1fcbaedccb316882d012d2f321c7e7dd.bindPopup(popup_69caf95f8125566c08a01fe8815a795d)
+        ;
+
+        
+    
+    
+            marker_1fcbaedccb316882d012d2f321c7e7dd.bindTooltip(
+                `<div>
+                     Muscogee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1fcbaedccb316882d012d2f321c7e7dd.setIcon(icon_852899b280c581ea2b3ea109a2b9a4a6);
+            
+    
+            var marker_071187e9baac2f4ad847e966a8e57720 = L.marker(
+                [33.1291, -105.566],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_81ee115a99caddaff6765efadb2c3816 = L.icon({
+  "iconUrl": "../../assets/icons/horse.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_0b30984ff6dcaaaf339398d48cd2140a = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_743e442ac9ff39e5f532a2302bc7a0e5 = $(`<div id="html_743e442ac9ff39e5f532a2302bc7a0e5" style="width: 100.0%; height: 100.0%;">Focal Year: 1870<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_0b30984ff6dcaaaf339398d48cd2140a.setContent(html_743e442ac9ff39e5f532a2302bc7a0e5);
+            
+        
+
+        marker_071187e9baac2f4ad847e966a8e57720.bindPopup(popup_0b30984ff6dcaaaf339398d48cd2140a)
+        ;
+
+        
+    
+    
+            marker_071187e9baac2f4ad847e966a8e57720.bindTooltip(
+                `<div>
+                     Chiricahua
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_071187e9baac2f4ad847e966a8e57720.setIcon(icon_81ee115a99caddaff6765efadb2c3816);
+            
+    
+            var marker_8b0d3e590655a503c9c3461c7a4509b4 = L.marker(
+                [-22.6559, -58.9053],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_beb2ee4253d8a629c80974e968a0c5fc = L.icon({
+  "iconUrl": "../../assets/icons/horse.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_52439afbd635ebf63e8b5bd6ca822836 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_784b1338e1cb4c260b2150583972513e = $(`<div id="html_784b1338e1cb4c260b2150583972513e" style="width: 100.0%; height: 100.0%;">Focal Year: 1889<br>Role of Gods: Otiose<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_52439afbd635ebf63e8b5bd6ca822836.setContent(html_784b1338e1cb4c260b2150583972513e);
+            
+        
+
+        marker_8b0d3e590655a503c9c3461c7a4509b4.bindPopup(popup_52439afbd635ebf63e8b5bd6ca822836)
+        ;
+
+        
+    
+    
+            marker_8b0d3e590655a503c9c3461c7a4509b4.bindTooltip(
+                `<div>
+                     Lengua
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8b0d3e590655a503c9c3461c7a4509b4.setIcon(icon_beb2ee4253d8a629c80974e968a0c5fc);
+            
+    
+            var marker_e614019211da7bc8d0f3d86ebf87eb5e = L.marker(
+                [-47.5796, -68.3235],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_0cd28120053b05beef22235537d94b7d = L.icon({
+  "iconUrl": "../../assets/icons/horse.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_b4dae67a68ea35e21882067d216da054 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_33d4e6e0f83de63f059f7fd6330bd2df = $(`<div id="html_33d4e6e0f83de63f059f7fd6330bd2df" style="width: 100.0%; height: 100.0%;">Focal Year: 1870<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_b4dae67a68ea35e21882067d216da054.setContent(html_33d4e6e0f83de63f059f7fd6330bd2df);
+            
+        
+
+        marker_e614019211da7bc8d0f3d86ebf87eb5e.bindPopup(popup_b4dae67a68ea35e21882067d216da054)
+        ;
+
+        
+    
+    
+            marker_e614019211da7bc8d0f3d86ebf87eb5e.bindTooltip(
+                `<div>
+                     Tehuelche
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e614019211da7bc8d0f3d86ebf87eb5e.setIcon(icon_0cd28120053b05beef22235537d94b7d);
+            
+    
+            var marker_cf63c8a17021e31cb14a3384facacb9f = L.marker(
+                [68.6436, 170.045],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_2fd18b52840d99d40905ed801d263e3f = L.icon({
+  "iconUrl": "../../assets/icons/reindeer.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_5d536759f4f8baf25892c70106b701d9 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_244314499a34d60bbaaf7eb99ccbbb7a = $(`<div id="html_244314499a34d60bbaaf7eb99ccbbb7a" style="width: 100.0%; height: 100.0%;">Focal Year: 1900<br>Role of Gods: Active, but not supporting morality<br>Animals Hunted: Large Game<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_5d536759f4f8baf25892c70106b701d9.setContent(html_244314499a34d60bbaaf7eb99ccbbb7a);
+            
+        
+
+        marker_cf63c8a17021e31cb14a3384facacb9f.bindPopup(popup_5d536759f4f8baf25892c70106b701d9)
+        ;
+
+        
+    
+    
+            marker_cf63c8a17021e31cb14a3384facacb9f.bindTooltip(
+                `<div>
+                     Chukchi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cf63c8a17021e31cb14a3384facacb9f.setIcon(icon_2fd18b52840d99d40905ed801d263e3f);
+            
+    
+            var marker_5626dde4843677272f719b06c99c0c2a = L.marker(
+                [68.725, 22.1113],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_a6e0b5c7a2a4c5fef7f6dfd0ecc72e69 = L.icon({
+  "iconUrl": "../../assets/icons/reindeer.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_464c81f1bde4241898081561563691b3 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_a8c23cd9e6a04db3754545242d8c82aa = $(`<div id="html_a8c23cd9e6a04db3754545242d8c82aa" style="width: 100.0%; height: 100.0%;">Focal Year: 1950<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Two or more of above<br>Religion: 2 (deep Christianization)</div>`)[0];
+                popup_464c81f1bde4241898081561563691b3.setContent(html_a8c23cd9e6a04db3754545242d8c82aa);
+            
+        
+
+        marker_5626dde4843677272f719b06c99c0c2a.bindPopup(popup_464c81f1bde4241898081561563691b3)
+        ;
+
+        
+    
+    
+            marker_5626dde4843677272f719b06c99c0c2a.bindTooltip(
+                `<div>
+                     Sami
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5626dde4843677272f719b06c99c0c2a.setIcon(icon_a6e0b5c7a2a4c5fef7f6dfd0ecc72e69);
+            
+    
+            var marker_5754f6c45fd7827f1ff51c10e376dd43 = L.marker(
+                [66.1775, 71.0234],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_7df3e601d27fea58a5f4aa91b8bd1f0c = L.icon({
+  "iconUrl": "../../assets/icons/reindeer.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_85749b18c4ac4ec4e53c3117265ca1b4 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_ef4b1fc69d85f0a1b0996533086c47b1 = $(`<div id="html_ef4b1fc69d85f0a1b0996533086c47b1" style="width: 100.0%; height: 100.0%;">Focal Year: 1894<br>Role of Gods: Active, but not supporting morality<br>Animals Hunted: Large Game<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_85749b18c4ac4ec4e53c3117265ca1b4.setContent(html_ef4b1fc69d85f0a1b0996533086c47b1);
+            
+        
+
+        marker_5754f6c45fd7827f1ff51c10e376dd43.bindPopup(popup_85749b18c4ac4ec4e53c3117265ca1b4)
+        ;
+
+        
+    
+    
+            marker_5754f6c45fd7827f1ff51c10e376dd43.bindTooltip(
+                `<div>
+                     Yurak-Samoyeds
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5754f6c45fd7827f1ff51c10e376dd43.setIcon(icon_7df3e601d27fea58a5f4aa91b8bd1f0c);
+            
+    
+            var marker_6c9911922de0a724a3e4070bdfe12b09 = L.marker(
+                [-14.0853, -71.7663],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_8e29d29759af94d72aee869eaec96859 = L.icon({
+  "iconUrl": "../../assets/icons/camel.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_f3a0b7230010154f5b326958eebce8b9 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_ce3f7f1fdbff7dda8bc7b7186627ad6e = $(`<div id="html_ce3f7f1fdbff7dda8bc7b7186627ad6e" style="width: 100.0%; height: 100.0%;">Focal Year: 1530<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_f3a0b7230010154f5b326958eebce8b9.setContent(html_ce3f7f1fdbff7dda8bc7b7186627ad6e);
+            
+        
+
+        marker_6c9911922de0a724a3e4070bdfe12b09.bindPopup(popup_f3a0b7230010154f5b326958eebce8b9)
+        ;
+
+        
+    
+    
+            marker_6c9911922de0a724a3e4070bdfe12b09.bindTooltip(
+                `<div>
+                     Inca
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6c9911922de0a724a3e4070bdfe12b09.setIcon(icon_8e29d29759af94d72aee869eaec96859);
+            
+    
+            var marker_e741a754e2fa65ec58682f0ddf0b2bf2 = L.marker(
+                [18.0426, 14.7717],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_e27fb127f23425423b36d230628f1880 = L.icon({
+  "iconUrl": "../../assets/icons/camel.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_88db9442cc71857d7c74236c1731a8d1 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_573efcb127739110407d3fcfd6cb44ff = $(`<div id="html_573efcb127739110407d3fcfd6cb44ff" style="width: 100.0%; height: 100.0%;">Focal Year: 1950<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Large Game<br>Religion: 1 (deep Islamization)</div>`)[0];
+                popup_88db9442cc71857d7c74236c1731a8d1.setContent(html_573efcb127739110407d3fcfd6cb44ff);
+            
+        
+
+        marker_e741a754e2fa65ec58682f0ddf0b2bf2.bindPopup(popup_88db9442cc71857d7c74236c1731a8d1)
+        ;
+
+        
+    
+    
+            marker_e741a754e2fa65ec58682f0ddf0b2bf2.bindTooltip(
+                `<div>
+                     Teda
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e741a754e2fa65ec58682f0ddf0b2bf2.setIcon(icon_e27fb127f23425423b36d230628f1880);
+            
+    
+            var marker_ffa21f5974a02eefcd7b471791b7c1e0 = L.marker(
+                [29.6742, 33.6113],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_a7f5f3a9490f8e5636deb4f17d5f8af0 = L.icon({
+  "iconUrl": "../../assets/icons/camel.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_6f7064f1904af4f7a2b3001e56668e6a = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_5f8ef4f79b393769615ca3f389d3a311 = $(`<div id="html_5f8ef4f79b393769615ca3f389d3a311" style="width: 100.0%; height: 100.0%;">Focal Year: 1913<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Two or more of above<br>Religion: 1 (deep Islamization)</div>`)[0];
+                popup_6f7064f1904af4f7a2b3001e56668e6a.setContent(html_5f8ef4f79b393769615ca3f389d3a311);
+            
+        
+
+        marker_ffa21f5974a02eefcd7b471791b7c1e0.bindPopup(popup_6f7064f1904af4f7a2b3001e56668e6a)
+        ;
+
+        
+    
+    
+            marker_ffa21f5974a02eefcd7b471791b7c1e0.bindTooltip(
+                `<div>
+                     Rwala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ffa21f5974a02eefcd7b471791b7c1e0.setIcon(icon_a7f5f3a9490f8e5636deb4f17d5f8af0);
+            
+    
+            var marker_10c91f0cf7cf60afb1c492cc3406133c = L.marker(
+                [-0.29005, 36.719],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_9542c21417a874f666a224285b4a3325 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_b80aea2235e3df18b1194a8da8c90f3f = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_a7bb401840ce36bb91b0090723c50908 = $(`<div id="html_a7bb401840ce36bb91b0090723c50908" style="width: 100.0%; height: 100.0%;">Focal Year: 1920<br>Role of Gods: Active, but not supporting morality<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_b80aea2235e3df18b1194a8da8c90f3f.setContent(html_a7bb401840ce36bb91b0090723c50908);
+            
+        
+
+        marker_10c91f0cf7cf60afb1c492cc3406133c.bindPopup(popup_b80aea2235e3df18b1194a8da8c90f3f)
+        ;
+
+        
+    
+    
+            marker_10c91f0cf7cf60afb1c492cc3406133c.bindTooltip(
+                `<div>
+                     Kikuyu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_10c91f0cf7cf60afb1c492cc3406133c.setIcon(icon_9542c21417a874f666a224285b4a3325);
+            
+    
+            var marker_19592b5353a739fdd23a0bbeddbad8ea = L.marker(
+                [37.5, 128.0],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_10a2eefc7385075af9d8d3b5d04b633b = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_91fcd2998a5b0e60d547d13b674253bd = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_bb39520bc27bba262b704fe01609438c = $(`<div id="html_bb39520bc27bba262b704fe01609438c" style="width: 100.0%; height: 100.0%;">Focal Year: 1947<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 5 (Mahayana Buddhism)</div>`)[0];
+                popup_91fcd2998a5b0e60d547d13b674253bd.setContent(html_bb39520bc27bba262b704fe01609438c);
+            
+        
+
+        marker_19592b5353a739fdd23a0bbeddbad8ea.bindPopup(popup_91fcd2998a5b0e60d547d13b674253bd)
+        ;
+
+        
+    
+    
+            marker_19592b5353a739fdd23a0bbeddbad8ea.bindTooltip(
+                `<div>
+                     Koreans
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_19592b5353a739fdd23a0bbeddbad8ea.setIcon(icon_10a2eefc7385075af9d8d3b5d04b633b);
+            
+    
+            var marker_0c2cd70ec57e5edbdf215b43f172f86d = L.marker(
+                [11.395566, -72.199791],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_bd19e47efa44bf9bf5d845efdd7082a8 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_e4bf39b42ce4110282a158110a305179 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_cc5300150cc9c8c69fa13c600e5ceff0 = $(`<div id="html_cc5300150cc9c8c69fa13c600e5ceff0" style="width: 100.0%; height: 100.0%;">Focal Year: 1947<br>Role of Gods: Active, but not supporting morality<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_e4bf39b42ce4110282a158110a305179.setContent(html_cc5300150cc9c8c69fa13c600e5ceff0);
+            
+        
+
+        marker_0c2cd70ec57e5edbdf215b43f172f86d.bindPopup(popup_e4bf39b42ce4110282a158110a305179)
+        ;
+
+        
+    
+    
+            marker_0c2cd70ec57e5edbdf215b43f172f86d.bindTooltip(
+                `<div>
+                     Wayuu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0c2cd70ec57e5edbdf215b43f172f86d.setIcon(icon_bd19e47efa44bf9bf5d845efdd7082a8);
+            
+    
+            var marker_d9729ecee7a0442bc9260589eb7f1b98 = L.marker(
+                [-29.0, -61.0],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_9c58799b605f615f27169a1ab3e52e51 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_08f9c4db8ce65b4c6cedd2e9f0e3481c = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_84c020f58a2684cfc721f2260b856574 = $(`<div id="html_84c020f58a2684cfc721f2260b856574" style="width: 100.0%; height: 100.0%;">Focal Year: 1750<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_08f9c4db8ce65b4c6cedd2e9f0e3481c.setContent(html_84c020f58a2684cfc721f2260b856574);
+            
+        
+
+        marker_d9729ecee7a0442bc9260589eb7f1b98.bindPopup(popup_08f9c4db8ce65b4c6cedd2e9f0e3481c)
+        ;
+
+        
+    
+    
+            marker_d9729ecee7a0442bc9260589eb7f1b98.bindTooltip(
+                `<div>
+                     Abipón
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d9729ecee7a0442bc9260589eb7f1b98.setIcon(icon_9c58799b605f615f27169a1ab3e52e51);
+            
+    
+            var marker_0a9a8a4d300c08e313b526e76529b24a = L.marker(
+                [15.2534, -15.383],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_27058a168fc09a6b7f2a3d8f8611c9bd = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_b1d5f5205e8a4c371e85f9a1d01cb046 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_ac0b4c6e607afebb7099751736f49d50 = $(`<div id="html_ac0b4c6e607afebb7099751736f49d50" style="width: 100.0%; height: 100.0%;">Focal Year: 1950<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Large Game<br>Religion: 1 (deep Islamization)</div>`)[0];
+                popup_b1d5f5205e8a4c371e85f9a1d01cb046.setContent(html_ac0b4c6e607afebb7099751736f49d50);
+            
+        
+
+        marker_0a9a8a4d300c08e313b526e76529b24a.bindPopup(popup_b1d5f5205e8a4c371e85f9a1d01cb046)
+        ;
+
+        
+    
+    
+            marker_0a9a8a4d300c08e313b526e76529b24a.bindTooltip(
+                `<div>
+                     Wolof
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0a9a8a4d300c08e313b526e76529b24a.setIcon(icon_27058a168fc09a6b7f2a3d8f8611c9bd);
+            
+    
+            var marker_e1d73a135a1c1200bdee57490ee5fc57 = L.marker(
+                [12.9, -7.65],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_cb59af1eeb67fd632afa0d3dcaeb0322 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_dbb76042de64d188bbfc1ee3006cf119 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_8f9fd5e5378c9a0ccfe7b27cd913bc8b = $(`<div id="html_8f9fd5e5378c9a0ccfe7b27cd913bc8b" style="width: 100.0%; height: 100.0%;">Focal Year: 1902<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 3 (superficial Islamization)</div>`)[0];
+                popup_dbb76042de64d188bbfc1ee3006cf119.setContent(html_8f9fd5e5378c9a0ccfe7b27cd913bc8b);
+            
+        
+
+        marker_e1d73a135a1c1200bdee57490ee5fc57.bindPopup(popup_dbb76042de64d188bbfc1ee3006cf119)
+        ;
+
+        
+    
+    
+            marker_e1d73a135a1c1200bdee57490ee5fc57.bindTooltip(
+                `<div>
+                     Bambara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e1d73a135a1c1200bdee57490ee5fc57.setIcon(icon_cb59af1eeb67fd632afa0d3dcaeb0322);
+            
+    
+            var marker_ecc9c9c2812fe9d6a5c85de83fa8a49d = L.marker(
+                [16.9634, -0.55187],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_5adf8a319b2215fa84791a5ffa48a628 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_dd2689e13da005fd02c2d5f34435d9be = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_943b1cf3142dae2e89e201e53f3ec6bb = $(`<div id="html_943b1cf3142dae2e89e201e53f3ec6bb" style="width: 100.0%; height: 100.0%;">Focal Year: 1940<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Large Game<br>Religion: 1 (deep Islamization)</div>`)[0];
+                popup_dd2689e13da005fd02c2d5f34435d9be.setContent(html_943b1cf3142dae2e89e201e53f3ec6bb);
+            
+        
+
+        marker_ecc9c9c2812fe9d6a5c85de83fa8a49d.bindPopup(popup_dd2689e13da005fd02c2d5f34435d9be)
+        ;
+
+        
+    
+    
+            marker_ecc9c9c2812fe9d6a5c85de83fa8a49d.bindTooltip(
+                `<div>
+                     Songhai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ecc9c9c2812fe9d6a5c85de83fa8a49d.setIcon(icon_5adf8a319b2215fa84791a5ffa48a628);
+            
+    
+            var marker_09e31a672e82e011d695f09af7913a73 = L.marker(
+                [10.0606, 15.4748],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_ab754ed1223e5d6e1e9bde80077e7f37 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_38c6602f34530e02997c6c0aefb48cc9 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_de202740a2e5d40775c9a5cf320a98b4 = $(`<div id="html_de202740a2e5d40775c9a5cf320a98b4" style="width: 100.0%; height: 100.0%;">Focal Year: 1910<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_38c6602f34530e02997c6c0aefb48cc9.setContent(html_de202740a2e5d40775c9a5cf320a98b4);
+            
+        
+
+        marker_09e31a672e82e011d695f09af7913a73.bindPopup(popup_38c6602f34530e02997c6c0aefb48cc9)
+        ;
+
+        
+    
+    
+            marker_09e31a672e82e011d695f09af7913a73.bindTooltip(
+                `<div>
+                     Masa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_09e31a672e82e011d695f09af7913a73.setIcon(icon_ab754ed1223e5d6e1e9bde80077e7f37);
+            
+    
+            var marker_707c8d8d52361c6c16c9d7a6fc46975b = L.marker(
+                [12.0455, 23.6401],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_a2b5290b23b9c444a48444021ebb2fbb = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_8cd42490b666f65794c1b8580af9f7eb = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_2e19c965be9898ab76c4f0f3daed469e = $(`<div id="html_2e19c965be9898ab76c4f0f3daed469e" style="width: 100.0%; height: 100.0%;">Focal Year: 1880<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Large Game<br>Religion: 1 (deep Islamization)</div>`)[0];
+                popup_8cd42490b666f65794c1b8580af9f7eb.setContent(html_2e19c965be9898ab76c4f0f3daed469e);
+            
+        
+
+        marker_707c8d8d52361c6c16c9d7a6fc46975b.bindPopup(popup_8cd42490b666f65794c1b8580af9f7eb)
+        ;
+
+        
+    
+    
+            marker_707c8d8d52361c6c16c9d7a6fc46975b.bindTooltip(
+                `<div>
+                     Fur
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_707c8d8d52361c6c16c9d7a6fc46975b.setIcon(icon_a2b5290b23b9c444a48444021ebb2fbb);
+            
+    
+            var marker_1b9f706853684a9414698077ef775e3d = L.marker(
+                [9.85472, 31.7926],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_146828bbb0b1f9d210796791485c2434 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_b4736296bfc42c6c9616765ca0de8322 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_c50a09f9fd512e4c8a48b51985300f12 = $(`<div id="html_c50a09f9fd512e4c8a48b51985300f12" style="width: 100.0%; height: 100.0%;">Focal Year: 1910<br>Role of Gods: Otiose<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_b4736296bfc42c6c9616765ca0de8322.setContent(html_c50a09f9fd512e4c8a48b51985300f12);
+            
+        
+
+        marker_1b9f706853684a9414698077ef775e3d.bindPopup(popup_b4736296bfc42c6c9616765ca0de8322)
+        ;
+
+        
+    
+    
+            marker_1b9f706853684a9414698077ef775e3d.bindTooltip(
+                `<div>
+                     Shilluk
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1b9f706853684a9414698077ef775e3d.setIcon(icon_146828bbb0b1f9d210796791485c2434);
+            
+    
+            var marker_d3adc70b5332a0b9a22699e4938ee3c9 = L.marker(
+                [7.34022, 36.1718],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_31485ad74db23dd5870074e2f641e929 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_a629523ecf9370aaa642a14f7913bec7 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_be74a9d46ef5639acec5915ca9313a18 = $(`<div id="html_be74a9d46ef5639acec5915ca9313a18" style="width: 100.0%; height: 100.0%;">Focal Year: 1905<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 3 (superficial Islamization)</div>`)[0];
+                popup_a629523ecf9370aaa642a14f7913bec7.setContent(html_be74a9d46ef5639acec5915ca9313a18);
+            
+        
+
+        marker_d3adc70b5332a0b9a22699e4938ee3c9.bindPopup(popup_a629523ecf9370aaa642a14f7913bec7)
+        ;
+
+        
+    
+    
+            marker_d3adc70b5332a0b9a22699e4938ee3c9.bindTooltip(
+                `<div>
+                     Kafa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d3adc70b5332a0b9a22699e4938ee3c9.setIcon(icon_31485ad74db23dd5870074e2f641e929);
+            
+    
+            var marker_90dde2c44cab236f788cfda942720ecb = L.marker(
+                [5.39111, 37.53],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_9834b541cf6b419ff29b778fc39af297 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_bf7972f87a73b25e70312845aa8d9a66 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_4fcdc2753523cdc23e40549a9ba11b2e = $(`<div id="html_4fcdc2753523cdc23e40549a9ba11b2e" style="width: 100.0%; height: 100.0%;">Focal Year: 1935<br>Role of Gods: Otiose<br>Animals Hunted: Large Game<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_bf7972f87a73b25e70312845aa8d9a66.setContent(html_4fcdc2753523cdc23e40549a9ba11b2e);
+            
+        
+
+        marker_90dde2c44cab236f788cfda942720ecb.bindPopup(popup_bf7972f87a73b25e70312845aa8d9a66)
+        ;
+
+        
+    
+    
+            marker_90dde2c44cab236f788cfda942720ecb.bindTooltip(
+                `<div>
+                     Konso
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_90dde2c44cab236f788cfda942720ecb.setIcon(icon_9834b541cf6b419ff29b778fc39af297);
+            
+    
+            var marker_1876e12695d9de3f495f9a0f28529842 = L.marker(
+                [11.708182, 39.543456],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_698571bcd73e7458733335a4bee3bed2 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_f97239975f6e281cafd71e29099a4fbb = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_80cd8348de031b19a9fa57724ef552b0 = $(`<div id="html_80cd8348de031b19a9fa57724ef552b0" style="width: 100.0%; height: 100.0%;">Focal Year: 1953<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Large Game<br>Religion: 2 (deep Christianization)</div>`)[0];
+                popup_f97239975f6e281cafd71e29099a4fbb.setContent(html_80cd8348de031b19a9fa57724ef552b0);
+            
+        
+
+        marker_1876e12695d9de3f495f9a0f28529842.bindPopup(popup_f97239975f6e281cafd71e29099a4fbb)
+        ;
+
+        
+    
+    
+            marker_1876e12695d9de3f495f9a0f28529842.bindTooltip(
+                `<div>
+                     Amhara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1876e12695d9de3f495f9a0f28529842.setIcon(icon_698571bcd73e7458733335a4bee3bed2);
+            
+    
+            var marker_9837763cf0e2a9feea862cc12a7c95e0 = L.marker(
+                [15.7833, 38.3917],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_4271d7fdde76d700611186b89ddc1f65 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_c51bc18f97538a12f74f5b2b504cd548 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_d98327c2653d62dbc3680528e4873cab = $(`<div id="html_d98327c2653d62dbc3680528e4873cab" style="width: 100.0%; height: 100.0%;">Focal Year: 1855<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Large Game<br>Religion: 4 (superficial Christianization)</div>`)[0];
+                popup_c51bc18f97538a12f74f5b2b504cd548.setContent(html_d98327c2653d62dbc3680528e4873cab);
+            
+        
+
+        marker_9837763cf0e2a9feea862cc12a7c95e0.bindPopup(popup_c51bc18f97538a12f74f5b2b504cd548)
+        ;
+
+        
+    
+    
+            marker_9837763cf0e2a9feea862cc12a7c95e0.bindTooltip(
+                `<div>
+                     Blin
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9837763cf0e2a9feea862cc12a7c95e0.setIcon(icon_4271d7fdde76d700611186b89ddc1f65);
+            
+    
+            var marker_94226d49c0e1818325cde33586d48385 = L.marker(
+                [-17.7052, 24.7398],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_5e3dcd5a7cca64b36a9f2e9b7aa16426 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_9a8e50807955c4622d146b0be1fb1abd = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_60c017d526bab07f46b116e4be36ea0c = $(`<div id="html_60c017d526bab07f46b116e4be36ea0c" style="width: 100.0%; height: 100.0%;">Focal Year: 1900<br>Role of Gods: Otiose<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_9a8e50807955c4622d146b0be1fb1abd.setContent(html_60c017d526bab07f46b116e4be36ea0c);
+            
+        
+
+        marker_94226d49c0e1818325cde33586d48385.bindPopup(popup_9a8e50807955c4622d146b0be1fb1abd)
+        ;
+
+        
+    
+    
+            marker_94226d49c0e1818325cde33586d48385.bindTooltip(
+                `<div>
+                     Lozi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_94226d49c0e1818325cde33586d48385.setIcon(icon_5e3dcd5a7cca64b36a9f2e9b7aa16426);
+            
+    
+            var marker_b5ffa53b7e5f9b8cdafabaf9a6bf1f7d = L.marker(
+                [34.916974, -3.430616],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_d1b4d3802706bbd11db350a55ada248f = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_490c4aa8955cde2d07c757a44fb48b46 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_e3035bc466e0440075d25b3cdb58f5c2 = $(`<div id="html_e3035bc466e0440075d25b3cdb58f5c2" style="width: 100.0%; height: 100.0%;">Focal Year: 1926<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Two or more of above<br>Religion: 1 (deep Islamization)</div>`)[0];
+                popup_490c4aa8955cde2d07c757a44fb48b46.setContent(html_e3035bc466e0440075d25b3cdb58f5c2);
+            
+        
+
+        marker_b5ffa53b7e5f9b8cdafabaf9a6bf1f7d.bindPopup(popup_490c4aa8955cde2d07c757a44fb48b46)
+        ;
+
+        
+    
+    
+            marker_b5ffa53b7e5f9b8cdafabaf9a6bf1f7d.bindTooltip(
+                `<div>
+                     Riffians
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b5ffa53b7e5f9b8cdafabaf9a6bf1f7d.setIcon(icon_d1b4d3802706bbd11db350a55ada248f);
+            
+    
+            var marker_763e8701a8f0a466c819a555b2d33462 = L.marker(
+                [33.1, 44.1],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_d6c552340dbea1b517cb8645f8ac6dde = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_f8b7a0e2605f84cf228ae1d6f8922e24 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_c295570c60f485a658ad234fb8057a0f = $(`<div id="html_c295570c60f485a658ad234fb8057a0f" style="width: 100.0%; height: 100.0%;">Focal Year: -1750<br>Role of Gods: Absent<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_f8b7a0e2605f84cf228ae1d6f8922e24.setContent(html_c295570c60f485a658ad234fb8057a0f);
+            
+        
+
+        marker_763e8701a8f0a466c819a555b2d33462.bindPopup(popup_f8b7a0e2605f84cf228ae1d6f8922e24)
+        ;
+
+        
+    
+    
+            marker_763e8701a8f0a466c819a555b2d33462.bindTooltip(
+                `<div>
+                     Babylonians
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_763e8701a8f0a466c819a555b2d33462.setIcon(icon_d6c552340dbea1b517cb8645f8ac6dde);
+            
+    
+            var marker_715fc6ae923ce93e991fb793523b6731 = L.marker(
+                [42.317, 21.3837],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_9b4c8c4019ea9f8e74d5b00498b7f811 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_d46eac760cfccdfa496eabcf3c2fb0d3 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_0c215daeb1ba39a99e1af090707be6bf = $(`<div id="html_0c215daeb1ba39a99e1af090707be6bf" style="width: 100.0%; height: 100.0%;">Focal Year: 1910<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Small Mammals<br>Religion: 1 (deep Islamization)</div>`)[0];
+                popup_d46eac760cfccdfa496eabcf3c2fb0d3.setContent(html_0c215daeb1ba39a99e1af090707be6bf);
+            
+        
+
+        marker_715fc6ae923ce93e991fb793523b6731.bindPopup(popup_d46eac760cfccdfa496eabcf3c2fb0d3)
+        ;
+
+        
+    
+    
+            marker_715fc6ae923ce93e991fb793523b6731.bindTooltip(
+                `<div>
+                     Gheg
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_715fc6ae923ce93e991fb793523b6731.setIcon(icon_9b4c8c4019ea9f8e74d5b00498b7f811);
+            
+    
+            var marker_75b2fbbdfa526d1cce113a11f31ed7b4 = L.marker(
+                [-12.4763, 14.4148],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_48ce6206039388f6ecfacb5452e70d9b = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_2b707b1c0b3d12e3b92045789a97aa2c = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_8bff06b1cfa4082732a53aec1901a555 = $(`<div id="html_8bff06b1cfa4082732a53aec1901a555" style="width: 100.0%; height: 100.0%;">Focal Year: 1890<br>Role of Gods: Otiose<br>Animals Hunted: Small Mammals<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_2b707b1c0b3d12e3b92045789a97aa2c.setContent(html_8bff06b1cfa4082732a53aec1901a555);
+            
+        
+
+        marker_75b2fbbdfa526d1cce113a11f31ed7b4.bindPopup(popup_2b707b1c0b3d12e3b92045789a97aa2c)
+        ;
+
+        
+    
+    
+            marker_75b2fbbdfa526d1cce113a11f31ed7b4.bindTooltip(
+                `<div>
+                     Mbundu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_75b2fbbdfa526d1cce113a11f31ed7b4.setIcon(icon_48ce6206039388f6ecfacb5452e70d9b);
+            
+    
+            var marker_a4426ff37cfc280c1eeb01c08eae3ffd = L.marker(
+                [43.056218, 41.159115],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_8795b1e29d442fc991a8435333f3cc9d = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_8e7268aa7e854b78ee600080d0e9b319 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_4459a1ec5da96132cdbeae337e40e761 = $(`<div id="html_4459a1ec5da96132cdbeae337e40e761" style="width: 100.0%; height: 100.0%;">Focal Year: 1880<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Large Game<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_8e7268aa7e854b78ee600080d0e9b319.setContent(html_4459a1ec5da96132cdbeae337e40e761);
+            
+        
+
+        marker_a4426ff37cfc280c1eeb01c08eae3ffd.bindPopup(popup_8e7268aa7e854b78ee600080d0e9b319)
+        ;
+
+        
+    
+    
+            marker_a4426ff37cfc280c1eeb01c08eae3ffd.bindTooltip(
+                `<div>
+                     Abkhaz
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a4426ff37cfc280c1eeb01c08eae3ffd.setIcon(icon_8795b1e29d442fc991a8435333f3cc9d);
+            
+    
+            var marker_60a7d653b03ba1833cd745f430f5010e = L.marker(
+                [30.0948, 75.3474],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_178b25f5b8f29fda5bdc01f71bba9e5d = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_76e37dda1668058b077ff866ea629b6f = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_abd443adda5826d16aa462ee09395455 = $(`<div id="html_abd443adda5826d16aa462ee09395455" style="width: 100.0%; height: 100.0%;">Focal Year: 1950<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Birds or Waterfowl<br>Religion: 1 (deep Islamization)</div>`)[0];
+                popup_76e37dda1668058b077ff866ea629b6f.setContent(html_abd443adda5826d16aa462ee09395455);
+            
+        
+
+        marker_60a7d653b03ba1833cd745f430f5010e.bindPopup(popup_76e37dda1668058b077ff866ea629b6f)
+        ;
+
+        
+    
+    
+            marker_60a7d653b03ba1833cd745f430f5010e.bindTooltip(
+                `<div>
+                     Punjabi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_60a7d653b03ba1833cd745f430f5010e.setIcon(icon_178b25f5b8f29fda5bdc01f71bba9e5d);
+            
+    
+            var marker_1517d5cc1eafc4315840676cffbcbbc7 = L.marker(
+                [19.7875, 79.9144],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_d73549dece62590c1266faa9c562fe16 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_079da1bf93f1ab1178b3ab886ab3b6f4 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_682728100a9b2df0d993650b1c4f5883 = $(`<div id="html_682728100a9b2df0d993650b1c4f5883" style="width: 100.0%; height: 100.0%;">Focal Year: 1938<br>Role of Gods: Active, but not supporting morality<br>Animals Hunted: Small Mammals<br>Religion: 8 (Hinduism)</div>`)[0];
+                popup_079da1bf93f1ab1178b3ab886ab3b6f4.setContent(html_682728100a9b2df0d993650b1c4f5883);
+            
+        
+
+        marker_1517d5cc1eafc4315840676cffbcbbc7.bindPopup(popup_079da1bf93f1ab1178b3ab886ab3b6f4)
+        ;
+
+        
+    
+    
+            marker_1517d5cc1eafc4315840676cffbcbbc7.bindTooltip(
+                `<div>
+                     Madia
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1517d5cc1eafc4315840676cffbcbbc7.setIcon(icon_d73549dece62590c1266faa9c562fe16);
+            
+    
+            var marker_44d338411b51fc5999f127a086c41c0c = L.marker(
+                [25.0317, 87.8185],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_74a4386f0beafe2157dff0460eb6d926 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_2fd2fc7d03f1942696900b241e459469 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_4f6c4cbf83184aeb2717cdf31969d6dd = $(`<div id="html_4f6c4cbf83184aeb2717cdf31969d6dd" style="width: 100.0%; height: 100.0%;">Focal Year: 1940<br>Role of Gods: Otiose<br>Animals Hunted: Small Mammals<br>Religion: 8 (Hinduism)</div>`)[0];
+                popup_2fd2fc7d03f1942696900b241e459469.setContent(html_4f6c4cbf83184aeb2717cdf31969d6dd);
+            
+        
+
+        marker_44d338411b51fc5999f127a086c41c0c.bindPopup(popup_2fd2fc7d03f1942696900b241e459469)
+        ;
+
+        
+    
+    
+            marker_44d338411b51fc5999f127a086c41c0c.bindTooltip(
+                `<div>
+                     Santal
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_44d338411b51fc5999f127a086c41c0c.setIcon(icon_74a4386f0beafe2157dff0460eb6d926);
+            
+    
+            var marker_2f49c3adb84bcd37062576b7d8d9654b = L.marker(
+                [41.8729, 65.7709],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_6cd6365ca4b67d825219de7c739e6edd = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_ba7319d33dfc3a52057d9994449590d9 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_8f9336a6de1f0c3f7512fcf2fe8ae294 = $(`<div id="html_8f9336a6de1f0c3f7512fcf2fe8ae294" style="width: 100.0%; height: 100.0%;">Focal Year: 1885<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Small Mammals<br>Religion: 3 (superficial Islamization)</div>`)[0];
+                popup_ba7319d33dfc3a52057d9994449590d9.setContent(html_8f9336a6de1f0c3f7512fcf2fe8ae294);
+            
+        
+
+        marker_2f49c3adb84bcd37062576b7d8d9654b.bindPopup(popup_ba7319d33dfc3a52057d9994449590d9)
+        ;
+
+        
+    
+    
+            marker_2f49c3adb84bcd37062576b7d8d9654b.bindTooltip(
+                `<div>
+                     Kazakh
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2f49c3adb84bcd37062576b7d8d9654b.setIcon(icon_6cd6365ca4b67d825219de7c739e6edd);
+            
+    
+            var marker_b36f4b793d3d2528f9f1a0f68d6d8aae = L.marker(
+                [27.0869, 88.5726],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_ad6884e050bdeb8825927ed3b03f4d44 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_efaa8d4ae968fdf1391f3bbfdd4eab2e = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_f42b6f2d6e9180825217d93b2752ea16 = $(`<div id="html_f42b6f2d6e9180825217d93b2752ea16" style="width: 100.0%; height: 100.0%;">Focal Year: 1937<br>Role of Gods: Active, but not supporting morality<br>Animals Hunted: Two or more of above<br>Religion: 7 (Vajrayana Buddhism)</div>`)[0];
+                popup_efaa8d4ae968fdf1391f3bbfdd4eab2e.setContent(html_f42b6f2d6e9180825217d93b2752ea16);
+            
+        
+
+        marker_b36f4b793d3d2528f9f1a0f68d6d8aae.bindPopup(popup_efaa8d4ae968fdf1391f3bbfdd4eab2e)
+        ;
+
+        
+    
+    
+            marker_b36f4b793d3d2528f9f1a0f68d6d8aae.bindTooltip(
+                `<div>
+                     Lepcha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b36f4b793d3d2528f9f1a0f68d6d8aae.setIcon(icon_ad6884e050bdeb8825927ed3b03f4d44);
+            
+    
+            var marker_4542fb5d785e6c9291c668168d764976 = L.marker(
+                [22.1138, 93.0387],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_09a9ad55a6001641f593f646dac48902 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_a34d63d762b8411837c47226136ff5ba = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_176deedf7133601fad56487122191cbe = $(`<div id="html_176deedf7133601fad56487122191cbe" style="width: 100.0%; height: 100.0%;">Focal Year: 1930<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_a34d63d762b8411837c47226136ff5ba.setContent(html_176deedf7133601fad56487122191cbe);
+            
+        
+
+        marker_4542fb5d785e6c9291c668168d764976.bindPopup(popup_a34d63d762b8411837c47226136ff5ba)
+        ;
+
+        
+    
+    
+            marker_4542fb5d785e6c9291c668168d764976.bindTooltip(
+                `<div>
+                     Maras
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4542fb5d785e6c9291c668168d764976.setIcon(icon_09a9ad55a6001641f593f646dac48902);
+            
+    
+            var marker_c924bb8a622211a584132d71930358ca = L.marker(
+                [19.8829, 100.268],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_a523d286bda6eec39f136aab1da04067 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_613adb063b1eb6822edd55ac95749680 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_6518308f0597f5611052bde45561a2a3 = $(`<div id="html_6518308f0597f5611052bde45561a2a3" style="width: 100.0%; height: 100.0%;">Focal Year: 1940<br>Role of Gods: Absent<br>Animals Hunted: Two or more of above<br>Religion: 0 (indigenous religion)</div>`)[0];
+                popup_613adb063b1eb6822edd55ac95749680.setContent(html_6518308f0597f5611052bde45561a2a3);
+            
+        
+
+        marker_c924bb8a622211a584132d71930358ca.bindPopup(popup_613adb063b1eb6822edd55ac95749680)
+        ;
+
+        
+    
+    
+            marker_c924bb8a622211a584132d71930358ca.bindTooltip(
+                `<div>
+                     Lamet
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c924bb8a622211a584132d71930358ca.setIcon(icon_a523d286bda6eec39f136aab1da04067);
+            
+    
+            var marker_92a84765db762237e191d0914c047f70 = L.marker(
+                [2.66503, 102.291],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_85521cce20b0657d300c92c03d9ee8d5 = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_c6f714a67be36a072bd0d4d89f077a40 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_b8bffd7a65c16c12c9fa1c17b841b89c = $(`<div id="html_b8bffd7a65c16c12c9fa1c17b841b89c" style="width: 100.0%; height: 100.0%;">Focal Year: 1958<br>Role of Gods: Active, supporting morality<br>Animals Hunted: Small Mammals<br>Religion: 1 (deep Islamization)</div>`)[0];
+                popup_c6f714a67be36a072bd0d4d89f077a40.setContent(html_b8bffd7a65c16c12c9fa1c17b841b89c);
+            
+        
+
+        marker_92a84765db762237e191d0914c047f70.bindPopup(popup_c6f714a67be36a072bd0d4d89f077a40)
+        ;
+
+        
+    
+    
+            marker_92a84765db762237e191d0914c047f70.bindTooltip(
+                `<div>
+                     Negri Sembilan
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_92a84765db762237e191d0914c047f70.setIcon(icon_85521cce20b0657d300c92c03d9ee8d5);
+            
+    
+            var marker_93f5d2482739cfe74f32cd3caf81c3d3 = L.marker(
+                [-8.35714, 115.075],
+                {
+}
+            ).addTo(map_48e959ec8cd28b4f8933e10611054874);
+        
+    
+        var icon_80bcd06a15c443f6eccb0c0fa94259fb = L.icon({
+  "iconUrl": "../../assets/icons/cow.png",
+  "iconSize": [30, 30],
+});
+        
+    
+        var popup_d385caca8be3a371118e4746a925b189 = L.popup({
+  "maxWidth": 150,
+  "minWidth": 150,
+});
+
+        
+            
+                var html_fa8f7e9acc7f3f88bcece7a18cf8296e = $(`<div id="html_fa8f7e9acc7f3f88bcece7a18cf8296e" style="width: 100.0%; height: 100.0%;">Focal Year: 1958<br>Role of Gods: Absent<br>Animals Hunted: Small Mammals<br>Religion: 8 (Hinduism)</div>`)[0];
+                popup_d385caca8be3a371118e4746a925b189.setContent(html_fa8f7e9acc7f3f88bcece7a18cf8296e);
+            
+        
+
+        marker_93f5d2482739cfe74f32cd3caf81c3d3.bindPopup(popup_d385caca8be3a371118e4746a925b189)
+        ;
+
+        
+    
+    
+            marker_93f5d2482739cfe74f32cd3caf81c3d3.bindTooltip(
+                `<div>
+                     Balinese
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_93f5d2482739cfe74f32cd3caf81c3d3.setIcon(icon_80bcd06a15c443f6eccb0c0fa94259fb);
+            
+</script>
+</html>

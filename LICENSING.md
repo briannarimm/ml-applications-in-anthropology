@@ -4,7 +4,7 @@ This repository has more than one license. Each license covers a different type 
 
 | What | Files | License |
 | --- | --- | --- |
-| Source code | `domesticated-animals-map/map.py`, `clustering-demo/clustering.py` | [MIT](LICENSE) |
+| Source code | `domesticated-animals-map/map.py`, `clustering-demo/clustering.py`, `style.css`, `script.js` | [MIT](LICENSE) |
 | Written content and page design | `README.md`, `CREDITS.md`, `LICENSING.md`, `index.html` | [CC BY 4.0](LICENSES/CC-BY-4.0.txt) |
 | Data and results made from the data | `data/*.csv`, `*/output/**`, `clustering-demo/published/**` | [CC BY-NC 4.0](LICENSES/CC-BY-NC-4.0.txt) |
 | Animal icons | `assets/icons/*.png` | CC BY 3.0 US (the author of each icon holds the copyright) |

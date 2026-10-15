@@ -2,7 +2,7 @@
 
 ## Data
 
-All categorical data comes from [D-PLACE](https://d-place.org). All location data comes from [Glottolog](https://glottolog.org).
+All categorical data comes from [D-PLACE](https://d-place.org) (license: CC BY-NC 4.0). All location data comes from [Glottolog](https://glottolog.org) (license: CC BY 4.0). See [LICENSING.md](LICENSING.md).
 
 The data uses these D-PLACE variables:
 

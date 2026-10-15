@@ -2,18 +2,43 @@
 
 ![A herd of cows](assets/images/cows.jpg)
 
-This repository has two small Python projects. Both projects use machine learning and data tools on anthropology data. Each project makes an interactive map.
+**Online showcase:** <https://www.briannaimm.com/ml-applications-in-anthropology/>
 
-| Project | What it does | Folder |
-| --- | --- | --- |
-| Domesticated animals map | Shows the main domesticated animal of 118 societies | [domesticated-animals-map](domesticated-animals-map) |
-| Clustering demo | Puts 141 societies into 3 groups with the K-Modes algorithm. Shows the groups on a map and in charts | [clustering-demo](clustering-demo) |
+This repository has two small Python projects. Both projects look for patterns in anthropology data. Each project makes an interactive map that you open in a web browser.
 
-**See the maps online:** <https://www.briannaimm.com/ml-applications-in-anthropology/>
+* **Domesticated animals map.** The map shows the main farm animal of 118 societies.
+* **Clustering demo.** A machine learning method puts 141 societies into 3 groups. The groups are shown on a map and in charts.
+
+You do not need to know machine learning or anthropology to use this repository.
+
+## Contents
+
+1. [Terms](#terms)
+2. [Data](#data)
+3. [Project 1: Domesticated animals map](#project-1-domesticated-animals-map)
+4. [Project 2: Clustering demo](#project-2-clustering-demo)
+5. [Install and run](#install-and-run)
+6. [Use your own data](#use-your-own-data)
+7. [Repository layout](#repository-layout)
+8. [Troubleshooting](#troubleshooting)
+9. [Credits and license](#credits-and-license)
+
+## Terms
+
+| Term | Meaning |
+| --- | --- |
+| Society | A group of people that share a culture. Each row in the data is one society |
+| Domesticated animal | An animal that people keep and breed, for example a pig or a cow |
+| Cluster | A group of societies that are similar to each other |
+| Clustering | A machine learning method that finds clusters. It does not use a list of right answers |
+| K-Modes | A clustering method for categories, such as "Pigs" or "Bovines" |
+| Elbow curve | A chart that helps you choose the number of clusters |
+| Otiose god | A god that exists, but does not take part in human affairs |
+| Focal year | The year that the data describes |
 
 ## Data
 
-Both projects use the same data. The data comes from D-PLACE, a database of cultural data. It describes 141 societies from the Standard Cross-Cultural Sample (SCCS).
+Both projects use the same data. The data describes 141 societies from the Standard Cross-Cultural Sample (SCCS). It comes from [D-PLACE](https://d-place.org), a database of cultural data.
 
 Each society has these variables:
 
@@ -25,32 +50,40 @@ Each society has these variables:
 | `religion_label` | The main religion | Indigenous religion, Islamization, Christianization |
 | `focal_year` | The year that the data describes | 1880 |
 
-Two files in the [data](data) folder hold the data:
+The [data](data) folder has two files:
 
 * `societies.csv` has the variables of all 141 societies.
-* `coordinates.csv` has the latitude and longitude of 118 societies. Glottolog gave these coordinates. 23 societies have no coordinates. These societies appear in the clustering, but not on the maps.
+* `coordinates.csv` has the latitude and longitude of 118 societies. The coordinates come from [Glottolog](https://glottolog.org).
 
-[CREDITS.md](CREDITS.md) lists the sources, the icon authors and the software licenses.
+23 societies have no coordinates. They are in the clustering. They are not on the maps.
 
 ## Project 1: Domesticated animals map
 
-The script reads the data and makes one web page. The web page shows a map of the world. Each society has one animal icon on the map.
+The script reads the data and makes one web page. The web page shows a world map. Each society has one animal icon on the map.
 
-* Move the mouse over an icon to see the name of the society.
-* Click an icon to see the focal year, the role of the gods, the animals that people hunt and the religion.
-* Read the legend at the bottom left to see which icon shows which animal.
+| Action | Result |
+| --- | --- |
+| Move the mouse over an icon | The name of the society shows |
+| Click an icon | The focal year, role of the gods, animals hunted and religion show |
+| Read the legend (bottom left) | You see which icon shows which animal |
+
+**Script:** [domesticated-animals-map/map.py](domesticated-animals-map/map.py)
+**Output:** `domesticated-animals-map/output/animal_map.html`
 
 The script uses these libraries:
 
 * **pandas** reads and joins the data.
-* **Folium** makes the map.
-* **Branca** makes the legend.
+* **Folium** draws the map.
+* **Branca** draws the legend.
 
 ## Project 2: Clustering demo
 
-Clustering puts similar items in the same group. This project uses clustering to find groups of societies that have similar animals, gods and religion.
+Clustering puts similar items in the same group. In this project, the items are societies. The script finds groups of societies that have similar animals, gods and religion.
 
-The project uses the **K-Modes** algorithm. K-Modes is like K-Means, but it works with categories and not with numbers. The center of a group is the most common category of each variable.
+The script uses **K-Modes**. K-Modes is like K-Means, but it works with categories and not with numbers. The center of a group is the most common category of each variable.
+
+**Script:** [clustering-demo/clustering.py](clustering-demo/clustering.py)
+**Output:** `clustering-demo/output/`
 
 The script does these steps:
 
@@ -61,31 +94,39 @@ The script does these steps:
 5. It draws one count chart for each variable.
 6. It makes a map. Each group has a different color.
 
-> **Note:** The elbow curve has no sharp bend. The cost continues to decrease as the number of groups increases. The number 3 is a choice that is easy to read. It is not a proof.
+> **Note:** The elbow curve has no sharp bend. The cost continues to decrease as the number of groups increases. The number 3 is easy to read. It is not a proof.
 
-K-Modes starts at random. The script uses a fixed seed (`SEED = 42`), so each run gives the same result.
+K-Modes starts at random. The script uses a fixed seed (`SEED = 42`). Each run gives the same result.
+
+### Output files
+
+| File | Content |
+| --- | --- |
+| `cluster_map.html` | Interactive map of the clusters |
+| `elbow_curve.png` | Cost for each number of clusters |
+| `clusters.csv` | The cluster of each of the 141 societies |
+| `clusters_mapdata.csv` | The same data with coordinates (118 societies) |
+| `charts/*_chart.png` | One count chart for each variable |
 
 ### Results
 
-These results come from the current script. The numbers are counts of societies.
+The numbers are counts of societies.
 
-| Group | Map color | Size | What the group has in common |
+| Cluster | Map color | Size | What the cluster has in common |
 | --- | --- | --- | --- |
 | 1 | Black | 69 | Gods are absent (50). Pigs are the main animal (23 of the 24 pig societies) |
 | 2 | Green | 47 | Gods are otiose (27). Small animals are the main animal (31). People hunt two or more kinds of animal (26) |
 | 3 | Red | 25 | Gods are active and support morality (22). Deep Islamization is common (14). Bovines (17) and camels (3) are the main animals |
 
-The pig result is the most interesting one. Almost all pig societies are in group 1, where the gods are absent. The pig is a food taboo in Judaism and Islam. The result may support the idea that food taboos relate to the role of the gods. Correlation is not causation. Geography and indigenous religions also influence the groups.
+Almost all pig societies are in cluster 1, where the gods are absent. Pigs are a food taboo in Judaism and Islam. The result can support the idea that food taboos relate to the role of the gods.
 
-> **Note:** Clusters are not exact. Many societies do not follow the pattern of their group.
+> **Warning:** Correlation is not causation. Geography and indigenous religions also influence the clusters. Many societies do not follow the pattern of their cluster.
 
-The folder [clustering-demo/published](clustering-demo/published) keeps the charts and map from the original 2021 analysis. That analysis started from a different random state. The group sizes are a little different, but the main pattern is the same.
+The folder [clustering-demo/published](clustering-demo/published) keeps the charts and the map from the 2021 analysis. That analysis used a different random start. The cluster sizes are a little different. The main pattern is the same.
 
-![Societies in each cluster](clustering-demo/published/cluster_chart.png)
+## Install and run
 
-## How to run the projects
-
-You need Python 3.9 or later.
+You need Python 3.9 or later and an internet connection.
 
 1. Clone the repository and go to the folder:
 
@@ -108,29 +149,36 @@ You need Python 3.9 or later.
    python domesticated-animals-map/map.py
    ```
 
-   The script writes `domesticated-animals-map/output/animal_map.html`.
-
 4. Run the clustering demo:
 
    ```bash
    python clustering-demo/clustering.py
    ```
 
-   The script writes its results to `clustering-demo/output/`.
-
-5. Show the maps. Start a local web server in the repository folder:
+5. Start a local web server:
 
    ```bash
    python -m http.server 8000
    ```
 
-   Open <http://localhost:8000> in a web browser. The start page is the same page as the online showcase.
+6. Open <http://localhost:8000> in a web browser. This page is the same as the online showcase.
 
-> **Note:** The map in the browser loads map tiles from the internet. You need an internet connection to see the base map.
+> **Note:** The maps load map tiles from the internet. Without a connection, the base map does not show.
 
-> **Note:** Do not move the HTML files. `animal_map.html` uses the icons in `assets/icons` through a relative link.
+> **Note:** Do not move the HTML files. `animal_map.html` links to the icons in `assets/icons` with a relative path.
 
-## Files in this repository
+## Use your own data
+
+1. Open the CSV files in the `data` folder.
+2. Change the rows. Keep the column names.
+3. Make sure that each society has the same `society_id` in both files.
+4. Run the scripts again.
+
+To add an animal, add a line to the `ICONS` dictionary in `map.py`. Put a PNG file in `assets/icons`.
+
+To change the number of clusters, change `N_CLUSTERS` in `clustering.py`.
+
+## Repository layout
 
 ```text
 data/                       Data of the societies (CSV)
@@ -139,20 +187,31 @@ assets/images/              Header images
 domesticated-animals-map/   Project 1: map.py and its output
 clustering-demo/            Project 2: clustering.py and its output
   published/                Charts and map from the 2021 analysis
-index.html                  Start page for the online maps
+LICENSES/                   Full text of the Creative Commons licenses
+index.html                  The online showcase page
 requirements.txt            Python libraries
 ```
 
-## How to use your own data
+## Troubleshooting
 
-To change the map, change the CSV files in the `data` folder. Keep the column names. The `society_id` column links the two files.
+| Problem | Cause | Solution |
+| --- | --- | --- |
+| `ModuleNotFoundError` | The libraries are not installed | Activate the virtual environment. Run `pip install -r requirements.txt` |
+| The animal icons do not show | You opened the HTML file from a different folder | Keep the folder layout. Use the local web server |
+| The base map is empty | There is no internet connection | Connect to the internet and reload the page |
+| The cluster numbers are different | You changed `SEED` or the data | Set `SEED = 42` and use the original data |
 
-To add an animal, add a line to the `ICONS` dictionary in `map.py` and put a PNG file in `assets/icons`. To change the number of groups, change `N_CLUSTERS` in `clustering.py`.
+## Credits and license
 
-## Author
+**Author:** Brianna R. Imm
 
-Brianna R. Imm
+This repository has more than one license:
 
-## License
+| What | License |
+| --- | --- |
+| Source code | [MIT](LICENSE) |
+| Text and page design | [CC BY 4.0](LICENSES/CC-BY-4.0.txt) |
+| Data and results | [CC BY-NC 4.0](LICENSES/CC-BY-NC-4.0.txt) (non-commercial) |
+| Icons and images | Their own licenses |
 
-The code is under the MIT License. See [LICENSE](LICENSE). The icons and the header images have their own licenses. See [CREDITS.md](CREDITS.md).
+See [LICENSING.md](LICENSING.md) for details. See [CREDITS.md](CREDITS.md) for data sources, icon authors and software citations.

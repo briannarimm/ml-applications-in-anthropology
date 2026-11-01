@@ -11,6 +11,8 @@ This repository has two small Python projects. Both projects look for patterns i
 
 You do not need to know machine learning or anthropology to use this repository.
 
+**Disclosures:** I wrote all of this code back in 2021. I used Claude to help fix the little things that broke since 2021 and to migrate the experiment to a page on my website. Also, while the folder [clustering-demo/published](clustering-demo/published) keeps the charts and the map from the 2021 analysis. That 2021 analysis used a different random start, so the cluster sizes are a little different. The main pattern, however, remains across old and new.
+
 ## Contents
 
 1. [Terms](#terms)
@@ -30,7 +32,7 @@ You do not need to know machine learning or anthropology to use this repository.
 | Society | A group of people that share a culture. Each row in the data is one society |
 | Domesticated animal | An animal that people keep and breed, for example a pig or a cow |
 | Cluster | A group of societies that are similar to each other |
-| Clustering | A machine learning method that finds clusters. It does not use a list of right answers |
+| Clustering | A machine learning method that finds clusters. |
 | K-Modes | A clustering method for categories, such as "Pigs" or "Bovines" |
 | Elbow curve | A chart that helps you choose the number of clusters |
 | Otiose god | A god that exists, but does not take part in human affairs |
@@ -94,10 +96,6 @@ The script does these steps:
 5. It draws one count chart for each variable.
 6. It makes a map. Each group has a different color.
 
-> **Note:** The elbow curve has no sharp bend. The cost continues to decrease as the number of groups increases. The number 3 is easy to read. It is not a proof.
-
-K-Modes starts at random. The script uses a fixed seed (`SEED = 42`). Each run gives the same result.
-
 ### Output files
 
 | File | Content |
@@ -120,9 +118,7 @@ The numbers are counts of societies.
 
 Almost all pig societies are in cluster 1, where the gods are absent. Pigs are a food taboo in Judaism and Islam. The result can support the idea that food taboos relate to the role of the gods.
 
-> **Warning:** Correlation is not causation. Geography and indigenous religions also influence the clusters. Many societies do not follow the pattern of their cluster.
-
-The folder [clustering-demo/published](clustering-demo/published) keeps the charts and the map from the 2021 analysis. That analysis used a different random start. The cluster sizes are a little different. The main pattern is the same.
+> **Important Note:** Correlation is not causation. Geography and indigenous religions also influence the clusters. Many societies do not follow the pattern of their cluster.
 
 ## Install and run
 
@@ -163,21 +159,6 @@ You need Python 3.9 or later and an internet connection.
 
 6. Open <http://localhost:8000> in a web browser. This page is the same as the online showcase.
 
-> **Note:** The maps load map tiles from the internet. Without a connection, the base map does not show.
-
-> **Note:** Do not move the HTML files. `animal_map.html` links to the icons in `assets/icons` with a relative path.
-
-## Use your own data
-
-1. Open the CSV files in the `data` folder.
-2. Change the rows. Keep the column names.
-3. Make sure that each society has the same `society_id` in both files.
-4. Run the scripts again.
-
-To add an animal, add a line to the `ICONS` dictionary in `map.py`. Put a PNG file in `assets/icons`.
-
-To change the number of clusters, change `N_CLUSTERS` in `clustering.py`.
-
 ## Repository layout
 
 ```text
@@ -191,15 +172,6 @@ LICENSES/                   Full text of the Creative Commons licenses
 index.html                  The online showcase page
 requirements.txt            Python libraries
 ```
-
-## Troubleshooting
-
-| Problem | Cause | Solution |
-| --- | --- | --- |
-| `ModuleNotFoundError` | The libraries are not installed | Activate the virtual environment. Run `pip install -r requirements.txt` |
-| The animal icons do not show | You opened the HTML file from a different folder | Keep the folder layout. Use the local web server |
-| The base map is empty | There is no internet connection | Connect to the internet and reload the page |
-| The cluster numbers are different | You changed `SEED` or the data | Set `SEED = 42` and use the original data |
 
 ## Credits and license
 

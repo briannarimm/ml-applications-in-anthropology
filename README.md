@@ -20,10 +20,8 @@ You do not need to know machine learning or anthropology to use this repository.
 3. [Project 1: Domesticated animals map](#project-1-domesticated-animals-map)
 4. [Project 2: Clustering demo](#project-2-clustering-demo)
 5. [Install and run](#install-and-run)
-6. [Use your own data](#use-your-own-data)
-7. [Repository layout](#repository-layout)
-8. [Troubleshooting](#troubleshooting)
-9. [Credits and license](#credits-and-license)
+6. [Repository layout](#repository-layout)
+7. [Credits and license](#credits-and-license)
 
 ## Terms
 

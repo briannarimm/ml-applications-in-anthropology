@@ -11,7 +11,7 @@ This repository has two small Python projects. Both projects look for patterns i
 
 You do not need to know machine learning or anthropology to use this repository.
 
-**Disclosures:** I wrote all of this code back in 2021. I used Claude to help fix the little things that broke since 2021 and to migrate the experiment to a page on my website. Also, while the folder [clustering-demo/published](clustering-demo/published) keeps the charts and the map from the 2021 analysis. That 2021 analysis used a different random start, so the cluster sizes are a little different. The main pattern, however, remains across old and new.
+**Disclosures:** I wrote all of this code back in 2021. I used Claude to help fix the little things that broke since 2021 and to migrate the experiment to a page on my website. Also, while the folder [clustering-demo/published](clustering-demo/published) keeps the charts and the map from the 2021 analysis, that analysis used a different random start, so the cluster sizes are a little different. The main pattern, however, remains across old and new.
 
 ## Contents
 

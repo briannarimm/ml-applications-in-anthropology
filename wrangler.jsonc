@@ -6,8 +6,8 @@
   "compatibility_date": "2026-11-06",
   // Workers Builds runs `bash cloudflare/build.sh`, which writes the site to .cloudflare-dist/ml-applications-in-anthropology/.
   // The build puts the files in .cloudflare-dist/ml-applications-in-anthropology/, so a request for /ml-applications-in-anthropology/ finds them by path.
-  // Migration day (step 5 of cloudflare/README.md in briannarimm.github.io): remove the // below to serve this on your domain.
-  // "routes": [{ "pattern": "www.briannaimm.com/ml-applications-in-anthropology*", "zone_name": "briannaimm.com" }],
+  // Serves this project on the live domain (turned on on migration day, see cloudflare/README.md in briannarimm.github.io).
+  "routes": [{ "pattern": "www.briannaimm.com/ml-applications-in-anthropology*", "zone_name": "briannaimm.com" }],
   "assets": {
     "directory": "./.cloudflare-dist",
     "html_handling": "auto-trailing-slash"

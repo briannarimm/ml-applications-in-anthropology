@@ -4,8 +4,8 @@
 # every tracked file except hidden paths, paths that start with "_", and the Cloudflare files.
 set -euo pipefail
 cd "$(dirname "$0")/.."
-OUT=.cloudflare-dist
-rm -rf "$OUT"
+rm -rf .cloudflare-dist
+OUT=.cloudflare-dist/ml-applications-in-anthropology
 mkdir -p "$OUT"
 git ls-files -z | while IFS= read -r -d '' f; do
   case "/$f" in

@@ -84,3 +84,7 @@ GEMINI.md
 .openai/
 .kiro/
 .trae/
+
+# Cloudflare Workers build output (see wrangler.jsonc)
+.cloudflare-dist/
+.wrangler/

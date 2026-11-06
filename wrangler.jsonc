@@ -1,0 +1,16 @@
+// Cloudflare Workers config: serves this project at www.briannaimm.com/ml-applications-in-anthropology/.
+// GitHub Pages ignores this file. Full setup and migration steps:
+// https://github.com/briannarimm/briannarimm.github.io/blob/main/cloudflare/README.md
+{
+  "name": "ml-applications-in-anthropology",
+  "compatibility_date": "2026-11-06",
+  // Workers Builds runs `bash cloudflare/build.sh`, which writes the site to .cloudflare-dist/.
+  // base_path makes .cloudflare-dist/index.html answer at /ml-applications-in-anthropology/ (needs Wrangler 4.148 or later).
+  // Migration day (step 5 of cloudflare/README.md in briannarimm.github.io): remove the // below to serve this on your domain.
+  // "routes": [{ "pattern": "www.briannaimm.com/ml-applications-in-anthropology*", "zone_name": "briannaimm.com" }],
+  "assets": {
+    "directory": "./.cloudflare-dist",
+    "base_path": "/ml-applications-in-anthropology",
+    "html_handling": "auto-trailing-slash"
+  }
+}

@@ -14,4 +14,6 @@ git ls-files -z | while IFS= read -r -d '' f; do
   mkdir -p "$OUT/$(dirname "$f")"
   cp "$f" "$OUT/$f"
 done
+# The project lives under /ml-applications-in-anthropology/. Send the bare test address (the workers.dev root) there too.
+printf '/ /ml-applications-in-anthropology/ 302\n' > .cloudflare-dist/_redirects
 echo "Copied $(find "$OUT" -type f | wc -l | tr -d ' ') files to $OUT/."

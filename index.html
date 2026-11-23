@@ -2,39 +2,79 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>
+  // Use the theme chosen on briannaimm.com, before first paint. With no choice, CSS follows the system setting.
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ML Applications in Anthropology</title>
+<title>ML Applications in Anthropology &middot; Brianna Imm</title>
 <meta name="description" content="Two Python projects that map and cluster cross-cultural data on animals, gods and religion in 141 societies.">
+<meta name="theme-color" content="#0a0e13" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f3ec" media="(prefers-color-scheme: light)">
+<link rel="canonical" href="https://www.briannaimm.com/ml-applications-in-anthropology/">
 <meta property="og:title" content="ML Applications in Anthropology">
 <meta property="og:description" content="An interactive map of domesticated animals and a K-Modes clustering of 141 societies.">
 <meta property="og:image" content="https://www.briannaimm.com/ml-applications-in-anthropology/assets/images/cows.jpg">
-<meta name="theme-color" content="#0a0e13">
+<link rel="icon" href="https://www.briannaimm.com/images/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Lato:ital,wght@0,300;0,400;0,700;1,400&display=swap">
+<!-- The design of briannaimm.com (DESIGN.md in briannarimm.github.io). Loading it from the site keeps this page in step with every redesign. -->
+<link rel="stylesheet" href="https://www.briannaimm.com/style.css">
+<link rel="stylesheet" href="project.css">
 </head>
 <body>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="arrow-up-right" viewBox="0 0 16 16"><path d="M4.5 11.5l7-7M5.5 4.5h6v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
   <symbol id="arrow-right" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="arrow-left" viewBox="0 0 16 16"><path d="M13 8H3M7 4L3 8l4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="arrow-down" viewBox="0 0 16 16"><path d="M8 3v10M4 9l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="download" viewBox="0 0 16 16"><path d="M8 2.5v8M4.5 7.5L8 11l3.5-3.5M3 13.5h10" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="doc" viewBox="0 0 16 16"><path d="M4 1.8h5l3 3v9.4H4zM9 1.8v3h3M6 8.5h4M6 11h4" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="code" viewBox="0 0 16 16"><path d="M5.5 4.5L2 8l3.5 3.5M10.5 4.5L14 8l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="play" viewBox="0 0 16 16"><path d="M5 3.2v9.6L12.5 8z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+  <symbol id="eye" viewBox="0 0 16 16"><path d="M1.5 8S4 3.5 8 3.5 14.5 8 14.5 8 12 12.5 8 12.5 1.5 8 1.5 8z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><circle cx="8" cy="8" r="2" fill="none" stroke="currentColor" stroke-width="1.4"/></symbol>
+  <symbol id="chev-left" viewBox="0 0 16 16"><path d="M10 3L5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="chev-right" viewBox="0 0 16 16"><path d="M6 3l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="sun" viewBox="0 0 16 16"><circle cx="8" cy="8" r="3" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M8 1.5v1.3M8 13.2v1.3M1.5 8h1.3M13.2 8h1.3M3.4 3.4l.9.9M11.7 11.7l.9.9M3.4 12.6l.9-.9M11.7 4.3l.9-.9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  <symbol id="moon" viewBox="0 0 16 16"><path d="M13.5 9.6A5.8 5.8 0 0 1 6.4 2.5a5.8 5.8 0 1 0 7.1 7.1z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
 </svg>
-<div class="aurora" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span></div>
+
+<div class="aurora" aria-hidden="true">
+  <span class="blob b1"></span>
+  <span class="blob b2"></span>
+  <span class="blob b3"></span>
+</div>
 <div class="spotlight" aria-hidden="true"></div>
 
+
 <header class="site-header">
-  <a class="brand brand-link" href="https://www.briannaimm.com/" aria-label="Brianna Imm, home">bri<span>.</span><em class="crumb" style="font-style:normal">/ ml-applications</em></a>
+  <a class="brand" href="https://www.briannaimm.com/" aria-label="Brianna Imm, home"><svg class="wordmark" xmlns="http://www.w3.org/2000/svg" viewBox="-3.9 -152.4 255.4 158.4" focusable="false" aria-hidden="true"><defs><linearGradient id="wm-nav-g" x1="0" y1="0" x2="1" y2="0.3"><stop offset="0" stop-color="#a5c5e2"/><stop offset="1" stop-color="#e3b7c3"/></linearGradient></defs>
+<path fill="url(#wm-nav-g)" d="M34.1 -145.2V-8.1L17.6 -0.4Q16 0.5 14.7 0.85Q13.4 1.2 12.4 1.2Q11.1 1.2 10.45 0.5Q9.8 -0.2 9.8 -1.5V-131.2Q9.8 -132.8 9.3 -133.55Q8.8 -134.3 7.6 -134.6L2.1 -134.7Q1 -135.1 0.55 -135.7Q0.1 -136.3 0.1 -137.2Q0.1 -138.3 0.75 -138.95Q1.4 -139.6 2.9 -140.2L25.9 -147.2Q28 -147.9 29.1 -148.15Q30.2 -148.4 31.1 -148.4Q32.6 -148.4 33.35 -147.5Q34.1 -146.6 34.1 -145.2ZM31 -66.8 28.6 -70.2Q35.7 -80.1 43.5 -84.95Q51.3 -89.8 61 -89.8Q71.7 -89.8 79.85 -84.5Q88 -79.2 92.6 -69.5Q97.2 -59.8 97.2 -46.3Q97.2 -31.4 91.85 -20.55Q86.5 -9.7 77.1 -3.85Q67.7 2 55.6 2Q45.4 2 38.4 -2.35Q31.4 -6.7 26.9 -14.5L30.7 -18.8Q33.9 -12.3 38.9 -8.9Q43.9 -5.5 50.3 -5.5Q56.5 -5.5 61.45 -9.5Q66.4 -13.5 69.35 -22Q72.3 -30.5 72.3 -43.8Q72.3 -56.4 69.65 -64.5Q67 -72.6 62.4 -76.6Q57.8 -80.6 51.7 -80.6Q46.1 -80.6 40.8 -77.2Q35.5 -73.8 31 -66.8Z M131 -49.5Q131 -63 134.7 -71.9Q138.4 -80.8 144.3 -85.3Q150.2 -89.8 157 -89.8Q164.7 -89.8 168.85 -85Q173 -80.2 173 -71.1Q173 -63.2 169.65 -59.45Q166.3 -55.7 161.1 -55.7Q156 -55.7 153.5 -58.4Q151 -61.1 150.8 -66.3L150.7 -69.5Q150.7 -72.5 149.5 -74Q148.3 -75.5 145.5 -75.5Q142.3 -75.5 139.5 -72.6Q136.7 -69.7 134.9 -63.95Q133.1 -58.2 133.1 -49.5ZM132.6 -85.5 133.1 -57.7V-11.7Q133.1 -9.6 133.95 -8.35Q134.8 -7.1 136.6 -6.7L145.1 -5.4Q146.5 -5.2 147.1 -4.45Q147.7 -3.7 147.7 -2.6Q147.7 -1.4 146.95 -0.7Q146.2 0 144.6 0H102.5Q101.1 0 100.3 -0.75Q99.5 -1.5 99.5 -2.6Q99.5 -3.6 100.05 -4.3Q100.6 -5 101.7 -5.5L106 -6.4Q107.6 -6.8 108.2 -7.9Q108.8 -9 108.8 -11.1V-72.4Q108.8 -74.1 108.35 -74.9Q107.9 -75.7 106.7 -76L101 -76.1Q100 -76.5 99.55 -77.1Q99.1 -77.7 99.1 -78.6Q99.1 -79.6 99.75 -80.3Q100.4 -81 101.9 -81.6L125.2 -88Q127 -88.6 128.1 -88.85Q129.2 -89.1 130 -89.1Q131.2 -89.1 131.8 -88.25Q132.4 -87.4 132.6 -85.5Z M202.7 -86.2V-11.4Q202.7 -9 203.35 -7.9Q204 -6.8 205.5 -6.4L209.9 -5.5Q210.9 -5 211.45 -4.3Q212 -3.6 212 -2.6Q212 -1.4 211.2 -0.7Q210.4 0 209 0H171.9Q170.6 0 169.8 -0.7Q169 -1.4 169 -2.6Q169 -3.6 169.5 -4.25Q170 -4.9 171.1 -5.4L175.6 -6.4Q177.1 -6.8 177.75 -7.9Q178.4 -9 178.4 -11.3V-72.2Q178.4 -73.8 177.9 -74.55Q177.4 -75.3 176.2 -75.6L170.8 -75.7Q169.6 -76.1 169.15 -76.7Q168.7 -77.3 168.7 -78.2Q168.7 -79.3 169.35 -80Q170 -80.7 171.5 -81.2L194.5 -88.2Q196.6 -89 197.7 -89.25Q198.8 -89.5 199.7 -89.5Q201.2 -89.5 201.95 -88.55Q202.7 -87.6 202.7 -86.2Z M189.9 -110.7Q183.2 -110.7 179.1 -114.85Q175 -119 175 -125.4Q175 -131.7 179.1 -135.85Q183.2 -140 189.9 -140Q196.6 -140 200.75 -135.85Q204.9 -131.7 204.9 -125.4Q204.9 -119 200.75 -114.85Q196.6 -110.7 189.9 -110.7Z"/>
+<path class="wm-period" fill="#e6e6ec" d="M232.05 1.9Q225.15 1.9 220.92 -2.37Q216.7 -6.65 216.7 -13.24Q216.7 -19.73 220.92 -24Q225.15 -28.28 232.05 -28.28Q238.95 -28.28 243.22 -24Q247.5 -19.73 247.5 -13.24Q247.5 -6.65 243.22 -2.37Q238.95 1.9 232.05 1.9Z"/>
+</svg>
+</a>
   <nav aria-label="Primary">
-    <a href="#data">Data</a>
-    <a href="#animal-map">Animal map</a>
-    <a href="#clustering">Clustering</a>
-    <a href="#run">Run it</a>
-    <a href="#credits">Credits</a>
+    <a href="https://www.briannaimm.com/#about">About</a>
+    <a href="https://www.briannaimm.com/#experience">Experience</a>
+    <a href="https://www.briannaimm.com/#work">Work</a>
+    <a href="https://blog.briannaimm.com/">Blog</a>
+    <a href="https://www.briannaimm.com/#links">Elsewhere</a>
+    <button class="theme-toggle" type="button" data-theme-toggle hidden><svg class="ico" aria-hidden="true"><use href="#sun"/></svg><span>Light</span></button>
   </nav>
 </header>
 
-<main id="top">
+  <main id="top">
+
+<nav class="crumbs" aria-label="Breadcrumb">
+  <a href="https://www.briannaimm.com/items/"><svg class="ico" aria-hidden="true"><use href="#arrow-left"/></svg> Papers &amp; Projects</a>
+</nav>
 <section class="hero">
   <div class="hero-text">
     <p class="eyebrow reveal">Data science &middot; Cultural anthropology &middot; Python</p>
@@ -50,6 +90,15 @@
     <figcaption><b>141 societies</b><span>Standard Cross-Cultural Sample</span></figcaption>
   </figure>
 </section>
+
+<nav class="page-toc reveal" aria-label="On this page">
+  <a href="#about">Overview</a>
+  <a href="#data">Data</a>
+  <a href="#animal-map">Animal map</a>
+  <a href="#clustering">Clustering</a>
+  <a href="#run">Run it</a>
+  <a href="#credits">Credits</a>
+</nav>
 
 <section id="about">
   <div class="prose">
@@ -68,12 +117,12 @@
       <div class="card tilt reveal">
         <h3>1. Domesticated animals map</h3>
         <p>Every society gets an icon for its main domesticated animal. Click an icon to read about the gods, hunting and religion of that society.</p>
-        <p><a href="#animal-map">Open the map &rarr;</a></p>
+        <a class="more" href="#animal-map">Open the map <i><svg class="ico" aria-hidden="true"><use href="#arrow-right"/></svg></i></a>
       </div>
       <div class="card tilt reveal">
         <h3>2. Clustering demo</h3>
         <p>The K-Modes algorithm groups societies with similar animals, gods and religion. Charts and a map show what each group has in common.</p>
-        <p><a href="#clustering">See the clusters &rarr;</a></p>
+        <a class="more" href="#clustering">See the clusters <i><svg class="ico" aria-hidden="true"><use href="#arrow-right"/></svg></i></a>
       </div>
     </div>
   </div>
@@ -197,10 +246,10 @@ python -m http.server 8000               # open http://localhost:8000</code></pr
 </main>
 
 <footer>
-  <p>&copy; 2021&ndash;<span id="year"></span> Brianna R. Imm &middot; Code: <a href="LICENSE">MIT</a>. Text and design: <a href="LICENSES/CC-BY-4.0.txt">CC BY 4.0</a>. Data and results: <a href="LICENSES/CC-BY-NC-4.0.txt">CC BY-NC 4.0</a>. <a href="LICENSING.md">Licensing details</a>.</p>
-  <p><a href="https://www.briannaimm.com/">&larr; Back to briannaimm.com</a> &middot; <a href="https://github.com/briannarimm/ml-applications-in-anthropology">Source on GitHub</a></p>
+  <p>&copy; 2021&ndash;<span id="year">2026</span> Brianna R. Imm &middot; Not legal advice. &middot; <a href="https://www.briannaimm.com/tos/">Terms</a> &middot; <a href="https://www.briannaimm.com/privacy-policy/">Privacy</a></p>
+  <p class="foot-license">Code: <a href="LICENSE">MIT</a>. Text and design: <a href="LICENSES/CC-BY-4.0.txt">CC BY 4.0</a>. Data and results: <a href="LICENSES/CC-BY-NC-4.0.txt">CC BY-NC 4.0</a>. <a href="LICENSING.md">Licensing details</a>. <a href="https://github.com/briannarimm/ml-applications-in-anthropology">Source on GitHub</a>.</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="https://www.briannaimm.com/script.js"></script>
 </body>
 </html>

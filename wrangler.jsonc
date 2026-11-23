@@ -11,5 +11,7 @@
   "assets": {
     "directory": "./.cloudflare-dist",
     "html_handling": "auto-trailing-slash"
-  }
+  },
+  // Builds of branches other than main run `npx wrangler preview`, which needs this block.
+  "previews": {}
 }

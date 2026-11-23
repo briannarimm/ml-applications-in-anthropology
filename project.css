@@ -94,4 +94,4 @@ pre code { background: none; padding: 0; }
 }
 
 /* The project title is longer than the home page's, so it is set a little smaller. */
-.hero h1 { font-size: clamp(2.5rem, 6.5vw, 4.6rem); line-height: 1.05; }
+.hero h1 { font-size: clamp(2.2rem, 5.5vw, 3.9rem); line-height: 1.12; }
